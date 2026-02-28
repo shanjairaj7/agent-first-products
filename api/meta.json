@@ -89,11 +89,12 @@
     "webhook": 11,
     "graphql": 2
   },
-  "lastUpdated": "2026-02-28T09:31:43.285Z",
+  "lastUpdated": "2026-02-28T09:49:05.048Z",
   "apiEndpoints": {
     "all": "/api/tools.json",
     "meta": "/api/meta.json",
     "byCategory": "/api/by-category/{category}.json",
-    "byInterface": "/api/by-interface/{interface}.json"
+    "byInterface": "/api/by-interface/{interface}.json",
+    "openapi": "/api/openapi.json"
   }
 }
