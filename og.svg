@@ -1,0 +1,103 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#08080e"/>
+
+  <!-- Dot grid pattern -->
+  <defs>
+    <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#1d1d2e" opacity="0.8"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- Left violet accent bar -->
+  <rect x="0" y="0" width="6" height="630" fill="#7c3aed"/>
+
+  <!-- Top border line -->
+  <rect x="0" y="0" width="1200" height="1" fill="#1d1d2e"/>
+
+  <!-- Score pill - top right -->
+  <rect x="960" y="60" width="180" height="52" rx="10" fill="#0f0f1a" stroke="#1d1d2e" stroke-width="1"/>
+  <text x="990" y="93" font-family="monospace" font-size="32" font-weight="700" fill="#10b981">9.2</text>
+  <text x="1046" y="87" font-family="monospace" font-size="13" fill="#52525b">/10</text>
+  <text x="1046" y="103" font-family="monospace" font-size="11" fill="#52525b" letter-spacing="0.05em">AVG</text>
+
+  <!-- Logo area -->
+  <rect x="60" y="60" width="52" height="52" rx="12" fill="#0f0f1a" stroke="#1d1d2e" stroke-width="1"/>
+  <!-- Dot grid logo -->
+  <circle cx="76" cy="76" r="2.5" fill="#7c3aed"/>
+  <circle cx="86" cy="76" r="2.5" fill="#7c3aed" opacity="0.6"/>
+  <circle cx="96" cy="76" r="2.5" fill="#7c3aed" opacity="0.3"/>
+  <circle cx="76" cy="86" r="2.5" fill="#7c3aed" opacity="0.6"/>
+  <circle cx="86" cy="86" r="2.5" fill="#7c3aed"/>
+  <circle cx="96" cy="86" r="2.5" fill="#7c3aed" opacity="0.6"/>
+  <circle cx="76" cy="96" r="2.5" fill="#7c3aed" opacity="0.3"/>
+  <circle cx="86" cy="96" r="2.5" fill="#7c3aed" opacity="0.6"/>
+  <circle cx="96" cy="96" r="2.5" fill="#7c3aed"/>
+
+  <!-- Main title -->
+  <text x="60" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="58" font-weight="700" fill="white" letter-spacing="-0.02em">Agent First Products</text>
+  <text x="60" y="268" font-family="system-ui, -apple-system, sans-serif" font-size="58" font-weight="700" fill="#7c3aed" letter-spacing="-0.02em">Registry</text>
+
+  <!-- Subtitle -->
+  <text x="60" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#71717a">Tools scored on API signup, MCP servers, SDK coverage</text>
+  <text x="60" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#71717a">and dashboard-free operation for AI agents.</text>
+
+  <!-- Stats row -->
+  <!-- Stat 1 -->
+  <rect x="60" y="410" width="160" height="72" rx="10" fill="#0f0f1a" stroke="#1d1d2e" stroke-width="1"/>
+  <text x="80" y="448" font-family="monospace" font-size="28" font-weight="700" fill="white">23</text>
+  <text x="80" y="468" font-family="monospace" font-size="12" fill="#71717a">tools indexed</text>
+
+  <!-- Stat 2 -->
+  <rect x="238" y="410" width="160" height="72" rx="10" fill="#0f0f1a" stroke="#1d1d2e" stroke-width="1"/>
+  <text x="258" y="448" font-family="monospace" font-size="28" font-weight="700" fill="#10b981">14</text>
+  <text x="258" y="468" font-family="monospace" font-size="12" fill="#71717a">with MCP server</text>
+
+  <!-- Stat 3 -->
+  <rect x="416" y="410" width="160" height="72" rx="10" fill="#0f0f1a" stroke="#1d1d2e" stroke-width="1"/>
+  <text x="436" y="448" font-family="monospace" font-size="28" font-weight="700" fill="#7c3aed">8</text>
+  <text x="436" y="468" font-family="monospace" font-size="12" fill="#71717a">API signup</text>
+
+  <!-- Interface badges -->
+  <rect x="60" y="520" width="58" height="26" rx="5" fill="#3b82f615" stroke="#3b82f630" stroke-width="1"/>
+  <text x="76" y="538" font-family="monospace" font-size="11" font-weight="600" fill="#3b82f6" text-anchor="middle">API</text>
+
+  <rect x="128" y="520" width="58" height="26" rx="5" fill="#a855f715" stroke="#a855f730" stroke-width="1"/>
+  <text x="144" y="538" font-family="monospace" font-size="11" font-weight="600" fill="#a855f7" text-anchor="middle">SDK</text>
+
+  <rect x="196" y="520" width="58" height="26" rx="5" fill="#f9731615" stroke="#f9731630" stroke-width="1"/>
+  <text x="212" y="538" font-family="monospace" font-size="11" font-weight="600" fill="#f97316" text-anchor="middle">CLI</text>
+
+  <rect x="264" y="520" width="58" height="26" rx="5" fill="#10b98115" stroke="#10b98130" stroke-width="1"/>
+  <text x="280" y="538" font-family="monospace" font-size="11" font-weight="600" fill="#10b981" text-anchor="middle">MCP</text>
+
+  <!-- URL -->
+  <text x="60" y="595" font-family="monospace" font-size="14" fill="#3f3f52">shanjairaj7.github.io/agent-first-products</text>
+
+  <!-- Right side decoration - score bars -->
+  <rect x="780" y="200" width="360" height="300" rx="14" fill="#0f0f1a" stroke="#1d1d2e" stroke-width="1"/>
+  <text x="800" y="230" font-family="monospace" font-size="11" fill="#52525b" letter-spacing="0.08em">SCORE DISTRIBUTION</text>
+
+  <!-- Bars -->
+  <text x="800" y="262" font-family="monospace" font-size="11" fill="#52525b">9-10</text>
+  <rect x="840" y="250" width="240" height="14" rx="3" fill="#1d1d2e"/>
+  <rect x="840" y="250" width="168" height="14" rx="3" fill="#10b981" opacity="0.7"/>
+
+  <text x="800" y="294" font-family="monospace" font-size="11" fill="#52525b">7-8</text>
+  <rect x="840" y="282" width="240" height="14" rx="3" fill="#1d1d2e"/>
+  <rect x="840" y="282" width="120" height="14" rx="3" fill="#f59e0b" opacity="0.7"/>
+
+  <text x="800" y="326" font-family="monospace" font-size="11" fill="#52525b">5-6</text>
+  <rect x="840" y="314" width="240" height="14" rx="3" fill="#1d1d2e"/>
+  <rect x="840" y="314" width="48" height="14" rx="3" fill="#f43f5e" opacity="0.7"/>
+
+  <text x="800" y="358" font-family="monospace" font-size="11" fill="#52525b">&lt;5</text>
+  <rect x="840" y="346" width="240" height="14" rx="3" fill="#1d1d2e"/>
+  <rect x="840" y="346" width="12" height="14" rx="3" fill="#f43f5e" opacity="0.4"/>
+
+  <!-- curl command -->
+  <rect x="780" y="430" width="360" height="56" rx="8" fill="#0a0a14" stroke="#1d1d2e" stroke-width="1"/>
+  <text x="800" y="456" font-family="monospace" font-size="11" fill="#52525b">$ curl /api/tools.json</text>
+  <text x="800" y="474" font-family="monospace" font-size="11" fill="#3f3f52">  | jq &#39;.[0].name&#39;</text>
+</svg>

@@ -89,7 +89,7 @@
     "webhook": 11,
     "graphql": 2
   },
-  "lastUpdated": "2026-02-28T09:49:05.048Z",
+  "lastUpdated": "2026-02-28T17:14:05.348Z",
   "apiEndpoints": {
     "all": "/api/tools.json",
     "meta": "/api/meta.json",

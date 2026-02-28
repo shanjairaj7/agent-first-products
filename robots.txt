@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shanjairaj7.github.io/agent-first-products/sitemap-index.xml
