@@ -33,18 +33,21 @@ export function RegistryDashboard({ tools, base = '' }: Props) {
     [tools, filters, sort],
   );
 
+  // Key changes when filter state changes — triggers stagger animation re-run
+  const listKey = useMemo(
+    () => [activeCategory, filters.interfaces.join(), filters.signupMethod.join(), filters.minScore, filters.hasFree, filters.search, sort].join('|'),
+    [activeCategory, filters, sort],
+  );
+
   return (
-    <div className="flex flex-col gap-4">
-      {/* Category tabs */}
+    <div className="flex flex-col gap-3">
       <CategoryTabs tools={tools} active={activeCategory} onChange={handleCategoryChange} />
 
-      {/* Search */}
       <SearchBar
         value={filters.search}
         onChange={s => setFilters(f => ({ ...f, search: s }))}
       />
 
-      {/* Inline filter row */}
       <FilterRow
         filters={filters}
         sort={sort}
@@ -55,9 +58,8 @@ export function RegistryDashboard({ tools, base = '' }: Props) {
         onReset={handleReset}
       />
 
-      {/* Grid */}
-      <div className="pt-2">
-        <ToolGrid tools={results} base={base} />
+      <div className="pt-1">
+        <ToolGrid tools={results} base={base} listKey={listKey} />
       </div>
     </div>
   );

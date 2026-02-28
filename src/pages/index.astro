@@ -2,55 +2,135 @@
 import Base from '../layouts/Base.astro';
 import { TOOLS, getRegistryMeta } from '../data/registry';
 import { RegistryDashboard } from '../components/islands/RegistryDashboard';
+import { getScoreColor } from '../lib/scores';
 
 const meta = getRegistryMeta();
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const apiSignupCount = TOOLS.filter(t => t.signup.method === 'api').length;
+const mcpCount = meta.interfaceCounts.mcp;
+const spotlight = TOOLS.slice(0, 3); // already sorted by score desc
+
+const IFACE_LABELS = { api: 'API', sdk: 'SDK', cli: 'CLI', mcp: 'MCP', webhook: 'Hook', graphql: 'GQL' };
+const IFACE_COLORS: Record<string, string> = {
+  api: '#3b82f6', sdk: '#a855f7', cli: '#f97316', mcp: '#10b981', webhook: '#eab308', graphql: '#ec4899',
+};
 ---
 
 <Base>
-  <!-- Hero — compact, information-dense -->
-  <section class="border-b border-zinc-800/50">
+  <!-- ── Hero ───────────────────────────────────────────────── -->
+  <section style="border-bottom: 1px solid #1d1d2e;">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-8">
       <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
 
-        <!-- Left: title + description -->
+        <!-- Left -->
         <div class="max-w-lg">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded" style="color: #a78bfa; background: rgba(124,58,237,0.1); border: 1px solid rgba(124,58,237,0.25);">
+              Open Registry
+            </span>
+            <span class="text-[10px] font-mono" style="color: #3a3a5c;">{meta.total} tools indexed</span>
+          </div>
           <h1 class="text-2xl font-bold text-white tracking-tight leading-snug">
             Agent First Products Registry
           </h1>
-          <p class="mt-1.5 text-sm text-zinc-500 leading-relaxed">
-            Tools scored on API signup, MCP support, SDK coverage, and whether
-            agents can operate without a dashboard.
+          <p class="mt-1.5 text-sm leading-relaxed" style="color: #52526a;">
+            Tools rated on API signup, MCP support, SDK coverage, and
+            whether agents can operate without a dashboard.
           </p>
         </div>
 
         <!-- Right: stat pills -->
         <div class="flex items-center gap-2 flex-wrap">
           {[
-            { label: 'tools',      value: meta.total,               color: 'text-white' },
-            { label: 'with MCP',   value: meta.interfaceCounts.mcp, color: 'text-emerald-400' },
-            { label: 'API signup', value: apiSignupCount,           color: 'text-blue-400' },
-            { label: 'avg score',  value: `${meta.avgScore}`,       color: 'text-amber-400' },
+            { label: 'tools',       value: String(meta.total),    color: '#e4e4f0' },
+            { label: 'MCP servers', value: String(mcpCount),      color: '#10b981' },
+            { label: 'API signup',  value: String(apiSignupCount), color: '#7c3aed' },
+            { label: 'avg score',   value: String(meta.avgScore), color: '#f59e0b' },
           ].map(s => (
-            <div class="flex items-baseline gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800">
-              <span class={`text-base font-bold font-mono tabular-nums ${s.color}`}>{s.value}</span>
-              <span class="text-[11px] text-zinc-500">{s.label}</span>
+            <div
+              class="flex items-baseline gap-1.5 px-3 py-1.5 rounded-lg"
+              style="background: #0f0f1a; border: 1px solid #1d1d2e;"
+            >
+              <span class="text-base font-bold font-mono tabular-nums" style={`color: ${s.color}`}>{s.value}</span>
+              <span class="text-[10px] font-mono" style="color: #3a3a5c;">{s.label}</span>
             </div>
           ))}
         </div>
       </div>
 
       <!-- CLI hint -->
-      <div class="mt-5 flex items-center gap-2 font-mono text-[11px] text-zinc-700 overflow-x-auto">
-        <span class="text-zinc-800 select-none">$</span>
-        <span class="whitespace-nowrap">curl {`${base}/api/tools.json`} | jq <span class="text-zinc-500">'.[] | select(.interfaces.mcp == true) | .name'</span></span>
+      <div class="mt-5 flex items-center gap-2 font-mono text-[11px] overflow-x-auto" style="color: #2a2a4d;">
+        <span style="color: #1d1d2e;" class="select-none">$</span>
+        <span class="whitespace-nowrap" style="color: #3a3a5c;">
+          curl {`${base}/api/tools.json`}
+          <span style="color: #52526a;"> | jq '.[] | select(.interfaces.mcp == true) | .name'</span>
+        </span>
       </div>
     </div>
   </section>
 
-  <!-- Registry -->
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-7">
+  <!-- ── Top Rated Spotlight ────────────────────────────────── -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-2">
+    <div class="flex items-center gap-2 mb-4">
+      <span class="text-[10px] font-mono uppercase tracking-widest" style="color: #52526a;">Top Rated</span>
+      <div class="flex-1 h-px" style="background: #1d1d2e;" />
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      {spotlight.map(tool => {
+        const { hex } = getScoreColor(tool.agentFirstScore);
+        const activeIfaces = Object.entries(tool.interfaces)
+          .filter(([, v]) => v)
+          .map(([k]) => k);
+        return (
+          <a
+            href={`${base}/tools/${tool.slug}`}
+            class="spotlight-tile no-underline group"
+          >
+            <!-- Score color top bar -->
+            <div class="h-0.5 -mx-5 -mt-4 mb-3 rounded-t-xl" style={`background: linear-gradient(to right, ${hex}, transparent);`} />
+
+            <!-- Header -->
+            <div class="flex items-start justify-between gap-2">
+              <div class="min-w-0">
+                <span class="text-[9px] font-mono uppercase tracking-widest block mb-1" style="color: #4a4a6a;">
+                  {tool.category.replace('-', ' ')}
+                </span>
+                <h3 class="text-sm font-bold text-white truncate group-hover:text-violet-300 transition-colors">
+                  {tool.name}
+                </h3>
+              </div>
+              <span class="score-num flex-shrink-0 text-2xl leading-none" style={`color: ${hex};`}>
+                {tool.agentFirstScore}
+              </span>
+            </div>
+
+            <p class="text-[11px] leading-relaxed mt-1.5 line-clamp-2" style="color: #52526a;">
+              {tool.description}
+            </p>
+
+            <!-- Interface badges -->
+            <div class="flex items-center gap-1 mt-2 flex-wrap">
+              {activeIfaces.map(k => (
+                <span
+                  class="px-1.5 py-0.5 rounded text-[9px] font-mono font-semibold"
+                  style={`color: ${IFACE_COLORS[k]}; background: ${IFACE_COLORS[k]}15; border: 1px solid ${IFACE_COLORS[k]}25;`}
+                >
+                  {IFACE_LABELS[k as keyof typeof IFACE_LABELS]}
+                </span>
+              ))}
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- ── Registry ───────────────────────────────────────────── -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6">
+    <div class="flex items-center gap-2 mb-4">
+      <span class="text-[10px] font-mono uppercase tracking-widest" style="color: #52526a;">All Tools</span>
+      <div class="flex-1 h-px" style="background: #1d1d2e;" />
+    </div>
     <RegistryDashboard tools={TOOLS} base={base} client:load />
   </div>
 </Base>

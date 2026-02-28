@@ -20,6 +20,27 @@ const scoreColor = getScoreColor(tool.agentFirstScore);
 const scoreLabel = getScoreLabel(tool.agentFirstScore);
 const catMeta = CATEGORIES.find(c => c.id === tool.category);
 
+const toolJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: tool.name,
+  description: tool.description,
+  url: tool.website,
+  applicationCategory: 'DeveloperApplication',
+  operatingSystem: 'Any',
+  offers: tool.pricing.hasFree
+    ? { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+    : undefined,
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: tool.agentFirstScore,
+    bestRating: 10,
+    worstRating: 1,
+    ratingCount: 1,
+    description: 'Agent-first score — rated on API signup, MCP support, SDK coverage, dashboard-free operation',
+  },
+};
+
 const INTERFACE_CONFIG = {
   api:     { label: 'REST API',   emoji: '🔗', desc: 'HTTP REST API available' },
   sdk:     { label: 'SDK',        emoji: '📦', desc: `SDK available for ${tool.sdkLanguages.join(', ') || 'multiple languages'}` },
@@ -33,6 +54,9 @@ const INTERFACE_CONFIG = {
 <Base
   title={`${tool.name} — Agent First Products Registry`}
   description={tool.description}
+  canonicalPath={`/tools/${tool.slug}`}
+  ogType="article"
+  jsonLd={toolJsonLd}
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10">
     <!-- Back -->

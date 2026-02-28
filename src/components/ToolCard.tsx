@@ -4,9 +4,9 @@ import { getScoreColor } from '../lib/scores';
 interface Props {
   tool: ToolEntry;
   base?: string;
+  index?: number;
 }
 
-// All interface keys in display order
 const IFACES: { key: keyof ToolEntry['interfaces']; label: string; color: string }[] = [
   { key: 'api',     label: 'API',  color: '#3b82f6' },
   { key: 'sdk',     label: 'SDK',  color: '#a855f7' },
@@ -17,9 +17,9 @@ const IFACES: { key: keyof ToolEntry['interfaces']; label: string; color: string
 ];
 
 const SIGNUP_CONFIG = {
-  'api':                  { label: 'API Signup',   color: '#34d399', bg: 'rgba(52,211,153,0.08)',  border: 'rgba(52,211,153,0.2)'  },
-  'website-bot-friendly': { label: 'Bot Friendly', color: '#60a5fa', bg: 'rgba(96,165,250,0.08)',  border: 'rgba(96,165,250,0.2)'  },
-  'human-only':           { label: 'Human Only',   color: '#f87171', bg: 'rgba(248,113,113,0.08)', border: 'rgba(248,113,113,0.2)' },
+  'api':                  { label: '⚡ API',   color: '#10b981', bg: 'rgba(16,185,129,0.08)',  border: 'rgba(16,185,129,0.2)'  },
+  'website-bot-friendly': { label: '🤖 Bot',   color: '#60a5fa', bg: 'rgba(96,165,250,0.08)',  border: 'rgba(96,165,250,0.2)'  },
+  'human-only':           { label: '👤 Human', color: '#f87171', bg: 'rgba(248,113,113,0.08)', border: 'rgba(248,113,113,0.2)' },
 } as const;
 
 const CATEGORY_EMOJI: Record<string, string> = {
@@ -28,117 +28,94 @@ const CATEGORY_EMOJI: Record<string, string> = {
   orchestration: '🎯', browser: '🌐', 'mcp-server': '🔌',
 };
 
-export function ToolCard({ tool, base = '' }: Props) {
+export function ToolCard({ tool, base = '', index = 0 }: Props) {
   const { hex } = getScoreColor(tool.agentFirstScore);
   const signup = SIGNUP_CONFIG[tool.signup.method];
-  const activeIfaces = IFACES.filter(i => tool.interfaces[i.key]);
-  const inactiveIfaces = IFACES.filter(i => !tool.interfaces[i.key]);
+  const delay = Math.min(index * 25, 400);
 
   return (
     <a
       href={`${base}/tools/${tool.slug}`}
-      className="group flex flex-col rounded-xl bg-zinc-900 border border-zinc-800/80
-                 hover:border-zinc-700 hover:shadow-lg hover:shadow-black/30
-                 transition-all duration-150 no-underline overflow-hidden"
+      className="tool-row group no-underline animate-row-in"
+      style={{ animationDelay: `${delay}ms` }}
     >
-      {/* ── Header ─────────────────────────── */}
-      <div className="flex items-start gap-3 px-4 pt-4 pb-3.5">
-        {/* Logo */}
-        <div className="flex-shrink-0 w-9 h-9 rounded-lg overflow-hidden bg-zinc-800 flex items-center justify-center">
+      {/* Left accent bar — expands on hover via group */}
+      <div
+        className="flex-shrink-0 self-stretch transition-all duration-200 group-hover:w-[5px]"
+        style={{ width: '3px', backgroundColor: hex }}
+      />
+
+      {/* Score */}
+      <div
+        className="flex-shrink-0 flex flex-col items-center justify-center py-3.5"
+        style={{ width: '52px', borderRight: '1px solid #1d1d2e' }}
+      >
+        <span className="score-num leading-none" style={{ color: hex, fontSize: '18px' }}>
+          {tool.agentFirstScore}
+        </span>
+        <span className="text-[9px] font-mono" style={{ color: '#3a3a5c' }}>/10</span>
+      </div>
+
+      {/* Logo */}
+      <div className="flex-shrink-0 flex items-center justify-center py-3 px-2.5">
+        <div className="w-7 h-7 rounded-md overflow-hidden flex items-center justify-center" style={{ background: '#1d1d2e' }}>
           {tool.logoUrl ? (
             <img
-              src={tool.logoUrl}
-              alt=""
-              width={36}
-              height={36}
+              src={tool.logoUrl} alt="" width={28} height={28}
               className="w-full h-full object-contain p-0.5"
               onError={e => ((e.target as HTMLImageElement).style.display = 'none')}
             />
           ) : (
-            <span className="text-base">{CATEGORY_EMOJI[tool.category] ?? '🛠️'}</span>
+            <span className="text-sm">{CATEGORY_EMOJI[tool.category] ?? '🛠️'}</span>
           )}
         </div>
-
-        {/* Name + category */}
-        <div className="flex-1 min-w-0 pt-0.5">
-          <h3 className="text-[13px] font-semibold text-white leading-snug truncate group-hover:text-zinc-100">
-            {tool.name}
-          </h3>
-          <span className="text-[11px] text-zinc-500 capitalize">
-            {tool.category.replace('-', ' ')}
-          </span>
-        </div>
-
-        {/* Score */}
-        <div className="flex-shrink-0 flex flex-col items-end pt-0.5">
-          <span
-            className="text-xl font-bold font-mono leading-none tabular-nums"
-            style={{ color: hex }}
-          >
-            {tool.agentFirstScore}
-          </span>
-          <span className="text-[9px] text-zinc-600 font-mono leading-none mt-0.5">/10</span>
-        </div>
       </div>
 
-      {/* ── Separator ──────────────────────── */}
-      <div className="h-px bg-zinc-800/60 mx-4" />
-
-      {/* ── Interfaces ─────────────────────── */}
-      <div className="px-4 py-3 flex items-center gap-1 flex-wrap">
-        {activeIfaces.map(iface => (
-          <span
-            key={iface.key}
-            className="px-1.5 py-0.5 rounded text-[10px] font-mono font-semibold border"
-            style={{
-              color: iface.color,
-              backgroundColor: `${iface.color}18`,
-              borderColor: `${iface.color}30`,
-            }}
-          >
-            {iface.label}
-          </span>
-        ))}
-        {inactiveIfaces.map(iface => (
-          <span
-            key={iface.key}
-            className="px-1.5 py-0.5 rounded text-[10px] font-mono text-zinc-700 border border-zinc-800"
-          >
-            {iface.label}
-          </span>
-        ))}
+      {/* Name + category */}
+      <div
+        className="flex flex-col justify-center py-3 min-w-0 flex-1 pr-3"
+        style={{ borderRight: '1px solid #1d1d2e' }}
+      >
+        <span className="text-[13px] font-semibold text-white truncate leading-snug block transition-transform duration-150 group-hover:translate-x-0.5">
+          {tool.name}
+        </span>
+        <span className="text-[9px] font-mono uppercase tracking-widest mt-0.5" style={{ color: '#4a4a6a' }}>
+          {tool.category.replace('-', ' ')}
+        </span>
       </div>
 
-      {/* ── Separator ──────────────────────── */}
-      <div className="h-px bg-zinc-800/60 mx-4" />
+      {/* Interfaces — desktop only */}
+      <div
+        className="hidden sm:flex items-center gap-1 flex-shrink-0 py-3 px-3"
+        style={{ borderRight: '1px solid #1d1d2e' }}
+      >
+        {IFACES.map(iface => {
+          const active = tool.interfaces[iface.key];
+          return (
+            <span
+              key={iface.key}
+              className="px-1.5 py-0.5 rounded text-[9px] font-mono font-semibold"
+              style={active
+                ? { color: iface.color, backgroundColor: `${iface.color}15`, border: `1px solid ${iface.color}25` }
+                : { color: '#2a2a3d', backgroundColor: 'transparent', border: '1px solid #1d1d2e' }
+              }
+            >
+              {iface.label}
+            </span>
+          );
+        })}
+      </div>
 
-      {/* ── Footer ─────────────────────────── */}
-      <div className="px-4 py-2.5 flex items-center gap-2 flex-wrap">
+      {/* Signup + free */}
+      <div className="flex-shrink-0 flex flex-col items-end justify-center py-3 px-3 gap-1" style={{ minWidth: '88px' }}>
         <span
-          className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium border"
-          style={{ color: signup.color, backgroundColor: signup.bg, borderColor: signup.border }}
+          className="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-mono font-medium whitespace-nowrap"
+          style={{ color: signup.color, backgroundColor: signup.bg, border: `1px solid ${signup.border}` }}
         >
           {signup.label}
         </span>
-
         {tool.pricing.hasFree && (
-          <span className="text-[10px] text-teal-400 font-mono">Free</span>
-        )}
-
-        {tool.sdkLanguages.length > 0 && (
-          <>
-            <span className="text-zinc-800 text-[10px]">·</span>
-            {tool.sdkLanguages.slice(0, 2).map(lang => (
-              <span key={lang} className="text-[10px] font-mono text-zinc-600 capitalize">
-                {lang}
-              </span>
-            ))}
-            {tool.sdkLanguages.length > 2 && (
-              <span className="text-[10px] font-mono text-zinc-700">
-                +{tool.sdkLanguages.length - 2}
-              </span>
-            )}
-          </>
+          <span className="text-[9px] font-mono font-medium" style={{ color: '#0d9488' }}>Free</span>
         )}
       </div>
     </a>

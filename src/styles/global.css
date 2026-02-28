@@ -7,19 +7,51 @@
 @layer base {
   :root {
     color-scheme: dark;
+    --bg-base: #08080e;
+    --bg-surface: #0f0f1a;
+    --bg-raised: #14141f;
+    --border-subtle: #1d1d2e;
+    --accent-violet: #7c3aed;
+    --accent-violet-hover: #6d28d9;
+    --accent-teal: #0d9488;
+    --score-high: #10b981;
+    --score-mid: #f59e0b;
+    --score-low: #f43f5e;
   }
 
   body {
-    @apply bg-zinc-950 text-zinc-100 antialiased;
+    background-color: var(--bg-base);
+    color: #e4e4f0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
+  /* Dot grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(circle, #1d1d2e 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  /* Ensure main content is above the dot grid */
+  body > * {
+    position: relative;
+    z-index: 1;
+  }
+
   * {
-    @apply border-zinc-800;
+    border-color: var(--border-subtle);
   }
 
   ::selection {
-    @apply bg-indigo-500/30 text-white;
+    background: rgba(124, 58, 237, 0.3);
+    color: #fff;
   }
 
   ::-webkit-scrollbar {
@@ -27,34 +59,122 @@
     height: 6px;
   }
   ::-webkit-scrollbar-track {
-    @apply bg-zinc-950;
+    background: var(--bg-base);
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-zinc-700 rounded-full;
+    background: #2a2a3e;
+    border-radius: 9999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-zinc-500;
+    background: #3d3d5c;
   }
+}
+
+/* Microinteraction keyframes */
+@keyframes slide-right {
+  from { transform: translateX(0); }
+  to   { transform: translateX(2px); }
+}
+
+@keyframes accent-expand {
+  from { width: 3px; }
+  to   { width: 6px; }
+}
+
+@keyframes row-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0); }
+  50%       { box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+@keyframes count-up {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @layer components {
   /* Badge base */
   .badge {
-    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-mono font-medium border;
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-mono font-medium;
+    border: 1px solid var(--border-subtle);
   }
 
-  /* Card base */
-  .card {
-    @apply bg-zinc-900 border border-zinc-800 rounded-xl transition-all duration-150;
+  /* Signal row card */
+  .tool-row {
+    display: flex;
+    align-items: stretch;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: border-color 0.15s ease, background 0.15s ease;
+    overflow: hidden;
   }
-  .card:hover {
-    @apply border-zinc-600 -translate-y-0.5 shadow-lg shadow-black/30;
+  .tool-row:hover {
+    border-color: rgba(124, 58, 237, 0.3);
+    background: var(--bg-raised);
   }
 
-  /* Input */
+  /* Input — Signal style */
   .input {
-    @apply bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white
-           placeholder:text-zinc-500 focus:outline-none focus:ring-1 focus:ring-indigo-500
-           focus:border-indigo-500 transition-colors;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    color: #e4e4f0;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .input::placeholder {
+    color: #4a4a6a;
+  }
+  .input:focus {
+    border-color: var(--accent-violet);
+    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.15);
+  }
+
+  /* Score numbers */
+  .score-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-feature-settings: "tnum";
+    font-weight: 700;
+  }
+
+  /* Frosted glass */
+  .frosted {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(8, 8, 14, 0.85);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  /* Spotlight tile */
+  .spotlight-tile {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    text-decoration: none;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+  .spotlight-tile:hover {
+    border-color: rgba(124, 58, 237, 0.4);
+    transform: translateY(-1px);
   }
 }

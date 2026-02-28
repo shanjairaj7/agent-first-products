@@ -4,25 +4,32 @@ import { ToolCard } from '../ToolCard';
 interface Props {
   tools: ToolEntry[];
   base?: string;
+  listKey?: string;
 }
 
-export function ToolGrid({ tools, base = '' }: Props) {
+export function ToolGrid({ tools, base = '', listKey = '' }: Props) {
   if (tools.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center py-24 text-center">
-        <div className="text-5xl mb-4">🔍</div>
-        <h3 className="text-lg font-semibold text-white mb-2">No tools found</h3>
-        <p className="text-sm text-zinc-500 max-w-sm">
-          Try adjusting your filters or search query. New tools are added regularly.
+      <div className="flex flex-col items-center justify-center py-20 text-center">
+        <div
+          className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-xl"
+          style={{ background: '#0f0f1a', border: '1px solid #1d1d2e' }}
+        >
+          ⌕
+        </div>
+        <p className="text-sm font-semibold text-white mb-1">No tools match</p>
+        <p className="text-xs" style={{ color: '#4a4a6a' }}>
+          Adjust filters or{' '}
+          <a href="#" className="underline" style={{ color: '#7c3aed' }}>submit a tool</a>
         </p>
       </div>
     );
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 animate-fade-in">
-      {tools.map(tool => (
-        <ToolCard key={tool.slug} tool={tool} base={base} />
+    <div key={listKey} className="flex flex-col gap-1.5">
+      {tools.map((tool, i) => (
+        <ToolCard key={tool.slug} tool={tool} base={base} index={i} />
       ))}
     </div>
   );

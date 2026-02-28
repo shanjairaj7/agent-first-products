@@ -1,18 +1,18 @@
 import type { FilterState, SortKey } from '../../lib/filters';
 
 const IFACE_OPTIONS = [
-  { key: 'api',     label: 'API',     activeClass: 'bg-blue-500/20 text-blue-300 border-blue-500/40' },
-  { key: 'sdk',     label: 'SDK',     activeClass: 'bg-purple-500/20 text-purple-300 border-purple-500/40' },
-  { key: 'cli',     label: 'CLI',     activeClass: 'bg-orange-500/20 text-orange-300 border-orange-500/40' },
-  { key: 'mcp',     label: 'MCP',     activeClass: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40' },
-  { key: 'webhook', label: 'Hook',    activeClass: 'bg-yellow-500/20 text-yellow-300 border-yellow-500/40' },
-  { key: 'graphql', label: 'GQL',     activeClass: 'bg-pink-500/20 text-pink-300 border-pink-500/40' },
+  { key: 'api',     label: 'API',  dot: '#3b82f6' },
+  { key: 'sdk',     label: 'SDK',  dot: '#a855f7' },
+  { key: 'cli',     label: 'CLI',  dot: '#f97316' },
+  { key: 'mcp',     label: 'MCP',  dot: '#10b981' },
+  { key: 'webhook', label: 'Hook', dot: '#eab308' },
+  { key: 'graphql', label: 'GQL',  dot: '#ec4899' },
 ] as const;
 
 const SIGNUP_OPTIONS = [
-  { key: 'api',                  label: '⚡ API',   title: 'Fully programmatic signup' },
-  { key: 'website-bot-friendly', label: '🤖 Bot',   title: 'Website allows bots' },
-  { key: 'human-only',           label: '👤 Human', title: 'Requires human verification' },
+  { key: 'api',                  label: '⚡ API',   title: 'Programmatic signup' },
+  { key: 'website-bot-friendly', label: '🤖 Bot',   title: 'Bot-friendly signup' },
+  { key: 'human-only',           label: '👤 Human', title: 'Human-only signup' },
 ] as const;
 
 const SORT_OPTIONS: { key: SortKey; label: string }[] = [
@@ -31,85 +31,92 @@ interface Props {
   onReset: () => void;
 }
 
-function Pill({
+function FilterPill({
   label,
   active,
+  dot,
   onClick,
-  activeClass,
   title,
 }: {
   label: string;
   active: boolean;
+  dot?: string;
   onClick: () => void;
-  activeClass?: string;
   title?: string;
 }) {
   return (
     <button
       onClick={onClick}
       title={title}
-      className={`
-        px-2.5 py-1 rounded text-[11px] font-mono font-medium border transition-all duration-100 whitespace-nowrap
-        ${active
-          ? (activeClass ?? 'bg-indigo-500/20 text-indigo-300 border-indigo-500/40')
-          : 'text-zinc-500 border-zinc-800 hover:border-zinc-600 hover:text-zinc-300'
-        }
-      `}
+      className="flex items-center gap-1.5 px-2 py-1 rounded text-[10px] font-mono font-medium transition-all duration-100 whitespace-nowrap"
+      style={active
+        ? {
+            background: dot ? `${dot}15` : 'rgba(124,58,237,0.12)',
+            color: dot ?? '#a78bfa',
+            border: `1px solid ${dot ? `${dot}30` : 'rgba(124,58,237,0.3)'}`,
+          }
+        : {
+            background: 'transparent',
+            color: '#52526a',
+            border: '1px solid #1d1d2e',
+          }
+      }
     >
+      {active && dot && (
+        <span
+          className="w-1.5 h-1.5 rounded-full flex-shrink-0 animate-dot-pulse"
+          style={{ backgroundColor: dot }}
+        />
+      )}
       {label}
     </button>
   );
 }
 
 export function FilterRow({
-  filters,
-  sort,
-  onFiltersChange,
-  onSortChange,
-  resultCount,
-  totalCount,
-  onReset,
+  filters, sort, onFiltersChange, onSortChange, resultCount, totalCount, onReset,
 }: Props) {
   const toggleIface = (key: string) => {
     const arr = filters.interfaces;
-    const next = arr.includes(key) ? arr.filter(v => v !== key) : [...arr, key];
-    onFiltersChange({ ...filters, interfaces: next });
+    onFiltersChange({ ...filters, interfaces: arr.includes(key) ? arr.filter(v => v !== key) : [...arr, key] });
   };
 
   const toggleSignup = (key: string) => {
     const arr = filters.signupMethod;
-    const next = arr.includes(key) ? arr.filter(v => v !== key) : [...arr, key];
-    onFiltersChange({ ...filters, signupMethod: next });
+    onFiltersChange({ ...filters, signupMethod: arr.includes(key) ? arr.filter(v => v !== key) : [...arr, key] });
   };
 
-  const hasActiveFilters = filters.interfaces.length > 0 || filters.signupMethod.length > 0
-    || filters.hasFree !== null || filters.minScore > 1;
+  const hasActiveFilters = filters.interfaces.length > 0
+    || filters.signupMethod.length > 0
+    || filters.hasFree !== null
+    || filters.minScore > 1;
 
   return (
-    <div className="flex flex-col gap-2">
-      {/* Main filter row */}
+    <div
+      className="frosted sticky z-30 rounded-xl px-3 py-2.5"
+      style={{ top: '54px' }}
+    >
       <div className="flex items-center gap-2 flex-wrap">
+
         {/* Interface toggles */}
         <div className="flex items-center gap-1">
           {IFACE_OPTIONS.map(opt => (
-            <Pill
+            <FilterPill
               key={opt.key}
               label={opt.label}
+              dot={opt.dot}
               active={filters.interfaces.includes(opt.key)}
               onClick={() => toggleIface(opt.key)}
-              activeClass={opt.activeClass}
-              title={`Filter: has ${opt.label}`}
             />
           ))}
         </div>
 
-        {/* Divider */}
-        <div className="h-4 w-px bg-zinc-800 mx-1" />
+        <div className="h-4 w-px" style={{ background: '#1d1d2e' }} />
 
-        {/* Signup method */}
+        {/* Signup */}
         <div className="flex items-center gap-1">
           {SIGNUP_OPTIONS.map(opt => (
-            <Pill
+            <FilterPill
               key={opt.key}
               label={opt.label}
               active={filters.signupMethod.includes(opt.key)}
@@ -119,21 +126,18 @@ export function FilterRow({
           ))}
         </div>
 
-        {/* Divider */}
-        <div className="h-4 w-px bg-zinc-800 mx-1" />
+        <div className="h-4 w-px" style={{ background: '#1d1d2e' }} />
 
-        {/* Free toggle */}
-        <Pill
-          label="✦ Free"
-          active={filters.hasFree === true}
-          onClick={() => onFiltersChange({ ...filters, hasFree: filters.hasFree === true ? null : true })}
-          activeClass="bg-teal-500/20 text-teal-300 border-teal-500/40"
-        />
-
-        {/* Score min */}
+        {/* Free + score shortcuts */}
         <div className="flex items-center gap-1">
+          <FilterPill
+            label="Free"
+            active={filters.hasFree === true}
+            dot="#0d9488"
+            onClick={() => onFiltersChange({ ...filters, hasFree: filters.hasFree === true ? null : true })}
+          />
           {[7, 8, 9].map(n => (
-            <Pill
+            <FilterPill
               key={n}
               label={`${n}+`}
               active={filters.minScore === n}
@@ -143,34 +147,34 @@ export function FilterRow({
           ))}
         </div>
 
-        {/* Spacer */}
         <div className="flex-1" />
 
-        {/* Result count + reset */}
-        <div className="flex items-center gap-3">
+        {/* Result count + clear + sort */}
+        <div className="flex items-center gap-2.5">
           {hasActiveFilters && (
             <button
               onClick={onReset}
-              className="text-[11px] text-zinc-500 hover:text-zinc-300 transition-colors"
+              className="text-[10px] font-mono transition-colors"
+              style={{ color: '#52526a' }}
+              onMouseEnter={e => (e.currentTarget.style.color = '#a78bfa')}
+              onMouseLeave={e => (e.currentTarget.style.color = '#52526a')}
             >
-              Clear
+              ✕ clear
             </button>
           )}
-          <span className="text-[11px] font-mono text-zinc-600">
-            <span className="text-zinc-300">{resultCount}</span>/{totalCount}
+          <span className="text-[10px] font-mono" style={{ color: '#3a3a5c' }}>
+            <span style={{ color: '#e4e4f0' }}>{resultCount}</span>/{totalCount}
           </span>
-
-          {/* Sort */}
-          <div className="flex items-center rounded border border-zinc-800 overflow-hidden">
+          <div className="flex items-center rounded overflow-hidden" style={{ border: '1px solid #1d1d2e' }}>
             {SORT_OPTIONS.map(opt => (
               <button
                 key={opt.key}
                 onClick={() => onSortChange(opt.key)}
-                className={`px-2.5 py-1 text-[11px] font-medium transition-colors ${
-                  sort === opt.key
-                    ? 'bg-zinc-800 text-white'
-                    : 'text-zinc-500 hover:text-zinc-300'
-                }`}
+                className="px-2 py-1 text-[10px] font-mono font-medium transition-colors"
+                style={sort === opt.key
+                  ? { background: '#1d1d2e', color: '#e4e4f0' }
+                  : { color: '#52526a' }
+                }
               >
                 {opt.label}
               </button>

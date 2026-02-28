@@ -4,15 +4,36 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  canonicalPath?: string;
+  ogType?: 'website' | 'article';
+  jsonLd?: Record<string, unknown>;
 }
 
 const {
   title = 'Agent First Products Registry',
   description = 'A curated registry of tools built natively for AI agents — scored on API signup, MCP servers, SDK coverage, and dashboard-free operation.',
+  canonicalPath = '',
+  ogType = 'website',
+  jsonLd,
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const siteUrl = 'https://shanjairaj7.github.io/agent-first-products';
+const canonicalUrl = `${siteUrl}${canonicalPath}`;
+const ogImage = `${siteUrl}/og.svg`;
+
+const defaultJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Agent First Products Registry',
+  description,
+  url: siteUrl,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: { '@type': 'EntryPoint', urlTemplate: `${siteUrl}/?q={search_term_string}` },
+    'query-input': 'required name=search_term_string',
+  },
+};
 ---
 
 <!doctype html>
@@ -21,12 +42,38 @@ const siteUrl = 'https://shanjairaj7.github.io/agent-first-products';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#7c3aed" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Agent First Products Registry" />
+    <meta name="keywords" content="AI agents, MCP, model context protocol, agent tools, API, developer tools, LLM tools, agent-first, registry" />
+
     <title>{title}</title>
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Agent First Products Registry — tools scored for AI agents" />
+    <meta property="og:site_name" content="Agent First Products Registry" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content="Agent First Products Registry" />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd ?? defaultJsonLd)} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link
@@ -34,42 +81,64 @@ const siteUrl = 'https://shanjairaj7.github.io/agent-first-products';
       rel="stylesheet"
     />
   </head>
-  <body class="min-h-screen bg-zinc-950 text-zinc-100">
+  <body class="min-h-screen text-zinc-100" style="background-color: #08080e;">
 
     <!-- Nav -->
-    <header class="sticky top-0 z-40 border-b border-zinc-800/50 bg-zinc-950/95 backdrop-blur-sm">
+    <header class="sticky top-0 z-40 backdrop-blur-md relative" style="background: rgba(8,8,14,0.9); border-bottom: 1px solid #1d1d2e;">
+      <!-- Violet gradient accent line at bottom of nav -->
+      <div class="absolute bottom-0 left-0 right-0 h-px" style="background: linear-gradient(to right, #7c3aed, rgba(124,58,237,0.3), transparent);" />
+
       <div class="max-w-6xl mx-auto px-4 sm:px-6 h-12 flex items-center justify-between">
 
-        <a href={`${base}/`} class="flex items-center gap-2 no-underline">
-          <div class="w-6 h-6 rounded-md bg-zinc-800 border border-zinc-700 flex items-center justify-center text-[11px]">
-            🤖
+        <!-- Logo: SVG dot-grid in violet -->
+        <a href={`${base}/`} class="flex items-center gap-2.5 no-underline group">
+          <div class="w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0" style="background: rgba(124,58,237,0.12); border: 1px solid rgba(124,58,237,0.3);">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="2" cy="2" r="1.5" fill="#7c3aed"/>
+              <circle cx="7" cy="2" r="1.5" fill="#7c3aed" opacity="0.7"/>
+              <circle cx="12" cy="2" r="1.5" fill="#7c3aed" opacity="0.4"/>
+              <circle cx="2" cy="7" r="1.5" fill="#7c3aed" opacity="0.7"/>
+              <circle cx="7" cy="7" r="1.5" fill="#7c3aed"/>
+              <circle cx="12" cy="7" r="1.5" fill="#7c3aed" opacity="0.7"/>
+              <circle cx="2" cy="12" r="1.5" fill="#7c3aed" opacity="0.4"/>
+              <circle cx="7" cy="12" r="1.5" fill="#7c3aed" opacity="0.7"/>
+              <circle cx="12" cy="12" r="1.5" fill="#7c3aed"/>
+            </svg>
           </div>
-          <span class="text-sm font-semibold text-white">Agent First</span>
-          <span class="text-[10px] font-mono text-zinc-600 hidden sm:inline">registry</span>
+          <div class="flex items-baseline gap-1.5">
+            <span class="text-sm font-semibold text-white">Agent First</span>
+            <span class="text-[10px] font-mono hidden sm:inline" style="color: #3a3a5c;">registry</span>
+          </div>
         </a>
 
         <nav class="flex items-center gap-1">
           <a
             href={`${base}/api/openapi.json`}
             target="_blank"
-            class="px-2.5 py-1.5 rounded text-[11px] font-mono text-zinc-500 hover:text-zinc-200
-                   hover:bg-zinc-800 transition-colors no-underline"
+            class="px-2.5 py-1.5 rounded text-[11px] font-mono transition-colors no-underline"
+            style="color: #52526a;"
+            onmouseover="this.style.color='#a78bfa';this.style.background='rgba(124,58,237,0.08)'"
+            onmouseout="this.style.color='#52526a';this.style.background='transparent'"
           >
             OpenAPI
           </a>
           <a
             href={`${base}/api/tools.json`}
             target="_blank"
-            class="px-2.5 py-1.5 rounded text-[11px] font-mono text-zinc-500 hover:text-zinc-200
-                   hover:bg-zinc-800 transition-colors no-underline"
+            class="px-2.5 py-1.5 rounded text-[11px] font-mono transition-colors no-underline"
+            style="color: #52526a;"
+            onmouseover="this.style.color='#a78bfa';this.style.background='rgba(124,58,237,0.08)'"
+            onmouseout="this.style.color='#52526a';this.style.background='transparent'"
           >
             /api/tools.json
           </a>
-          <div class="w-px h-4 bg-zinc-800 mx-1"></div>
+          <div class="w-px h-4 mx-1" style="background: #1d1d2e;"></div>
           <a
             href={`${base}/submit`}
-            class="px-3 py-1.5 rounded-md bg-zinc-800 hover:bg-zinc-700 border border-zinc-700
-                   text-white text-[11px] font-medium transition-colors no-underline"
+            class="px-3 py-1.5 rounded-md text-white text-[11px] font-medium transition-all no-underline"
+            style="background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.35);"
+            onmouseover="this.style.background='rgba(124,58,237,0.25)'"
+            onmouseout="this.style.background='rgba(124,58,237,0.15)'"
           >
             + Add Tool
           </a>
@@ -81,16 +150,31 @@ const siteUrl = 'https://shanjairaj7.github.io/agent-first-products';
     <slot />
 
     <!-- Footer -->
-    <footer class="border-t border-zinc-800/40 mt-16 py-8">
+    <footer class="mt-16 py-8" style="border-top: 1px solid #1d1d2e;">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
-          <p class="text-xs font-semibold text-zinc-400">Agent First Products Registry</p>
-          <p class="text-[11px] text-zinc-600 mt-0.5 font-mono">{siteUrl}/api/tools.json</p>
+          <div class="flex items-center gap-2 mb-1">
+            <div class="w-4 h-4 rounded flex items-center justify-center" style="background: rgba(124,58,237,0.12); border: 1px solid rgba(124,58,237,0.3);">
+              <svg width="10" height="10" viewBox="0 0 14 14" fill="none">
+                <circle cx="2" cy="2" r="1.5" fill="#7c3aed"/>
+                <circle cx="7" cy="2" r="1.5" fill="#7c3aed" opacity="0.7"/>
+                <circle cx="12" cy="2" r="1.5" fill="#7c3aed" opacity="0.4"/>
+                <circle cx="2" cy="7" r="1.5" fill="#7c3aed" opacity="0.7"/>
+                <circle cx="7" cy="7" r="1.5" fill="#7c3aed"/>
+                <circle cx="12" cy="7" r="1.5" fill="#7c3aed" opacity="0.7"/>
+                <circle cx="2" cy="12" r="1.5" fill="#7c3aed" opacity="0.4"/>
+                <circle cx="7" cy="12" r="1.5" fill="#7c3aed" opacity="0.7"/>
+                <circle cx="12" cy="12" r="1.5" fill="#7c3aed"/>
+              </svg>
+            </div>
+            <p class="text-xs font-semibold" style="color: #a4a4c0;">Agent First Products Registry</p>
+          </div>
+          <p class="text-[11px] font-mono" style="color: #3a3a5c;">{siteUrl}/api/tools.json</p>
         </div>
-        <div class="flex items-center gap-4 text-[11px] text-zinc-600">
-          <a href={`${base}/api/openapi.json`} target="_blank" class="hover:text-zinc-400 transition-colors no-underline font-mono">OpenAPI</a>
-          <a href={`${base}/submit`} class="hover:text-zinc-400 transition-colors no-underline">Submit</a>
-          <a href="https://github.com/shanjairaj7/agent-first-products" target="_blank" class="hover:text-zinc-400 transition-colors no-underline">GitHub ↗</a>
+        <div class="flex items-center gap-4 text-[11px]" style="color: #3a3a5c;">
+          <a href={`${base}/api/openapi.json`} target="_blank" class="font-mono no-underline transition-colors hover:text-zinc-400">OpenAPI</a>
+          <a href={`${base}/submit`} class="no-underline transition-colors hover:text-zinc-400">Submit</a>
+          <a href="https://github.com/shanjairaj7/agent-first-products" target="_blank" class="no-underline transition-colors hover:text-zinc-400">GitHub ↗</a>
         </div>
       </div>
     </footer>
