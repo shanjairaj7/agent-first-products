@@ -1,0 +1,32 @@
+{
+  "name": "Anthropic API",
+  "slug": "anthropic-api",
+  "description": "The Claude API — the AI backbone for most agent systems. Full programmatic access to Claude models with prompt caching, streaming, tool use, and the Files API.",
+  "website": "https://anthropic.com/api",
+  "logoUrl": "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/claude-color.png",
+  "category": "infrastructure",
+  "agentFirstScore": 10,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": false,
+    "model": "usage-based"
+  },
+  "tags": ["llm", "claude", "foundation-model", "tool-use", "streaming"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": true
+}

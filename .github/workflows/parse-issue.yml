@@ -1,0 +1,160 @@
+name: Parse Tool Submission
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  parse-and-pr:
+    if: github.event.label.name == 'tool-submission'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Parse issue and generate tool JSON
+        id: parse
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const body = issue.body || '';
+
+            function parseField(label) {
+              const regex = new RegExp(`### ${label}\\s*([\\s\\S]*?)(?=###|$)`, 'i');
+              const match = body.match(regex);
+              return match ? match[1].trim() : '';
+            }
+
+            function parseBool(label) {
+              return parseField(label).toLowerCase().includes('yes') ||
+                     parseField(label).toLowerCase().includes('[x]');
+            }
+
+            const name = parseField('Tool Name');
+            if (!name) {
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: issue.number,
+                body: '❌ Could not parse tool name. Please use the issue template.',
+              });
+              return;
+            }
+
+            const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+            const description = parseField('Description').slice(0, 300);
+            const website = parseField('Website URL');
+            const categoryRaw = parseField('Category').toLowerCase().trim();
+            const validCategories = ['search','automation','data','infrastructure','observability','compute','payments','auth','orchestration','browser','mcp-server'];
+            const category = validCategories.includes(categoryRaw) ? categoryRaw : 'infrastructure';
+            const scoreRaw = parseInt(parseField('Agent-First Score') || '5', 10);
+            const agentFirstScore = Math.min(10, Math.max(1, isNaN(scoreRaw) ? 5 : scoreRaw));
+
+            const bodyLower = body.toLowerCase();
+            const hasAPI =     bodyLower.includes('[x] has api') || bodyLower.includes('[x] rest api');
+            const hasSDK =     bodyLower.includes('[x] has sdk');
+            const hasCLI =     bodyLower.includes('[x] has cli');
+            const hasMCP =     bodyLower.includes('[x] has mcp');
+            const hasWebhook = bodyLower.includes('[x] has webhook');
+            const hasGraphQL = bodyLower.includes('[x] has graphql');
+            const hasFree =    bodyLower.includes('[x] free tier') || bodyLower.includes('[x] yes');
+
+            const signupRaw = parseField('Signup Method').toLowerCase();
+            const signupMethod = signupRaw.includes('api') ? 'api'
+              : signupRaw.includes('bot') ? 'website-bot-friendly'
+              : 'human-only';
+
+            const pricingRaw = parseField('Pricing Model').toLowerCase();
+            const pricingModels = ['usage-based','subscription','free','enterprise'];
+            const pricingModel = pricingModels.find(m => pricingRaw.includes(m)) || 'subscription';
+
+            const sdkRaw = parseField('SDK Languages');
+            const sdkLanguages = sdkRaw ? sdkRaw.split(',').map(s => s.trim().toLowerCase()).filter(Boolean) : [];
+
+            const mcpUrl = parseField('MCP Server URL') || null;
+            const tagsRaw = parseField('Tags');
+            const tags = tagsRaw ? tagsRaw.split(',').map(s => s.trim().toLowerCase().replace(/\s+/g,'-')).filter(Boolean) : [];
+
+            const tool = {
+              name,
+              slug,
+              description: description || `${name} — submitted via GitHub Issues.`,
+              website: website || 'https://example.com',
+              category,
+              agentFirstScore,
+              interfaces: { api: hasAPI, sdk: hasSDK, cli: hasCLI, mcp: hasMCP, webhook: hasWebhook, graphql: hasGraphQL },
+              signup: { method: signupMethod, hasAgentAuth: false, allowsBots: signupMethod !== 'human-only' },
+              allFeaturesViaAPI: hasAPI,
+              sdkLanguages,
+              mcpServerUrl: mcpUrl || null,
+              pricing: { hasFree, model: pricingModel },
+              tags,
+              addedAt: new Date().toISOString(),
+              verified: false,
+            };
+
+            const fs = require('fs');
+            const path = `src/data/tools/${slug}.json`;
+
+            if (fs.existsSync(path)) {
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: issue.number,
+                body: `⚠️ A tool with slug \`${slug}\` already exists. Please check if it's already in the registry.`,
+              });
+              return;
+            }
+
+            fs.writeFileSync(path, JSON.stringify(tool, null, 2) + '\n');
+            core.setOutput('slug', slug);
+            core.setOutput('path', path);
+            core.setOutput('name', name);
+            core.setOutput('issue_number', issue.number.toString());
+
+      - name: Create branch and PR
+        if: steps.parse.outputs.slug != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          SLUG="${{ steps.parse.outputs.slug }}"
+          NAME="${{ steps.parse.outputs.name }}"
+          ISSUE="${{ steps.parse.outputs.issue_number }}"
+          BRANCH="add-tool/${SLUG}"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "${BRANCH}"
+          git add "src/data/tools/${SLUG}.json"
+          git commit -m "feat(registry): add ${NAME}"
+          git push origin "${BRANCH}"
+
+          gh pr create \
+            --title "Add tool: ${NAME}" \
+            --body "$(cat <<EOF
+          Closes #${ISSUE}
+
+          Auto-generated from issue #${ISSUE}. Please review before merging:
+
+          - [ ] Verify \`agentFirstScore\` is accurate
+          - [ ] Confirm all \`interfaces\` flags are correct
+          - [ ] Add \`logoUrl\` if available
+          - [ ] Set \`verified: true\` if independently confirmed
+          - [ ] Run \`npm run validate\` locally to check schema
+          EOF
+          )" \
+            --base main \
+            --head "${BRANCH}"

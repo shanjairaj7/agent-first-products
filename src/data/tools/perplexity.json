@@ -1,0 +1,32 @@
+{
+  "name": "Perplexity API",
+  "slug": "perplexity",
+  "description": "AI-powered search API with real-time web indexing. Returns structured research answers with citations — the fastest way for agents to answer factual questions about current events.",
+  "website": "https://www.perplexity.ai/api",
+  "logoUrl": "https://avatars.githubusercontent.com/u/116907547?s=64",
+  "category": "search",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": false,
+    "cli": false,
+    "mcp": true,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": false,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": [],
+  "mcpServerUrl": "https://github.com/ppl-ai/modelcontextprotocol",
+  "pricing": {
+    "hasFree": false,
+    "model": "usage-based"
+  },
+  "tags": ["search", "research", "citations", "real-time", "fact-checking"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": true
+}

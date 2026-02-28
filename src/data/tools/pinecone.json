@@ -1,0 +1,32 @@
+{
+  "name": "Pinecone",
+  "slug": "pinecone",
+  "description": "Managed vector database for semantic search and agent long-term memory. Serverless with instant provisioning, hybrid search, and a dedicated Pinecone Assistant endpoint for RAG workloads.",
+  "website": "https://pinecone.io",
+  "logoUrl": "https://avatars.githubusercontent.com/u/54333248?s=64",
+  "category": "data",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript", "javascript", "java", "go"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["vector-database", "semantic-search", "rag", "embeddings", "agent-memory"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": true
+}

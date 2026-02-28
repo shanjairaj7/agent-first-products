@@ -1,0 +1,32 @@
+{
+  "name": "Bright Data",
+  "slug": "bright-data",
+  "description": "Enterprise web data platform with residential proxies, SERP API, and an Agent Browser with built-in CAPTCHA solving. Massive scale for production data pipelines powering AI training.",
+  "website": "https://brightdata.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/20947487?s=64",
+  "category": "data",
+  "agentFirstScore": 7,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": true,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "human-only",
+    "hasAgentAuth": false,
+    "allowsBots": false
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript", "javascript"],
+  "mcpServerUrl": "https://github.com/luminati-io/brightdata-mcp",
+  "pricing": {
+    "hasFree": false,
+    "model": "usage-based"
+  },
+  "tags": ["proxies", "web-scraping", "serp", "datasets", "enterprise"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": true
+}

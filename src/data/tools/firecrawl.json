@@ -1,0 +1,32 @@
+{
+  "name": "Firecrawl",
+  "slug": "firecrawl",
+  "description": "Web scraping and crawling API that returns LLM-ready markdown. Handles JavaScript rendering, pagination, and anti-bot measures. Has an Agent endpoint for multi-step autonomous browsing.",
+  "website": "https://firecrawl.dev",
+  "logoUrl": "https://avatars.githubusercontent.com/u/157971260?s=64",
+  "category": "data",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": true,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript", "go", "rust"],
+  "mcpServerUrl": "https://github.com/mendableai/firecrawl-mcp-server",
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["web-scraping", "crawling", "markdown", "llm-ready", "javascript-rendering"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": true
+}

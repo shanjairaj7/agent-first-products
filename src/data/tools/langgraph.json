@@ -1,0 +1,32 @@
+{
+  "name": "LangGraph",
+  "slug": "langgraph",
+  "description": "Low-level orchestration framework for building stateful, long-running agents as directed graphs. Handles durable state, human-in-the-loop, and multi-agent coordination with a hosted platform.",
+  "website": "https://langchain-ai.github.io/langgraph",
+  "logoUrl": "https://avatars.githubusercontent.com/u/126733545?s=64",
+  "category": "orchestration",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": true,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript"],
+  "mcpServerUrl": "https://github.com/langchain-ai/langgraph/tree/main/libs/langgraph-mcp",
+  "pricing": {
+    "hasFree": true,
+    "model": "subscription"
+  },
+  "tags": ["orchestration", "state-machine", "multi-agent", "durable-execution", "open-source"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": true
+}

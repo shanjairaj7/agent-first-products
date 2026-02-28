@@ -1,0 +1,32 @@
+{
+  "name": "Helicone",
+  "slug": "helicone",
+  "description": "Open-source LLM observability with one-line proxy integration. Agent session tracing, cost tracking, and prompt management — fully self-hostable, all features via API, no dashboard lock-in.",
+  "website": "https://helicone.ai",
+  "logoUrl": "https://avatars.githubusercontent.com/u/108263233?s=64",
+  "category": "observability",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": false,
+    "cli": false,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": false,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": [],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["observability", "proxy", "open-source", "cost-tracking", "self-hostable"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": true
+}

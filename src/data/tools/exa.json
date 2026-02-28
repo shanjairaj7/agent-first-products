@@ -1,0 +1,32 @@
+{
+  "name": "Exa",
+  "slug": "exa",
+  "description": "Neural search API for the web — finds the exact content AI agents need using embeddings-based retrieval instead of keywords. Built for machine consumption with clean structured responses.",
+  "website": "https://exa.ai",
+  "logoUrl": "https://avatars.githubusercontent.com/u/127428455?s=64",
+  "category": "search",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": true,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript"],
+  "mcpServerUrl": "https://github.com/exa-labs/exa-mcp-server",
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["semantic-search", "neural-search", "embeddings", "web-crawl"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": true
+}

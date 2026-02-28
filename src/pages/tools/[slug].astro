@@ -1,0 +1,227 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from '../../layouts/Base.astro';
+import { TOOLS, getToolBySlug } from '../../data/registry';
+import { ScoreRing } from '../../components/ScoreRing';
+import { InterfaceBadges } from '../../components/InterfaceBadges';
+import { SignupBadge } from '../../components/SignupBadge';
+import { CATEGORIES } from '../../data/schema';
+import { getScoreColor, getScoreLabel } from '../../lib/scores';
+
+export const getStaticPaths: GetStaticPaths = () =>
+  TOOLS.map(t => ({ params: { slug: t.slug } }));
+
+const { slug } = Astro.params;
+const tool = getToolBySlug(slug!);
+if (!tool) return Astro.redirect(import.meta.env.BASE_URL + '/');
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const scoreColor = getScoreColor(tool.agentFirstScore);
+const scoreLabel = getScoreLabel(tool.agentFirstScore);
+const catMeta = CATEGORIES.find(c => c.id === tool.category);
+
+const INTERFACE_CONFIG = {
+  api:     { label: 'REST API',   emoji: '🔗', desc: 'HTTP REST API available' },
+  sdk:     { label: 'SDK',        emoji: '📦', desc: `SDK available for ${tool.sdkLanguages.join(', ') || 'multiple languages'}` },
+  cli:     { label: 'CLI',        emoji: '⌨️', desc: 'Command-line interface available' },
+  mcp:     { label: 'MCP Server', emoji: '🔌', desc: 'Model Context Protocol server' },
+  webhook: { label: 'Webhooks',   emoji: '📡', desc: 'Webhook event delivery' },
+  graphql: { label: 'GraphQL',    emoji: '◈', desc: 'GraphQL API available' },
+} as const;
+---
+
+<Base
+  title={`${tool.name} — Agent First Products Registry`}
+  description={tool.description}
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10">
+    <!-- Back -->
+    <a href={`${base}/`} class="inline-flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-300 transition-colors no-underline mb-8">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="19" y1="12" x2="5" y2="12" />
+        <polyline points="12 19 5 12 12 5" />
+      </svg>
+      Registry
+    </a>
+
+    <!-- Header card -->
+    <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 mb-6">
+      <div class="flex items-start justify-between gap-4 flex-wrap">
+        <div class="flex items-center gap-4">
+          <!-- Logo -->
+          <div class="w-16 h-16 rounded-xl overflow-hidden bg-zinc-800 flex items-center justify-center flex-shrink-0">
+            {tool.logoUrl ? (
+              <img src={tool.logoUrl} alt={tool.name} width={64} height={64} class="w-full h-full object-contain" />
+            ) : (
+              <span class="text-3xl">{catMeta?.emoji ?? '🛠️'}</span>
+            )}
+          </div>
+          <div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <h1 class="text-2xl font-bold text-white">{tool.name}</h1>
+              {tool.verified && (
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-indigo-500/15 border border-indigo-500/30 text-[11px] font-medium text-indigo-400">
+                  ✓ Verified
+                </span>
+              )}
+            </div>
+            <div class="flex items-center gap-2 mt-1 flex-wrap">
+              <span class="text-sm text-zinc-400 capitalize">{catMeta?.emoji} {tool.category.replace('-', ' ')}</span>
+              {tool.pricing.hasFree && (
+                <span class="text-[11px] text-teal-400 font-medium border border-teal-500/25 bg-teal-500/10 px-2 py-0.5 rounded-full">
+                  Free tier
+                </span>
+              )}
+              <span class="text-[11px] text-zinc-500 capitalize border border-zinc-700 px-2 py-0.5 rounded-full">
+                {tool.pricing.model}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Score -->
+        <div class="flex flex-col items-center gap-1 flex-shrink-0">
+          <ScoreRing score={tool.agentFirstScore} size={72} showLabel client:load />
+          <p class="text-[10px] text-zinc-500 mt-0.5">Agent Score</p>
+        </div>
+      </div>
+
+      <p class="text-zinc-300 text-base leading-relaxed mt-6">{tool.description}</p>
+
+      <!-- CTA -->
+      <div class="flex items-center gap-3 mt-6 flex-wrap">
+        <a
+          href={tool.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white text-zinc-900 font-semibold text-sm hover:bg-zinc-100 transition-colors no-underline"
+        >
+          Visit {tool.name}
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
+          </svg>
+        </a>
+        {tool.mcpServerUrl && (
+          <a
+            href={tool.mcpServerUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 font-medium text-sm hover:bg-emerald-500/20 transition-colors no-underline"
+          >
+            <span>🔌</span> MCP Server
+          </a>
+        )}
+      </div>
+    </div>
+
+    <!-- Details grid -->
+    <div class="grid sm:grid-cols-2 gap-6 mb-6">
+      <!-- Interfaces -->
+      <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-5">
+        <h2 class="text-sm font-semibold text-white mb-4">Programmatic Access</h2>
+        <div class="flex flex-col gap-2.5">
+          {Object.entries(INTERFACE_CONFIG).map(([key, cfg]) => {
+            const active = tool.interfaces[key as keyof typeof tool.interfaces];
+            return (
+              <div class={`flex items-center gap-3 ${active ? '' : 'opacity-40'}`}>
+                <div class={`w-7 h-7 rounded-lg flex items-center justify-center text-sm flex-shrink-0 ${active ? 'bg-zinc-800' : 'bg-zinc-900'}`}>
+                  {cfg.emoji}
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class={`text-xs font-medium ${active ? 'text-white' : 'text-zinc-600'}`}>{cfg.label}</p>
+                  <p class="text-[10px] text-zinc-600">{cfg.desc}</p>
+                </div>
+                <div class={`w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 ${active ? 'bg-emerald-500/20' : 'bg-zinc-800'}`}>
+                  {active ? (
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+                      <path d="M1 4l2 2 4-4" stroke="#34d399" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  ) : (
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+                      <path d="M2 2l4 4M6 2L2 6" stroke="#52525b" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <!-- Signup & Auth -->
+      <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-5">
+        <h2 class="text-sm font-semibold text-white mb-4">Agent Signup & Auth</h2>
+
+        <div class="mb-4">
+          <p class="text-[10px] text-zinc-500 uppercase tracking-wider mb-2">Signup Method</p>
+          <SignupBadge method={tool.signup.method} />
+          <p class="text-xs text-zinc-500 mt-2">
+            {tool.signup.method === 'api' && 'Agents can register programmatically via API — no browser or human needed.'}
+            {tool.signup.method === 'website-bot-friendly' && 'Website signup works for bots — no CAPTCHA or email verification blocking agents.'}
+            {tool.signup.method === 'human-only' && 'Requires human verification. Agents need pre-provisioned credentials or a human to create the account.'}
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-2 mt-4 pt-4 border-t border-zinc-800">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-zinc-400">Agent authentication</span>
+            <span class={`text-xs font-medium ${tool.signup.hasAgentAuth ? 'text-emerald-400' : 'text-zinc-600'}`}>
+              {tool.signup.hasAgentAuth ? '✓ Yes' : '✗ No'}
+            </span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-zinc-400">Allows bots</span>
+            <span class={`text-xs font-medium ${tool.signup.allowsBots ? 'text-emerald-400' : 'text-red-400'}`}>
+              {tool.signup.allowsBots ? '✓ Yes' : '✗ No'}
+            </span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-zinc-400">All features via API</span>
+            <span class={`text-xs font-medium ${tool.allFeaturesViaAPI ? 'text-emerald-400' : 'text-amber-400'}`}>
+              {tool.allFeaturesViaAPI ? '✓ Yes' : '~ Partial'}
+            </span>
+          </div>
+        </div>
+
+        {tool.sdkLanguages.length > 0 && (
+          <div class="mt-4 pt-4 border-t border-zinc-800">
+            <p class="text-[10px] text-zinc-500 uppercase tracking-wider mb-2">SDK Languages</p>
+            <div class="flex flex-wrap gap-1">
+              {tool.sdkLanguages.map(lang => (
+                <span class="text-[11px] font-mono bg-zinc-800 text-zinc-300 px-2 py-1 rounded-md capitalize">
+                  {lang}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+
+    <!-- Tags -->
+    {tool.tags.length > 0 && (
+      <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-5 mb-6">
+        <h2 class="text-sm font-semibold text-white mb-3">Tags</h2>
+        <div class="flex flex-wrap gap-1.5">
+          {tool.tags.map(tag => (
+            <span class="text-[11px] font-mono text-zinc-400 bg-zinc-800/60 border border-zinc-700/50 px-2 py-1 rounded-md">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- API example -->
+    <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-5">
+      <h2 class="text-sm font-semibold text-white mb-3">Get this via API</h2>
+      <div class="bg-zinc-950 rounded-lg p-3 font-mono text-[12px] text-zinc-400 overflow-x-auto">
+        <p class="text-zinc-600"># Fetch this tool</p>
+        <p>curl https://shanjairaj7.github.io/agent-first-products/api/tools.json \</p>
+        <p class="pl-4">{`| jq '.[] | select(.slug == "${tool.slug}")'`}</p>
+      </div>
+    </div>
+  </div>
+</Base>

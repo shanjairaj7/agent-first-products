@@ -1,0 +1,32 @@
+{
+  "name": "LangSmith",
+  "slug": "langsmith",
+  "description": "LLM observability platform for tracing, evaluating, and monitoring AI agent runs. Deep LangChain integration with full REST API access for programmatic trace analysis and dataset management.",
+  "website": "https://smith.langchain.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/126733545?s=64",
+  "category": "observability",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript", "javascript"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "subscription"
+  },
+  "tags": ["observability", "tracing", "evaluation", "langchain", "monitoring"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": true
+}

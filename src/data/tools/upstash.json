@@ -1,0 +1,32 @@
+{
+  "name": "Upstash",
+  "slug": "upstash",
+  "description": "Serverless Redis and Kafka with per-request pricing — zero cold starts, HTTP REST API for agents that can't maintain persistent connections. 100% programmatic provisioning via API.",
+  "website": "https://upstash.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/70108611?s=64",
+  "category": "infrastructure",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "api",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["typescript", "python", "javascript", "go", "rust", "java"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["redis", "kafka", "serverless", "key-value", "rate-limiting", "agent-memory"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": true
+}

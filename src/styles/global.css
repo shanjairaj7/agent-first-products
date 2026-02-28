@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-zinc-950 text-zinc-100 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  * {
+    @apply border-zinc-800;
+  }
+
+  ::selection {
+    @apply bg-indigo-500/30 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-zinc-950;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-zinc-700 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-zinc-500;
+  }
+}
+
+@layer components {
+  /* Badge base */
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-mono font-medium border;
+  }
+
+  /* Card base */
+  .card {
+    @apply bg-zinc-900 border border-zinc-800 rounded-xl transition-all duration-150;
+  }
+  .card:hover {
+    @apply border-zinc-600 -translate-y-0.5 shadow-lg shadow-black/30;
+  }
+
+  /* Input */
+  .input {
+    @apply bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 text-sm text-white
+           placeholder:text-zinc-500 focus:outline-none focus:ring-1 focus:ring-indigo-500
+           focus:border-indigo-500 transition-colors;
+  }
+}

@@ -1,0 +1,78 @@
+---
+import Base from '../layouts/Base.astro';
+
+const REPO = 'shanjairaj7/agent-first-products';
+const issueUrl = `https://github.com/${REPO}/issues/new?template=add-tool.yml&labels=tool-submission`;
+---
+
+<Base
+  title="Submit a Tool — Agent First Products Registry"
+  description="Submit an agent-first tool to be included in the registry."
+>
+  <div class="max-w-2xl mx-auto px-4 sm:px-6 py-16">
+    <!-- Header -->
+    <div class="mb-10">
+      <h1 class="text-2xl font-bold text-white mb-3">Submit a Tool</h1>
+      <p class="text-zinc-400 text-base leading-relaxed">
+        Know a tool that deserves to be in the registry? Submissions happen via GitHub Issues — an automated
+        workflow parses your submission and opens a pull request.
+      </p>
+    </div>
+
+    <!-- Criteria -->
+    <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 mb-8">
+      <h2 class="text-sm font-semibold text-white mb-4">What qualifies?</h2>
+      <div class="flex flex-col gap-3">
+        {[
+          { icon: '⚡', text: 'Has an API, SDK, CLI, or MCP server — not just a web dashboard' },
+          { icon: '🤖', text: 'Agents can use the core feature set programmatically' },
+          { icon: '🔑', text: 'Provides machine-readable authentication (API keys, OAuth flows, M2M tokens)' },
+          { icon: '📦', text: 'Is a production-ready tool or service — not a demo or prototype' },
+        ].map(item => (
+          <div class="flex items-start gap-3">
+            <span class="text-lg flex-shrink-0">{item.icon}</span>
+            <p class="text-sm text-zinc-400">{item.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Scoring guide -->
+    <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 mb-8">
+      <h2 class="text-sm font-semibold text-white mb-4">Agent-First Score guide</h2>
+      <div class="flex flex-col gap-2">
+        {[
+          { range: '9–10', color: 'text-emerald-400', label: 'Native', desc: 'Built exclusively for agents — API-only, no dashboard needed, API signup' },
+          { range: '7–8',  color: 'text-amber-400',   label: 'Strong', desc: 'Core features via API, dashboard optional, agent auth supported' },
+          { range: '5–6',  color: 'text-orange-400',  label: 'Partial', desc: 'Some features need the dashboard, no agent-specific auth' },
+          { range: '1–4',  color: 'text-red-400',     label: 'Limited', desc: 'API available but most value requires human interaction' },
+        ].map(row => (
+          <div class="flex items-start gap-3 py-1.5 border-b border-zinc-800/50 last:border-0">
+            <span class={`text-sm font-bold font-mono w-12 flex-shrink-0 ${row.color}`}>{row.range}</span>
+            <span class={`text-xs font-medium w-14 flex-shrink-0 ${row.color}`}>{row.label}</span>
+            <p class="text-xs text-zinc-500">{row.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <a
+      href={issueUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500
+             text-white font-semibold text-sm transition-colors no-underline"
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10" />
+        <line x1="12" y1="8" x2="12" y2="16" />
+        <line x1="8" y1="12" x2="16" y2="12" />
+      </svg>
+      Open submission on GitHub
+    </a>
+    <p class="text-xs text-zinc-600 text-center mt-3">
+      A maintainer will review and auto-generate a PR from your issue.
+    </p>
+  </div>
+</Base>

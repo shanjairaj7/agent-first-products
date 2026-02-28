@@ -1,0 +1,32 @@
+{
+  "name": "Clerk",
+  "slug": "clerk",
+  "description": "User authentication platform with machine-to-machine (M2M) tokens — designed for services that agents need to call on behalf of users. Full API and SDK, programmatic user/org management.",
+  "website": "https://clerk.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/49538330?s=64",
+  "category": "auth",
+  "agentFirstScore": 7,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["typescript", "javascript", "python", "go", "ruby"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "subscription"
+  },
+  "tags": ["auth", "m2m-tokens", "jwt", "oauth", "user-management"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": true
+}

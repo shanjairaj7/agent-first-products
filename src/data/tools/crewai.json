@@ -1,0 +1,32 @@
+{
+  "name": "CrewAI",
+  "slug": "crewai",
+  "description": "Role-based multi-agent orchestration framework. Define agent crews with goals and tools, run them autonomously. 4,000+ tool integrations via Composio, async execution, MCP server support.",
+  "website": "https://crewai.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/159383026?s=64",
+  "category": "orchestration",
+  "agentFirstScore": 7,
+  "interfaces": {
+    "api": false,
+    "sdk": true,
+    "cli": true,
+    "mcp": true,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": false,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": false,
+  "sdkLanguages": ["python"],
+  "mcpServerUrl": "https://docs.crewai.com/concepts/mcp",
+  "pricing": {
+    "hasFree": true,
+    "model": "subscription"
+  },
+  "tags": ["multi-agent", "roles", "autonomous", "framework", "open-source"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": true
+}

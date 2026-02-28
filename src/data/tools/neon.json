@@ -1,0 +1,32 @@
+{
+  "name": "Neon",
+  "slug": "neon",
+  "description": "Serverless Postgres with instant branching and scale-to-zero. Over 80% of Neon databases are created by agents — supports full database provisioning, branching, and querying via REST API.",
+  "website": "https://neon.tech",
+  "logoUrl": "https://avatars.githubusercontent.com/u/77690634?s=64",
+  "category": "infrastructure",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": true,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "api",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["typescript", "python", "javascript"],
+  "mcpServerUrl": "https://github.com/neondatabase/mcp-server-neon",
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["postgres", "serverless", "branching", "database", "sql"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": true
+}

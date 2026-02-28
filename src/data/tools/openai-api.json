@@ -1,0 +1,32 @@
+{
+  "name": "OpenAI API",
+  "slug": "openai-api",
+  "description": "GPT-4o, o3, and Embeddings via REST API. Built-in tool calling, assistants, structured outputs, and the Responses API — the platform most agent frameworks target first.",
+  "website": "https://platform.openai.com",
+  "logoUrl": "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/openai.png",
+  "category": "infrastructure",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript", "javascript", "go", "java", "rust"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": false,
+    "model": "usage-based"
+  },
+  "tags": ["llm", "gpt-4o", "embeddings", "tool-calling", "structured-outputs"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": true
+}

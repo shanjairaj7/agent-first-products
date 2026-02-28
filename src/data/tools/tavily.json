@@ -1,0 +1,32 @@
+{
+  "name": "Tavily",
+  "slug": "tavily",
+  "description": "Real-time web search API purpose-built for AI agents and RAG pipelines. Returns structured, citable results optimized for LLM consumption — not human reading.",
+  "website": "https://tavily.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/131060032?s=64",
+  "category": "search",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": true,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript", "javascript"],
+  "mcpServerUrl": "https://github.com/tavily-ai/tavily-mcp",
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["web-search", "rag", "research", "real-time", "citations"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": true
+}

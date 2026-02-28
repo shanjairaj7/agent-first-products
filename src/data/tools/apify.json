@@ -1,0 +1,32 @@
+{
+  "name": "Apify",
+  "slug": "apify",
+  "description": "Serverless web scraping platform with 4,000+ pre-built Actors for any website. Full API for scheduling, running, and retrieving results. Native MCP integration and CrewAI/LangChain support.",
+  "website": "https://apify.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/24586296?s=64",
+  "category": "automation",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": true,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript", "javascript"],
+  "mcpServerUrl": "https://github.com/apify/actors-mcp-server",
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["web-scraping", "actors", "automation", "crawling", "data-extraction"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": true
+}
