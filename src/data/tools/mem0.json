@@ -1,0 +1,32 @@
+{
+  "name": "Mem0",
+  "slug": "mem0",
+  "description": "Persistent memory layer for AI agents that stores and retrieves memories across sessions. Manages user preferences, facts, and context via API and Python/JS SDKs with an MCP server available.",
+  "website": "https://mem0.ai",
+  "logoUrl": "https://avatars.githubusercontent.com/u/137926057?s=64",
+  "category": "data",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": true,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript"],
+  "mcpServerUrl": "https://github.com/mem0ai/mem0/tree/main/mem0-mcp",
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["memory", "personalization", "agents", "open-source"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

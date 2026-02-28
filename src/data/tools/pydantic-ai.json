@@ -1,0 +1,32 @@
+{
+  "name": "PydanticAI",
+  "slug": "pydantic-ai",
+  "description": "Python agent framework by the Pydantic team with type-safe agents, dependency injection, tool use, and streaming. Supports OpenAI, Anthropic, Gemini, and other model providers. MCP client support included.",
+  "website": "https://ai.pydantic.dev",
+  "logoUrl": "https://avatars.githubusercontent.com/u/110818415?s=64",
+  "category": "orchestration",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": false,
+    "sdk": true,
+    "cli": false,
+    "mcp": true,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": false,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "free"
+  },
+  "tags": ["open-source", "agent-framework", "type-safe", "python", "pydantic"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

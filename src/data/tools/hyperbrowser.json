@@ -1,0 +1,32 @@
+{
+  "name": "Hyperbrowser",
+  "slug": "hyperbrowser",
+  "description": "Cloud browser for AI agents with an API to start sessions, navigate pages, and extract data. Includes computer use support and an MCP server for direct agent integration.",
+  "website": "https://hyperbrowser.ai",
+  "logoUrl": "https://avatars.githubusercontent.com/u/170000777?s=64",
+  "category": "browser",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": true,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript", "javascript"],
+  "mcpServerUrl": "https://github.com/hyperbrowserai/mcp",
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["browser-api", "computer-use", "sessions"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

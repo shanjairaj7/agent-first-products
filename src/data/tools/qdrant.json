@@ -1,0 +1,32 @@
+{
+  "name": "Qdrant",
+  "slug": "qdrant",
+  "description": "Open source vector database with payload filtering for hybrid search. Available as cloud managed or self-hosted with full REST/gRPC API, Python/JS/Rust/Go SDKs, and an official MCP server.",
+  "website": "https://qdrant.tech",
+  "logoUrl": "https://avatars.githubusercontent.com/u/73504361?s=64",
+  "category": "data",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": true,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript", "rust", "go"],
+  "mcpServerUrl": "https://github.com/qdrant/mcp-server-qdrant",
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["vector-db", "open-source", "similarity-search", "rust"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Fly.io",
+  "slug": "fly-io",
+  "description": "Deploy Docker containers globally with a CLI-first workflow using flyctl and a REST Machines API for programmatic VM lifecycle management. Edge networking with low-latency global deployment.",
+  "website": "https://fly.io",
+  "logoUrl": "https://avatars.githubusercontent.com/u/22525303?s=64",
+  "category": "infrastructure",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": false,
+    "cli": true,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": [],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["deployment", "docker", "edge", "machines-api", "global"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

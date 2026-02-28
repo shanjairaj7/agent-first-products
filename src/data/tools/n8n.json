@@ -1,0 +1,32 @@
+{
+  "name": "n8n",
+  "slug": "n8n",
+  "description": "Open source workflow automation with 400+ integrations and AI agent nodes. Self-hostable with REST API, CLI, and code nodes for custom logic. Webhook-driven event processing.",
+  "website": "https://n8n.io",
+  "logoUrl": "https://avatars.githubusercontent.com/u/45487711?s=64",
+  "category": "automation",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": false,
+    "cli": true,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": false,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["javascript"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "subscription"
+  },
+  "tags": ["open-source", "workflow-automation", "self-hostable", "integrations", "ai-agents"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

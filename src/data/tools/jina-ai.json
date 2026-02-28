@@ -1,0 +1,32 @@
+{
+  "name": "Jina AI",
+  "slug": "jina-ai",
+  "description": "Reader API converts any URL to LLM-ready markdown instantly. Also provides embeddings, reranker, and classifier APIs with a generous free tier for AI agent and RAG pipeline integration.",
+  "website": "https://jina.ai",
+  "logoUrl": "https://avatars.githubusercontent.com/u/60539444?s=64",
+  "category": "search",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "javascript"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["reader-api", "embeddings", "reranker", "markdown-conversion"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

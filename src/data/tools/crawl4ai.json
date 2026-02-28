@@ -1,0 +1,32 @@
+{
+  "name": "Crawl4AI",
+  "slug": "crawl4ai",
+  "description": "Open source async web crawler built for LLMs and AI agents. Returns structured markdown content, supports JSON extraction and screenshot capture, with MCP server and CLI included.",
+  "website": "https://crawl4ai.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/165337399?s=64",
+  "category": "browser",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": true,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": false,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python"],
+  "mcpServerUrl": "https://github.com/unclecode/crawl4ai/tree/main/mcp",
+  "pricing": {
+    "hasFree": true,
+    "model": "free"
+  },
+  "tags": ["open-source", "web-crawling", "markdown", "async", "llm-ready"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

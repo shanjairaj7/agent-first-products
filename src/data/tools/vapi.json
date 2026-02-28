@@ -1,0 +1,32 @@
+{
+  "name": "Vapi",
+  "slug": "vapi",
+  "description": "Voice AI infrastructure for building, testing, and deploying voice agents via REST API. Real-time transcription and LLM integration for phone-based AI agents. Python and TypeScript SDKs. YC S23.",
+  "website": "https://vapi.ai",
+  "logoUrl": "https://avatars.githubusercontent.com/u/124702902?s=64",
+  "category": "automation",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["voice-ai", "phone-agents", "real-time", "yc", "telephony"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

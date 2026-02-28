@@ -1,0 +1,32 @@
+{
+  "name": "Twilio",
+  "slug": "twilio",
+  "description": "Communications API platform for SMS, voice, email, and WhatsApp. REST API with SDKs in 7 languages and extensive webhook support for building programmable communication agents.",
+  "website": "https://www.twilio.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/109142?s=64",
+  "category": "automation",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "javascript", "java", "ruby", "php", "go"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["sms", "voice", "whatsapp", "communications-api"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

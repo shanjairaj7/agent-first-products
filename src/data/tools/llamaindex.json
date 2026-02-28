@@ -1,0 +1,32 @@
+{
+  "name": "LlamaIndex",
+  "slug": "llamaindex",
+  "description": "Open source data framework for LLM applications. Connect to data sources, parse documents, and build RAG pipelines with Python and TypeScript SDKs. Extensive integrations with vector stores.",
+  "website": "https://www.llamaindex.ai",
+  "logoUrl": "https://avatars.githubusercontent.com/u/130722866?s=64",
+  "category": "orchestration",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": false,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": false,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "free"
+  },
+  "tags": ["open-source", "rag", "data-framework", "agents"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Chroma",
+  "slug": "chromadb",
+  "description": "Open source embedding database supporting in-process and client/server modes. Zero configuration required with Python and JavaScript SDKs, designed specifically for AI application development.",
+  "website": "https://www.trychroma.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/107552506?s=64",
+  "category": "data",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": true,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": false,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript", "javascript"],
+  "mcpServerUrl": "https://github.com/chroma-core/chroma-mcp",
+  "pricing": {
+    "hasFree": true,
+    "model": "free"
+  },
+  "tags": ["open-source", "embeddings", "vector-db", "in-process"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

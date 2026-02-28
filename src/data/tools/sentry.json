@@ -1,0 +1,32 @@
+{
+  "name": "Sentry",
+  "slug": "sentry",
+  "description": "Error tracking, performance monitoring, and session replay with SDKs in 100+ platforms. REST API, CLI, MCP server for AI error analysis, and webhooks for automated agent error workflows.",
+  "website": "https://sentry.io",
+  "logoUrl": "https://avatars.githubusercontent.com/u/1396951?s=64",
+  "category": "observability",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": true,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "javascript", "java", "go", "ruby"],
+  "mcpServerUrl": "https://github.com/getsentry/sentry-mcp",
+  "pricing": {
+    "hasFree": true,
+    "model": "subscription"
+  },
+  "tags": ["error-tracking", "performance", "open-source", "apm"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

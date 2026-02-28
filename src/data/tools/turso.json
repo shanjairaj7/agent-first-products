@@ -1,0 +1,32 @@
+{
+  "name": "Turso",
+  "slug": "turso",
+  "description": "SQLite at the edge with multi-tenant support. Instant per-tenant database creation via REST API, libsql protocol, and CLI. TypeScript, Python, Rust, and Go SDKs for easy agent integration.",
+  "website": "https://turso.tech",
+  "logoUrl": "https://avatars.githubusercontent.com/u/139791384?s=64",
+  "category": "infrastructure",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["typescript", "python", "rust", "go"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["sqlite", "edge", "multi-tenant", "libsql"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

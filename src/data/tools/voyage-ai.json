@@ -1,0 +1,32 @@
+{
+  "name": "Voyage AI",
+  "slug": "voyage-ai",
+  "description": "State-of-the-art embedding and reranking models for RAG applications. REST API and Python SDK with specialized domain models for code, finance, and legal use cases. Free tier available.",
+  "website": "https://www.voyageai.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/130565773?s=64",
+  "category": "compute",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["embeddings", "reranking", "rag", "domain-specific"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

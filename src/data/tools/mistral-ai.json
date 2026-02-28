@@ -1,0 +1,32 @@
+{
+  "name": "Mistral AI",
+  "slug": "mistral-ai",
+  "description": "European AI lab providing fast and efficient LLM models with chat, embeddings, and function calling. OpenAI-compatible API with Python and JavaScript SDKs for easy agent integration.",
+  "website": "https://mistral.ai",
+  "logoUrl": "https://avatars.githubusercontent.com/u/132372032?s=64",
+  "category": "compute",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "javascript"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": false,
+    "model": "usage-based"
+  },
+  "tags": ["llm", "function-calling", "european", "efficient"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

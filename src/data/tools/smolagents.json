@@ -1,0 +1,32 @@
+{
+  "name": "smolagents",
+  "slug": "smolagents",
+  "description": "Minimal agent framework by Hugging Face where code agents write and execute Python to complete tasks. Small codebase designed for easy extension with MCP support for tool integration.",
+  "website": "https://huggingface.co/docs/smolagents",
+  "logoUrl": "https://avatars.githubusercontent.com/u/25720743?s=64",
+  "category": "orchestration",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": false,
+    "sdk": true,
+    "cli": false,
+    "mcp": true,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": false,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "free"
+  },
+  "tags": ["open-source", "code-agents", "hugging-face", "minimal"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Weights & Biases",
+  "slug": "weights-biases",
+  "description": "ML experiment tracking, dataset versioning, and model registry platform. Python SDK, REST API, and CLI included. LLM tracing via Weave for monitoring agent and LLM application performance.",
+  "website": "https://wandb.ai",
+  "logoUrl": "https://avatars.githubusercontent.com/u/26401354?s=64",
+  "category": "observability",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "javascript"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "subscription"
+  },
+  "tags": ["ml-tracking", "experiment-tracking", "llm-tracing", "weave"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

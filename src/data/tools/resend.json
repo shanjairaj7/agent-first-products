@@ -1,0 +1,32 @@
+{
+  "name": "Resend",
+  "slug": "resend",
+  "description": "Email API built for developers with React Email templates and clean REST API design. SDKs in TypeScript, Python, Ruby, PHP, Go, and Java with a generous free tier. YC-backed.",
+  "website": "https://resend.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/108510645?s=64",
+  "category": "automation",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["typescript", "python", "ruby", "php", "go", "java"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["email-api", "react-email", "developer-first", "yc"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

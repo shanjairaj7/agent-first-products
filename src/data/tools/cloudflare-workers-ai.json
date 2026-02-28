@@ -1,0 +1,32 @@
+{
+  "name": "Cloudflare Workers AI",
+  "slug": "cloudflare-workers-ai",
+  "description": "Run LLM inference at the edge via Cloudflare Workers. Includes AI Gateway for LLM proxying, R2 object storage, D1 SQLite, and KV storage — all accessible via REST API, Wrangler CLI, and MCP server.",
+  "website": "https://developers.cloudflare.com/workers-ai/",
+  "logoUrl": "https://avatars.githubusercontent.com/u/314135?s=64",
+  "category": "infrastructure",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": true,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["typescript", "javascript", "python"],
+  "mcpServerUrl": "https://github.com/cloudflare/mcp-server-cloudflare",
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["edge", "inference", "r2", "kv", "d1", "ai-gateway"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

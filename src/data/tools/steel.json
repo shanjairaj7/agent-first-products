@@ -1,0 +1,32 @@
+{
+  "name": "Steel",
+  "slug": "steel",
+  "description": "Cloud browser infrastructure purpose-built for AI agents. Provides sessions, proxies, and CAPTCHA solving via API with no headless browser setup required for running browser-based agents.",
+  "website": "https://steel.dev",
+  "logoUrl": "https://avatars.githubusercontent.com/u/162726649?s=64",
+  "category": "browser",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript", "javascript"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["browser-sessions", "proxies", "captcha-solving", "headless"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

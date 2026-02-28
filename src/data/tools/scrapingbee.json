@@ -1,0 +1,31 @@
+{
+  "name": "ScrapingBee",
+  "slug": "scrapingbee",
+  "description": "Web scraping API with JavaScript rendering and proxy rotation. Provides a REST API with Python, Node, Ruby, and PHP SDKs for handling anti-bot measures and dynamic content extraction.",
+  "website": "https://www.scrapingbee.com",
+  "category": "browser",
+  "agentFirstScore": 7,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": false,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "javascript", "ruby", "php"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["scraping", "proxy", "js-rendering"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

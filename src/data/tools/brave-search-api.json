@@ -1,0 +1,32 @@
+{
+  "name": "Brave Search API",
+  "slug": "brave-search-api",
+  "description": "Independent web search with a privacy focus. Fully API-accessible with no scraping required, free tier includes 2k requests per month. Official MCP server available for agent integration.",
+  "website": "https://api.search.brave.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/98565736?s=64",
+  "category": "search",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": true,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "javascript"],
+  "mcpServerUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search",
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["web-search", "privacy", "independent-index"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

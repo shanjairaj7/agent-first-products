@@ -1,0 +1,32 @@
+{
+  "name": "Replicate",
+  "slug": "replicate",
+  "description": "Run ML models via API with over 10000 models for image, video, audio, and code generation. Simple REST API with Python, Node, and Go SDKs — no GPU setup or infrastructure management required.",
+  "website": "https://replicate.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/60410876?s=64",
+  "category": "infrastructure",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "javascript", "go"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": false,
+    "model": "usage-based"
+  },
+  "tags": ["ml-models", "image-generation", "inference", "gpu-cloud"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

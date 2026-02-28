@@ -1,0 +1,32 @@
+{
+  "name": "Inngest",
+  "slug": "inngest",
+  "description": "Background jobs and durable workflows as code with SDK-first event-driven design. Supports fan-out, step functions, and automatic retries. TypeScript and Python SDKs. Open source and self-hostable.",
+  "website": "https://www.inngest.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/74215852?s=64",
+  "category": "orchestration",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["typescript", "python"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["background-jobs", "step-functions", "open-source", "event-driven", "durable"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

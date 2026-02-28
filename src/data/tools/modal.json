@@ -1,0 +1,32 @@
+{
+  "name": "Modal",
+  "slug": "modal",
+  "description": "Serverless cloud for Python supporting GPU workloads, batch jobs, and web endpoints. Deploy directly from code using decorators via CLI and SDK — no dashboard interaction required.",
+  "website": "https://modal.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/75660786?s=64",
+  "category": "infrastructure",
+  "agentFirstScore": 10,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "api",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["serverless", "gpu", "python", "yc", "functions", "batch"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

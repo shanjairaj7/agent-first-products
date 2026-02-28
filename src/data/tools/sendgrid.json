@@ -1,0 +1,32 @@
+{
+  "name": "SendGrid",
+  "slug": "sendgrid",
+  "description": "Email delivery platform by Twilio for transactional and bulk email. REST API with SDKs in Python, JavaScript, Java, PHP, Ruby, and Go. Requires human account verification for setup.",
+  "website": "https://sendgrid.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/181234?s=64",
+  "category": "automation",
+  "agentFirstScore": 7,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "human-only",
+    "hasAgentAuth": false,
+    "allowsBots": false
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "javascript", "java", "php", "ruby", "go"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["email", "bulk-email", "transactional", "twilio"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

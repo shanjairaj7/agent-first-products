@@ -1,0 +1,32 @@
+{
+  "name": "AgentOps",
+  "slug": "agentops",
+  "description": "Observability and analytics platform built specifically for AI agents. Provides session replays, cost tracking, and error detection via Python SDK and REST API. YC-backed with a free tier.",
+  "website": "https://agentops.ai",
+  "logoUrl": "https://avatars.githubusercontent.com/u/129735845?s=64",
+  "category": "observability",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "javascript"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["agent-monitoring", "session-replay", "cost-tracking", "yc"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

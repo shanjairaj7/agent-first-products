@@ -1,0 +1,32 @@
+{
+  "name": "Auth0",
+  "slug": "auth0",
+  "description": "Identity platform by Okta supporting OAuth, OIDC, and SAML. Management API for programmatic user management with SDKs in Python, JavaScript, Java, Go, and Ruby. Some features require dashboard setup.",
+  "website": "https://auth0.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/2824157?s=64",
+  "category": "auth",
+  "agentFirstScore": 7,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "human-only",
+    "hasAgentAuth": true,
+    "allowsBots": false
+  },
+  "allFeaturesViaAPI": false,
+  "sdkLanguages": ["python", "javascript", "java", "go", "ruby"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "subscription"
+  },
+  "tags": ["identity", "oauth", "sso", "enterprise", "okta"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

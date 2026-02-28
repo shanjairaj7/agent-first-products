@@ -1,0 +1,32 @@
+{
+  "name": "Fireworks AI",
+  "slug": "fireworks-ai",
+  "description": "Fast LLM inference API with function calling and JSON mode. Sub-100ms latency with 100+ open source models available. Python and Node SDKs. YC W23 with bot-friendly signup.",
+  "website": "https://fireworks.ai",
+  "logoUrl": "https://avatars.githubusercontent.com/u/124983430?s=64",
+  "category": "compute",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "javascript"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["llm-inference", "fast", "function-calling", "yc", "open-models"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

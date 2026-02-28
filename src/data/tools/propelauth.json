@@ -1,0 +1,32 @@
+{
+  "name": "PropelAuth",
+  "slug": "propelauth",
+  "description": "Auth for B2B SaaS with multi-tenant organizations, role-based access control, and full API management. Webhook notifications and Python/Node SDKs for programmatic user and org management.",
+  "website": "https://www.propelauth.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/96398720?s=64",
+  "category": "auth",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "javascript"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "subscription"
+  },
+  "tags": ["b2b-auth", "multi-tenant", "organizations", "roles"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Temporal",
+  "slug": "temporal",
+  "description": "Durable execution engine for long-running workflows. Define workflows as code with automatic retries and state persistence. SDKs in Python, Go, Java, TypeScript, and PHP with open source core.",
+  "website": "https://temporal.io",
+  "logoUrl": "https://avatars.githubusercontent.com/u/56493103?s=64",
+  "category": "orchestration",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "go", "java", "typescript", "php"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["workflow-orchestration", "durable-execution", "open-source", "retry"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

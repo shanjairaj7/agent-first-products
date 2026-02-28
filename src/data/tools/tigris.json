@@ -1,0 +1,32 @@
+{
+  "name": "Tigris",
+  "slug": "tigris",
+  "description": "Globally distributed object storage with S3-compatible API. No region configuration needed with automatic replication. CLI and TypeScript, Python, Go SDKs available with a free tier.",
+  "website": "https://www.tigrisdata.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/97783285?s=64",
+  "category": "infrastructure",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["typescript", "python", "go"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["object-storage", "s3-compatible", "distributed", "yc"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

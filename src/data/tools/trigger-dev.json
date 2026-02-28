@@ -1,0 +1,32 @@
+{
+  "name": "Trigger.dev",
+  "slug": "trigger-dev",
+  "description": "Open source background jobs platform with a code-first approach for long-running tasks and scheduled jobs. TypeScript SDK with self-hosting support and automatic retries. YC-backed.",
+  "website": "https://trigger.dev",
+  "logoUrl": "https://avatars.githubusercontent.com/u/95297378?s=64",
+  "category": "orchestration",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["typescript"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["background-jobs", "open-source", "long-running", "typescript", "yc"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

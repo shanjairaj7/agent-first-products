@@ -1,0 +1,32 @@
+{
+  "name": "LlamaParse",
+  "slug": "llamaparse",
+  "description": "Proprietary document parser by LlamaIndex for extracting structured data from complex PDFs containing tables and images. Accessible via REST API and Python/TypeScript SDKs with a free tier.",
+  "website": "https://cloud.llamaindex.ai",
+  "logoUrl": "https://avatars.githubusercontent.com/u/130722866?s=64",
+  "category": "data",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["document-parsing", "pdf", "tables", "rag"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

@@ -1,0 +1,32 @@
+{
+  "name": "WorkOS",
+  "slug": "workos",
+  "description": "Enterprise-ready auth platform for SSO, SCIM provisioning, MFA, and admin portal. REST API with Node, Python, Ruby, and Go SDKs for rapid enterprise authentication integration.",
+  "website": "https://workos.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/47638274?s=64",
+  "category": "auth",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["typescript", "python", "ruby", "go"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "subscription"
+  },
+  "tags": ["sso", "scim", "enterprise", "saml", "oidc"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

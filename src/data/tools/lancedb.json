@@ -1,0 +1,32 @@
+{
+  "name": "LanceDB",
+  "slug": "lancedb",
+  "description": "Embedded multimodal vector database with columnar storage using the Lance format. No server required. Supports Python, JavaScript, and Rust with free open source licensing.",
+  "website": "https://lancedb.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/104893010?s=64",
+  "category": "data",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": false,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": false,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript", "rust"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "free"
+  },
+  "tags": ["open-source", "embedded", "multimodal", "columnar", "vector-db"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

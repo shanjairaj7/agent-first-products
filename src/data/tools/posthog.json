@@ -1,0 +1,32 @@
+{
+  "name": "PostHog",
+  "slug": "posthog",
+  "description": "Open source product analytics, session recording, and feature flags platform. Full REST API with Python, Node, PHP, Ruby, and Go SDKs. Self-hostable with a generous free cloud tier.",
+  "website": "https://posthog.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/63120248?s=64",
+  "category": "observability",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "javascript", "php", "ruby", "go"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["product-analytics", "feature-flags", "open-source", "session-recording"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

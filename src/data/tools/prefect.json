@@ -1,0 +1,32 @@
+{
+  "name": "Prefect",
+  "slug": "prefect",
+  "description": "Python workflow orchestration with code-first pipeline definitions. REST API, Python SDK, and CLI for building and monitoring data pipelines. Cloud and self-hosted deployment options.",
+  "website": "https://www.prefect.io",
+  "logoUrl": "https://avatars.githubusercontent.com/u/39270919?s=64",
+  "category": "orchestration",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": false,
+    "webhook": true,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["workflow-orchestration", "python", "data-pipelines", "open-source"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Logfire",
+  "slug": "logfire",
+  "description": "Observability platform by Pydantic built on OpenTelemetry with built-in LLM instrumentation. Python SDK and CLI with free self-hosting option for monitoring AI agents and LLM applications.",
+  "website": "https://logfire.pydantic.dev",
+  "logoUrl": "https://avatars.githubusercontent.com/u/110818415?s=64",
+  "category": "observability",
+  "agentFirstScore": 9,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": true,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["opentelemetry", "llm-instrumentation", "pydantic", "tracing"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

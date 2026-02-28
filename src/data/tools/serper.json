@@ -1,0 +1,31 @@
+{
+  "name": "Serper",
+  "slug": "serper",
+  "description": "Google Search API that returns clean JSON results with extremely fast response times and 2500 free queries on signup. Minimal signup friction makes it ideal for agent integration.",
+  "website": "https://serper.dev",
+  "category": "search",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": false,
+    "cli": false,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": [],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["google-search", "json", "fast"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

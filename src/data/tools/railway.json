@@ -1,0 +1,32 @@
+{
+  "name": "Railway",
+  "slug": "railway",
+  "description": "Cloud deployment platform with GitHub integration for auto-deploy from git. Provides REST API, CLI, GraphQL API, and webhooks. Includes managed databases and requires human account setup.",
+  "website": "https://railway.app",
+  "logoUrl": "https://avatars.githubusercontent.com/u/66716858?s=64",
+  "category": "infrastructure",
+  "agentFirstScore": 7,
+  "interfaces": {
+    "api": true,
+    "sdk": false,
+    "cli": true,
+    "mcp": false,
+    "webhook": true,
+    "graphql": true
+  },
+  "signup": {
+    "method": "human-only",
+    "hasAgentAuth": false,
+    "allowsBots": false
+  },
+  "allFeaturesViaAPI": false,
+  "sdkLanguages": [],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["deployment", "ci-cd", "postgres", "redis", "github"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

@@ -1,0 +1,31 @@
+{
+  "name": "SerpApi",
+  "slug": "serpapi",
+  "description": "Structured Google/Bing/and other search engine results via REST API. Agent-friendly signup with no CAPTCHA. Supports Python, Ruby, Node, Go, and PHP SDKs for easy integration.",
+  "website": "https://serpapi.com",
+  "category": "search",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "ruby", "javascript", "go", "php"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["google-search", "serp", "structured-results"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

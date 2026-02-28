@@ -1,0 +1,32 @@
+{
+  "name": "DSPy",
+  "slug": "dspy",
+  "description": "Framework for programming language models rather than prompting them. Compilers automatically optimize prompts and weights for your pipeline. Python-only open source project from Stanford.",
+  "website": "https://dspy.ai",
+  "logoUrl": "https://avatars.githubusercontent.com/u/125672393?s=64",
+  "category": "orchestration",
+  "agentFirstScore": 7,
+  "interfaces": {
+    "api": false,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": false,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "free"
+  },
+  "tags": ["open-source", "prompt-optimization", "compiler", "stanford"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

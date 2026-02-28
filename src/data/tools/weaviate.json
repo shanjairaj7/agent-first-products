@@ -1,0 +1,32 @@
+{
+  "name": "Weaviate",
+  "slug": "weaviate",
+  "description": "Open source vector database with built-in ML model integrations for semantic search. Supports GraphQL and REST APIs with Python, JavaScript, Go, and Java SDKs. Cloud managed available.",
+  "website": "https://weaviate.io",
+  "logoUrl": "https://avatars.githubusercontent.com/u/37794290?s=64",
+  "category": "data",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": false,
+    "graphql": true
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript", "go", "java"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["vector-db", "open-source", "graphql", "semantic-search"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

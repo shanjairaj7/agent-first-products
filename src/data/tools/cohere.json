@@ -1,0 +1,32 @@
+{
+  "name": "Cohere",
+  "slug": "cohere",
+  "description": "Enterprise LLM platform providing Generate, Embed, and Rerank APIs with tool use and function calling support. SDKs in Python, TypeScript, Go, and Java for building RAG and agent applications.",
+  "website": "https://cohere.com",
+  "logoUrl": "https://avatars.githubusercontent.com/u/54850923?s=64",
+  "category": "compute",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": true,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": true,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": true,
+  "sdkLanguages": ["python", "typescript", "go", "java"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "usage-based"
+  },
+  "tags": ["llm", "embeddings", "reranking", "enterprise", "rag"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}

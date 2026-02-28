@@ -1,0 +1,32 @@
+{
+  "name": "Stagehand",
+  "slug": "stagehand",
+  "description": "Open source browser automation framework by Browserbase. AI-native with act(), extract(), and observe() primitives for intuitive browser control. TypeScript-first built on top of Playwright.",
+  "website": "https://stagehand.dev",
+  "logoUrl": "https://avatars.githubusercontent.com/u/143888741?s=64",
+  "category": "browser",
+  "agentFirstScore": 8,
+  "interfaces": {
+    "api": false,
+    "sdk": true,
+    "cli": false,
+    "mcp": false,
+    "webhook": false,
+    "graphql": false
+  },
+  "signup": {
+    "method": "website-bot-friendly",
+    "hasAgentAuth": false,
+    "allowsBots": true
+  },
+  "allFeaturesViaAPI": false,
+  "sdkLanguages": ["typescript", "javascript"],
+  "mcpServerUrl": null,
+  "pricing": {
+    "hasFree": true,
+    "model": "free"
+  },
+  "tags": ["open-source", "browser-automation", "ai-native", "playwright"],
+  "addedAt": "2026-02-28T00:00:00.000Z",
+  "verified": false
+}
