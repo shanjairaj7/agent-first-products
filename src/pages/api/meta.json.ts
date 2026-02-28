@@ -9,10 +9,11 @@ export const GET: APIRoute = () => {
     ...meta,
     lastUpdated: new Date().toISOString(),
     apiEndpoints: {
-      all:          '/api/tools.json',
-      meta:         '/api/meta.json',
-      byCategory:   '/api/by-category/{category}.json',
-      byInterface:  '/api/by-interface/{interface}.json',
+      all:         '/api/tools.json',
+      meta:        '/api/meta.json',
+      byCategory:  '/api/by-category/{category}.json',
+      byInterface: '/api/by-interface/{interface}.json',
+      openapi:     '/api/openapi.json',
     },
   };
 

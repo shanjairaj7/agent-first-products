@@ -4,13 +4,11 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
-  ogImage?: string;
 }
 
 const {
   title = 'Agent First Products Registry',
-  description = 'A curated registry of products and tools built for AI agents — ranked by how natively they support programmatic access, API signup, MCP servers, SDKs, and CLIs.',
-  ogImage = '/og.png',
+  description = 'A curated registry of tools built natively for AI agents — scored on API signup, MCP servers, SDK coverage, and dashboard-free operation.',
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -24,88 +22,75 @@ const siteUrl = 'https://shanjairaj7.github.io/agent-first-products';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <title>{title}</title>
-
-    <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={siteUrl} />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-
-    <!-- Favicon -->
+    <meta name="twitter:card" content="summary" />
     <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
-
-    <!-- Preconnect for fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..400&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
   </head>
   <body class="min-h-screen bg-zinc-950 text-zinc-100">
+
     <!-- Nav -->
-    <header class="sticky top-0 z-40 border-b border-zinc-800/60 bg-zinc-950/90 backdrop-blur-md">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-        <a href={`${base}/`} class="flex items-center gap-2.5 no-underline">
-          <div class="w-7 h-7 rounded-lg bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center">
-            <span class="text-sm">🤖</span>
+    <header class="sticky top-0 z-40 border-b border-zinc-800/50 bg-zinc-950/95 backdrop-blur-sm">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-12 flex items-center justify-between">
+
+        <a href={`${base}/`} class="flex items-center gap-2 no-underline">
+          <div class="w-6 h-6 rounded-md bg-zinc-800 border border-zinc-700 flex items-center justify-center text-[11px]">
+            🤖
           </div>
-          <span class="font-semibold text-white text-sm">Agent First Products</span>
-          <span class="hidden sm:inline text-[10px] font-mono text-zinc-600 border border-zinc-800 px-1.5 py-0.5 rounded">
-            Registry
-          </span>
+          <span class="text-sm font-semibold text-white">Agent First</span>
+          <span class="text-[10px] font-mono text-zinc-600 hidden sm:inline">registry</span>
         </a>
 
-        <nav class="flex items-center gap-4">
-          <a href={`${base}/`} class="text-xs text-zinc-400 hover:text-white transition-colors no-underline">
-            Registry
-          </a>
-          <a href={`${base}/api/tools.json`} target="_blank" class="text-xs text-zinc-400 hover:text-white transition-colors no-underline font-mono">
-            API
+        <nav class="flex items-center gap-1">
+          <a
+            href={`${base}/api/openapi.json`}
+            target="_blank"
+            class="px-2.5 py-1.5 rounded text-[11px] font-mono text-zinc-500 hover:text-zinc-200
+                   hover:bg-zinc-800 transition-colors no-underline"
+          >
+            OpenAPI
           </a>
           <a
-            href={`${base}/submit`}
-            class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500
-                   text-white text-xs font-medium transition-colors no-underline"
+            href={`${base}/api/tools.json`}
+            target="_blank"
+            class="px-2.5 py-1.5 rounded text-[11px] font-mono text-zinc-500 hover:text-zinc-200
+                   hover:bg-zinc-800 transition-colors no-underline"
           >
-            <span>+</span> Add Tool
+            /api/tools.json
+          </a>
+          <div class="w-px h-4 bg-zinc-800 mx-1"></div>
+          <a
+            href={`${base}/submit`}
+            class="px-3 py-1.5 rounded-md bg-zinc-800 hover:bg-zinc-700 border border-zinc-700
+                   text-white text-[11px] font-medium transition-colors no-underline"
+          >
+            + Add Tool
           </a>
         </nav>
       </div>
     </header>
 
-    <!-- Page content -->
+    <!-- Content -->
     <slot />
 
     <!-- Footer -->
-    <footer class="border-t border-zinc-800/60 mt-20 py-10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div>
-            <p class="text-sm font-semibold text-white">Agent First Products Registry</p>
-            <p class="text-xs text-zinc-500 mt-0.5">A registry of tools built natively for AI agents.</p>
-          </div>
-          <div class="flex items-center gap-6 text-xs text-zinc-500">
-            <a href={`${base}/api/tools.json`} target="_blank" class="hover:text-zinc-300 transition-colors no-underline font-mono">
-              /api/tools.json
-            </a>
-            <a href={`${base}/submit`} class="hover:text-zinc-300 transition-colors no-underline">
-              Submit a tool
-            </a>
-            <a href="https://github.com/shanjairaj7/agent-first-products" target="_blank" class="hover:text-zinc-300 transition-colors no-underline">
-              GitHub
-            </a>
-          </div>
+    <footer class="border-t border-zinc-800/40 mt-16 py-8">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div>
+          <p class="text-xs font-semibold text-zinc-400">Agent First Products Registry</p>
+          <p class="text-[11px] text-zinc-600 mt-0.5 font-mono">{siteUrl}/api/tools.json</p>
         </div>
-        <div class="mt-6 pt-6 border-t border-zinc-800/40 flex items-center gap-2">
-          <span class="text-[10px] text-zinc-700 font-mono">
-            curl {siteUrl}/api/tools.json | jq '.[] | select(.interfaces.mcp == true) | .name'
-          </span>
+        <div class="flex items-center gap-4 text-[11px] text-zinc-600">
+          <a href={`${base}/api/openapi.json`} target="_blank" class="hover:text-zinc-400 transition-colors no-underline font-mono">OpenAPI</a>
+          <a href={`${base}/submit`} class="hover:text-zinc-400 transition-colors no-underline">Submit</a>
+          <a href="https://github.com/shanjairaj7/agent-first-products" target="_blank" class="hover:text-zinc-400 transition-colors no-underline">GitHub ↗</a>
         </div>
       </div>
     </footer>
