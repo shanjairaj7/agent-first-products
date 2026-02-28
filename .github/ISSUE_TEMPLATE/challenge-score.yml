@@ -1,0 +1,102 @@
+name: Challenge a Score
+description: Dispute an existing tool's agent-first score
+title: "[Score] <Tool Name> should be <X>, not <Y>"
+labels: ["score-challenge"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to challenge an existing score in the registry.
+        Include evidence (docs links, API examples, changelog entries) so maintainers can make a data-driven decision.
+
+  - type: input
+    id: tool-name
+    attributes:
+      label: Tool Name
+      description: The exact name as it appears in the registry
+      placeholder: "e.g. Tavily"
+    validations:
+      required: true
+
+  - type: input
+    id: tool-slug
+    attributes:
+      label: Tool Slug
+      description: Slug as it appears in the URL (`/tools/<slug>`)
+      placeholder: "e.g. tavily"
+    validations:
+      required: true
+
+  - type: input
+    id: current-score
+    attributes:
+      label: Current Score
+      description: What the score currently is in the registry
+      placeholder: "e.g. 9"
+    validations:
+      required: true
+
+  - type: input
+    id: proposed-score
+    attributes:
+      label: Proposed Score
+      description: What you believe the score should be (1–10)
+      placeholder: "e.g. 10"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: direction
+    attributes:
+      label: Score Direction
+      description: Should the score go up or down?
+      options:
+        - "Higher — tool is more agent-first than currently rated"
+        - "Lower — tool is less agent-first than currently rated"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: criteria
+    attributes:
+      label: Relevant Criteria
+      description: Which agent-first criteria are affected?
+      options:
+        - label: API signup (programmatic account creation)
+        - label: All features available via API (no dashboard required)
+        - label: MCP server exists / does not exist
+        - label: SDK coverage changed
+        - label: CLI available / not available
+        - label: Agent auth (M2M tokens / service accounts)
+        - label: Webhook support added / removed
+        - label: Pricing model changed
+
+  - type: textarea
+    id: reasoning
+    attributes:
+      label: Reasoning
+      description: Why should the score change? Be specific.
+      placeholder: |
+        e.g. Tavily now supports programmatic signup via POST /v1/accounts — no email verification, no CAPTCHA.
+        This puts them at a 10 (Native), not 9.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Links to documentation, API endpoints, changelogs, or curl examples that support your claim.
+      placeholder: |
+        - https://docs.example.com/api/signup
+        - curl -X POST https://api.example.com/v1/accounts -d '{"email":"agent@example.com"}'
+        - Changelog: https://example.com/changelog#2026-01-15
+    validations:
+      required: true
+
+  - type: input
+    id: contact
+    attributes:
+      label: Your GitHub handle (optional)
+      description: So we can notify you when the score is updated
+      placeholder: "@username"
