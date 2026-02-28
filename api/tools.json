@@ -82,6 +82,45 @@
     "verified": true
   },
   {
+    "name": "Brave Search API",
+    "slug": "brave-search-api",
+    "description": "Independent web search with a privacy focus. Fully API-accessible with no scraping required, free tier includes 2k requests per month. Official MCP server available for agent integration.",
+    "website": "https://api.search.brave.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/98565736?s=64",
+    "category": "search",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "web-search",
+      "privacy",
+      "independent-index"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "Browserbase",
     "slug": "browserbase",
     "description": "Headless browser infrastructure built for AI agents. Stealth browsing, session management, live debugging, and CAPTCHA solving — all via API. No UI needed, ever.",
@@ -287,6 +326,46 @@
     "verified": true
   },
   {
+    "name": "Jina AI",
+    "slug": "jina-ai",
+    "description": "Reader API converts any URL to LLM-ready markdown instantly. Also provides embeddings, reranker, and classifier APIs with a generous free tier for AI agent and RAG pipeline integration.",
+    "website": "https://jina.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/60539444?s=64",
+    "category": "search",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "reader-api",
+      "embeddings",
+      "reranker",
+      "markdown-conversion"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "Neon",
     "slug": "neon",
     "description": "Serverless Postgres with instant branching and scale-to-zero. Over 80% of Neon databases are created by agents — supports full database provisioning, branching, and querying via REST API.",
@@ -372,6 +451,87 @@
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": true
+  },
+  {
+    "name": "Spider",
+    "slug": "spider-cloud",
+    "description": "Open source web crawler and scraper built for AI agents. Returns clean markdown content, handles JavaScript rendering, and supports fast bulk crawling via API and Python/Node SDKs.",
+    "website": "https://spider.cloud",
+    "logoUrl": "https://avatars.githubusercontent.com/u/153308295?s=64",
+    "category": "search",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "web-crawling",
+      "scraping",
+      "markdown",
+      "open-source"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Steel",
+    "slug": "steel",
+    "description": "Cloud browser infrastructure purpose-built for AI agents. Provides sessions, proxies, and CAPTCHA solving via API with no headless browser setup required for running browser-based agents.",
+    "website": "https://steel.dev",
+    "logoUrl": "https://avatars.githubusercontent.com/u/162726649?s=64",
+    "category": "browser",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "browser-sessions",
+      "proxies",
+      "captcha-solving",
+      "headless"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
   },
   {
     "name": "Tavily",
@@ -751,6 +911,122 @@
     "verified": true
   },
   {
+    "name": "SerpApi",
+    "slug": "serpapi",
+    "description": "Structured Google/Bing/and other search engine results via REST API. Agent-friendly signup with no CAPTCHA. Supports Python, Ruby, Node, Go, and PHP SDKs for easy integration.",
+    "website": "https://serpapi.com",
+    "category": "search",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "ruby",
+      "javascript",
+      "go",
+      "php"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "google-search",
+      "serp",
+      "structured-results"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Serper",
+    "slug": "serper",
+    "description": "Google Search API that returns clean JSON results with extremely fast response times and 2500 free queries on signup. Minimal signup friction makes it ideal for agent integration.",
+    "website": "https://serper.dev",
+    "category": "search",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": false,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "google-search",
+      "json",
+      "fast"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Stagehand",
+    "slug": "stagehand",
+    "description": "Open source browser automation framework by Browserbase. AI-native with act(), extract(), and observe() primitives for intuitive browser control. TypeScript-first built on top of Playwright.",
+    "website": "https://stagehand.dev",
+    "logoUrl": "https://avatars.githubusercontent.com/u/143888741?s=64",
+    "category": "browser",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": false,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": false,
+    "sdkLanguages": [
+      "typescript",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "browser-automation",
+      "ai-native",
+      "playwright"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "Stripe",
     "slug": "stripe",
     "description": "Payment infrastructure with agentic commerce features — Shared Payment Tokens for agent-initiated transactions, full REST API, and an official MCP server for payment operations.",
@@ -969,5 +1245,45 @@
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": true
+  },
+  {
+    "name": "ScrapingBee",
+    "slug": "scrapingbee",
+    "description": "Web scraping API with JavaScript rendering and proxy rotation. Provides a REST API with Python, Node, Ruby, and PHP SDKs for handling anti-bot measures and dynamic content extraction.",
+    "website": "https://www.scrapingbee.com",
+    "category": "browser",
+    "agentFirstScore": 7,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript",
+      "ruby",
+      "php"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "scraping",
+      "proxy",
+      "js-rendering"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
   }
 ]

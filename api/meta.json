@@ -1,5 +1,5 @@
 {
-  "total": 23,
+  "total": 31,
   "verified": 23,
   "avgScore": 8.4,
   "categories": [
@@ -8,7 +8,7 @@
       "label": "Search",
       "emoji": "🔍",
       "description": "Web search and research APIs",
-      "count": 3
+      "count": 8
     },
     {
       "id": "automation",
@@ -71,7 +71,7 @@
       "label": "Browser",
       "emoji": "🌐",
       "description": "Browser automation and scraping",
-      "count": 1
+      "count": 4
     },
     {
       "id": "mcp-server",
@@ -82,14 +82,14 @@
     }
   ],
   "interfaceCounts": {
-    "api": 22,
-    "sdk": 20,
+    "api": 29,
+    "sdk": 27,
     "cli": 9,
-    "mcp": 15,
-    "webhook": 11,
+    "mcp": 16,
+    "webhook": 12,
     "graphql": 2
   },
-  "lastUpdated": "2026-02-28T17:14:05.348Z",
+  "lastUpdated": "2026-02-28T17:36:52.585Z",
   "apiEndpoints": {
     "all": "/api/tools.json",
     "meta": "/api/meta.json",

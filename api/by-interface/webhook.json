@@ -168,6 +168,46 @@
     "verified": true
   },
   {
+    "name": "Spider",
+    "slug": "spider-cloud",
+    "description": "Open source web crawler and scraper built for AI agents. Returns clean markdown content, handles JavaScript rendering, and supports fast bulk crawling via API and Python/Node SDKs.",
+    "website": "https://spider.cloud",
+    "logoUrl": "https://avatars.githubusercontent.com/u/153308295?s=64",
+    "category": "search",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "web-crawling",
+      "scraping",
+      "markdown",
+      "open-source"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "Apify",
     "slug": "apify",
     "description": "Serverless web scraping platform with 4,000+ pre-built Actors for any website. Full API for scheduling, running, and retrieving results. Native MCP integration and CrewAI/LangChain support.",
