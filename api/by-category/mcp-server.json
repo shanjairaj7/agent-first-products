@@ -37,5 +37,44 @@
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": true
+  },
+  {
+    "name": "Playwright MCP",
+    "slug": "playwright-mcp",
+    "description": "Official Microsoft MCP server for browser automation using Playwright. Provides full CDP access, screenshots, navigation, and form filling capabilities for AI agent browser control.",
+    "website": "https://github.com/microsoft/playwright-mcp",
+    "logoUrl": "https://avatars.githubusercontent.com/u/6154722?s=64",
+    "category": "mcp-server",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": false,
+      "sdk": false,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript"
+    ],
+    "mcpServerUrl": "https://github.com/microsoft/playwright-mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "browser-automation",
+      "microsoft",
+      "playwright"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
   }
 ]

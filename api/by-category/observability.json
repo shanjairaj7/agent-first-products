@@ -1,5 +1,167 @@
 [
   {
+    "name": "AgentOps",
+    "slug": "agentops",
+    "description": "Observability and analytics platform built specifically for AI agents. Provides session replays, cost tracking, and error detection via Python SDK and REST API. YC-backed with a free tier.",
+    "website": "https://agentops.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/129735845?s=64",
+    "category": "observability",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "agent-monitoring",
+      "session-replay",
+      "cost-tracking",
+      "yc"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Logfire",
+    "slug": "logfire",
+    "description": "Observability platform by Pydantic built on OpenTelemetry with built-in LLM instrumentation. Python SDK and CLI with free self-hosting option for monitoring AI agents and LLM applications.",
+    "website": "https://logfire.pydantic.dev",
+    "logoUrl": "https://avatars.githubusercontent.com/u/110818415?s=64",
+    "category": "observability",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "opentelemetry",
+      "llm-instrumentation",
+      "pydantic",
+      "tracing"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "PostHog",
+    "slug": "posthog",
+    "description": "Open source product analytics, session recording, and feature flags platform. Full REST API with Python, Node, PHP, Ruby, and Go SDKs. Self-hostable with a generous free cloud tier.",
+    "website": "https://posthog.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/63120248?s=64",
+    "category": "observability",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript",
+      "php",
+      "ruby",
+      "go"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "product-analytics",
+      "feature-flags",
+      "open-source",
+      "session-recording"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Arize AI",
+    "slug": "arize-ai",
+    "description": "ML observability and LLM tracing platform. Includes Phoenix open source for local tracing and cloud deployment for production. Trace LLM calls, run evals, and detect model drift.",
+    "website": "https://arize.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/61427307?s=64",
+    "category": "observability",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "ml-observability",
+      "llm-tracing",
+      "phoenix",
+      "evals"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "Helicone",
     "slug": "helicone",
     "description": "Open-source LLM observability with one-line proxy integration. Agent session tracing, cost tracking, and prompt management — fully self-hostable, all features via API, no dashboard lock-in.",
@@ -78,5 +240,88 @@
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": true
+  },
+  {
+    "name": "Sentry",
+    "slug": "sentry",
+    "description": "Error tracking, performance monitoring, and session replay with SDKs in 100+ platforms. REST API, CLI, MCP server for AI error analysis, and webhooks for automated agent error workflows.",
+    "website": "https://sentry.io",
+    "logoUrl": "https://avatars.githubusercontent.com/u/1396951?s=64",
+    "category": "observability",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript",
+      "java",
+      "go",
+      "ruby"
+    ],
+    "mcpServerUrl": "https://github.com/getsentry/sentry-mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "error-tracking",
+      "performance",
+      "open-source",
+      "apm"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Weights & Biases",
+    "slug": "weights-biases",
+    "description": "ML experiment tracking, dataset versioning, and model registry platform. Python SDK, REST API, and CLI included. LLM tracing via Weave for monitoring agent and LLM application performance.",
+    "website": "https://wandb.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/26401354?s=64",
+    "category": "observability",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "ml-tracking",
+      "experiment-tracking",
+      "llm-tracing",
+      "weave"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
   }
 ]

@@ -40,5 +40,248 @@
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": true
+  },
+  {
+    "name": "Fireworks AI",
+    "slug": "fireworks-ai",
+    "description": "Fast LLM inference API with function calling and JSON mode. Sub-100ms latency with 100+ open source models available. Python and Node SDKs. YC W23 with bot-friendly signup.",
+    "website": "https://fireworks.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/124983430?s=64",
+    "category": "compute",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "llm-inference",
+      "fast",
+      "function-calling",
+      "yc",
+      "open-models"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Groq",
+    "slug": "groq",
+    "description": "Ultra-fast LLM inference on custom LPU hardware with an OpenAI-compatible API. Provides the fastest inference available for popular models. Python and JavaScript SDKs with a free tier.",
+    "website": "https://groq.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/79576057?s=64",
+    "category": "compute",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "llm-inference",
+      "fast",
+      "lpu",
+      "openai-compatible"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Together AI",
+    "slug": "together-ai",
+    "description": "LLM inference platform for open source models with OpenAI-compatible API. Supports fine-tuning, embeddings, and function calling with Python and JavaScript SDKs and a free tier.",
+    "website": "https://www.together.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/118274684?s=64",
+    "category": "compute",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "llm-inference",
+      "open-source-models",
+      "fine-tuning",
+      "openai-compatible"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Cohere",
+    "slug": "cohere",
+    "description": "Enterprise LLM platform providing Generate, Embed, and Rerank APIs with tool use and function calling support. SDKs in Python, TypeScript, Go, and Java for building RAG and agent applications.",
+    "website": "https://cohere.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/54850923?s=64",
+    "category": "compute",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "go",
+      "java"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "llm",
+      "embeddings",
+      "reranking",
+      "enterprise",
+      "rag"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Mistral AI",
+    "slug": "mistral-ai",
+    "description": "European AI lab providing fast and efficient LLM models with chat, embeddings, and function calling. OpenAI-compatible API with Python and JavaScript SDKs for easy agent integration.",
+    "website": "https://mistral.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/132372032?s=64",
+    "category": "compute",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": false,
+      "model": "usage-based"
+    },
+    "tags": [
+      "llm",
+      "function-calling",
+      "european",
+      "efficient"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Voyage AI",
+    "slug": "voyage-ai",
+    "description": "State-of-the-art embedding and reranking models for RAG applications. REST API and Python SDK with specialized domain models for code, finance, and legal use cases. Free tier available.",
+    "website": "https://www.voyageai.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/130565773?s=64",
+    "category": "compute",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "embeddings",
+      "reranking",
+      "rag",
+      "domain-specific"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
   }
 ]

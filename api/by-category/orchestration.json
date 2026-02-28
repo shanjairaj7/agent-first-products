@@ -1,5 +1,86 @@
 [
   {
+    "name": "Inngest",
+    "slug": "inngest",
+    "description": "Background jobs and durable workflows as code with SDK-first event-driven design. Supports fan-out, step functions, and automatic retries. TypeScript and Python SDKs. Open source and self-hostable.",
+    "website": "https://www.inngest.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/74215852?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "background-jobs",
+      "step-functions",
+      "open-source",
+      "event-driven",
+      "durable"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Trigger.dev",
+    "slug": "trigger-dev",
+    "description": "Open source background jobs platform with a code-first approach for long-running tasks and scheduled jobs. TypeScript SDK with self-hosting support and automatic retries. YC-backed.",
+    "website": "https://trigger.dev",
+    "logoUrl": "https://avatars.githubusercontent.com/u/95297378?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "background-jobs",
+      "open-source",
+      "long-running",
+      "typescript",
+      "yc"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "LangGraph",
     "slug": "langgraph",
     "description": "Low-level orchestration framework for building stateful, long-running agents as directed graphs. Handles durable state, human-in-the-loop, and multi-agent coordination with a hosted platform.",
@@ -41,6 +122,207 @@
     "verified": true
   },
   {
+    "name": "LlamaIndex",
+    "slug": "llamaindex",
+    "description": "Open source data framework for LLM applications. Connect to data sources, parse documents, and build RAG pipelines with Python and TypeScript SDKs. Extensive integrations with vector stores.",
+    "website": "https://www.llamaindex.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/130722866?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": false,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "rag",
+      "data-framework",
+      "agents"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Prefect",
+    "slug": "prefect",
+    "description": "Python workflow orchestration with code-first pipeline definitions. REST API, Python SDK, and CLI for building and monitoring data pipelines. Cloud and self-hosted deployment options.",
+    "website": "https://www.prefect.io",
+    "logoUrl": "https://avatars.githubusercontent.com/u/39270919?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "workflow-orchestration",
+      "python",
+      "data-pipelines",
+      "open-source"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "PydanticAI",
+    "slug": "pydantic-ai",
+    "description": "Python agent framework by the Pydantic team with type-safe agents, dependency injection, tool use, and streaming. Supports OpenAI, Anthropic, Gemini, and other model providers. MCP client support included.",
+    "website": "https://ai.pydantic.dev",
+    "logoUrl": "https://avatars.githubusercontent.com/u/110818415?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": false,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "agent-framework",
+      "type-safe",
+      "python",
+      "pydantic"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "smolagents",
+    "slug": "smolagents",
+    "description": "Minimal agent framework by Hugging Face where code agents write and execute Python to complete tasks. Small codebase designed for easy extension with MCP support for tool integration.",
+    "website": "https://huggingface.co/docs/smolagents",
+    "logoUrl": "https://avatars.githubusercontent.com/u/25720743?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": false,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "code-agents",
+      "hugging-face",
+      "minimal"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Temporal",
+    "slug": "temporal",
+    "description": "Durable execution engine for long-running workflows. Define workflows as code with automatic retries and state persistence. SDKs in Python, Go, Java, TypeScript, and PHP with open source core.",
+    "website": "https://temporal.io",
+    "logoUrl": "https://avatars.githubusercontent.com/u/56493103?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "go",
+      "java",
+      "typescript",
+      "php"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "workflow-orchestration",
+      "durable-execution",
+      "open-source",
+      "retry"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "CrewAI",
     "slug": "crewai",
     "description": "Role-based multi-agent orchestration framework. Define agent crews with goals and tools, run them autonomously. 4,000+ tool integrations via Composio, async execution, MCP server support.",
@@ -79,5 +361,44 @@
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": true
+  },
+  {
+    "name": "DSPy",
+    "slug": "dspy",
+    "description": "Framework for programming language models rather than prompting them. Compilers automatically optimize prompts and weights for your pipeline. Python-only open source project from Stanford.",
+    "website": "https://dspy.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/125672393?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 7,
+    "interfaces": {
+      "api": false,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "prompt-optimization",
+      "compiler",
+      "stanford"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
   }
 ]

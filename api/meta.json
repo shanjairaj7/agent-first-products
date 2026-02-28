@@ -1,5 +1,5 @@
 {
-  "total": 31,
+  "total": 78,
   "verified": 23,
   "avgScore": 8.4,
   "categories": [
@@ -15,35 +15,35 @@
       "label": "Automation",
       "emoji": "⚙️",
       "description": "Workflow and task automation",
-      "count": 2
+      "count": 7
     },
     {
       "id": "data",
       "label": "Data",
       "emoji": "📊",
       "description": "Data extraction and processing",
-      "count": 3
+      "count": 10
     },
     {
       "id": "infrastructure",
       "label": "Infrastructure",
       "emoji": "🏗️",
       "description": "Databases, storage, and compute infrastructure",
-      "count": 5
+      "count": 13
     },
     {
       "id": "observability",
       "label": "Observability",
       "emoji": "📈",
       "description": "Monitoring, logging, and tracing",
-      "count": 2
+      "count": 8
     },
     {
       "id": "compute",
       "label": "Compute",
       "emoji": "💻",
       "description": "Code execution and sandboxing",
-      "count": 1
+      "count": 7
     },
     {
       "id": "payments",
@@ -57,39 +57,39 @@
       "label": "Auth",
       "emoji": "🔐",
       "description": "Authentication and authorization",
-      "count": 1
+      "count": 5
     },
     {
       "id": "orchestration",
       "label": "Orchestration",
       "emoji": "🎯",
       "description": "Agent orchestration frameworks",
-      "count": 2
+      "count": 10
     },
     {
       "id": "browser",
       "label": "Browser",
       "emoji": "🌐",
       "description": "Browser automation and scraping",
-      "count": 4
+      "count": 6
     },
     {
       "id": "mcp-server",
       "label": "MCP Server",
       "emoji": "🔌",
       "description": "Model Context Protocol servers",
-      "count": 1
+      "count": 2
     }
   ],
   "interfaceCounts": {
-    "api": 29,
-    "sdk": 27,
-    "cli": 9,
-    "mcp": 16,
-    "webhook": 12,
-    "graphql": 2
+    "api": 70,
+    "sdk": 70,
+    "cli": 29,
+    "mcp": 27,
+    "webhook": 32,
+    "graphql": 4
   },
-  "lastUpdated": "2026-02-28T17:36:52.585Z",
+  "lastUpdated": "2026-02-28T17:43:41.498Z",
   "apiEndpoints": {
     "all": "/api/tools.json",
     "meta": "/api/meta.json",

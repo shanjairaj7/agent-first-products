@@ -121,6 +121,130 @@
     "verified": true
   },
   {
+    "name": "Chroma",
+    "slug": "chromadb",
+    "description": "Open source embedding database supporting in-process and client/server modes. Zero configuration required with Python and JavaScript SDKs, designed specifically for AI application development.",
+    "website": "https://www.trychroma.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/107552506?s=64",
+    "category": "data",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript"
+    ],
+    "mcpServerUrl": "https://github.com/chroma-core/chroma-mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "embeddings",
+      "vector-db",
+      "in-process"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Cloudflare Workers AI",
+    "slug": "cloudflare-workers-ai",
+    "description": "Run LLM inference at the edge via Cloudflare Workers. Includes AI Gateway for LLM proxying, R2 object storage, D1 SQLite, and KV storage — all accessible via REST API, Wrangler CLI, and MCP server.",
+    "website": "https://developers.cloudflare.com/workers-ai/",
+    "logoUrl": "https://avatars.githubusercontent.com/u/314135?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "javascript",
+      "python"
+    ],
+    "mcpServerUrl": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "edge",
+      "inference",
+      "r2",
+      "kv",
+      "d1",
+      "ai-gateway"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Crawl4AI",
+    "slug": "crawl4ai",
+    "description": "Open source async web crawler built for LLMs and AI agents. Returns structured markdown content, supports JSON extraction and screenshot capture, with MCP server and CLI included.",
+    "website": "https://crawl4ai.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/165337399?s=64",
+    "category": "browser",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": "https://github.com/unclecode/crawl4ai/tree/main/mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "web-crawling",
+      "markdown",
+      "async",
+      "llm-ready"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "E2B",
     "slug": "e2b",
     "description": "Secure sandboxed cloud environments for AI agents to execute code. Instant provisioning, full internet access, file system, and terminal — programmatic API with sub-second startup.",
@@ -285,6 +409,46 @@
     "verified": true
   },
   {
+    "name": "Mem0",
+    "slug": "mem0",
+    "description": "Persistent memory layer for AI agents that stores and retrieves memories across sessions. Manages user preferences, facts, and context via API and Python/JS SDKs with an MCP server available.",
+    "website": "https://mem0.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/137926057?s=64",
+    "category": "data",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript"
+    ],
+    "mcpServerUrl": "https://github.com/mem0ai/mem0/tree/main/mem0-mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "memory",
+      "personalization",
+      "agents",
+      "open-source"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "Neon",
     "slug": "neon",
     "description": "Serverless Postgres with instant branching and scale-to-zero. Over 80% of Neon databases are created by agents — supports full database provisioning, branching, and querying via REST API.",
@@ -325,6 +489,87 @@
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": true
+  },
+  {
+    "name": "Playwright MCP",
+    "slug": "playwright-mcp",
+    "description": "Official Microsoft MCP server for browser automation using Playwright. Provides full CDP access, screenshots, navigation, and form filling capabilities for AI agent browser control.",
+    "website": "https://github.com/microsoft/playwright-mcp",
+    "logoUrl": "https://avatars.githubusercontent.com/u/6154722?s=64",
+    "category": "mcp-server",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": false,
+      "sdk": false,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript"
+    ],
+    "mcpServerUrl": "https://github.com/microsoft/playwright-mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "browser-automation",
+      "microsoft",
+      "playwright"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Qdrant",
+    "slug": "qdrant",
+    "description": "Open source vector database with payload filtering for hybrid search. Available as cloud managed or self-hosted with full REST/gRPC API, Python/JS/Rust/Go SDKs, and an official MCP server.",
+    "website": "https://qdrant.tech",
+    "logoUrl": "https://avatars.githubusercontent.com/u/73504361?s=64",
+    "category": "data",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "rust",
+      "go"
+    ],
+    "mcpServerUrl": "https://github.com/qdrant/mcp-server-qdrant",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "vector-db",
+      "open-source",
+      "similarity-search",
+      "rust"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
   },
   {
     "name": "Tavily",
@@ -411,6 +656,46 @@
     "verified": true
   },
   {
+    "name": "Hyperbrowser",
+    "slug": "hyperbrowser",
+    "description": "Cloud browser for AI agents with an API to start sessions, navigate pages, and extract data. Includes computer use support and an MCP server for direct agent integration.",
+    "website": "https://hyperbrowser.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/170000777?s=64",
+    "category": "browser",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript"
+    ],
+    "mcpServerUrl": "https://github.com/hyperbrowserai/mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "browser-api",
+      "computer-use",
+      "sessions"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "LangGraph",
     "slug": "langgraph",
     "description": "Low-level orchestration framework for building stateful, long-running agents as directed graphs. Handles durable state, human-in-the-loop, and multi-agent coordination with a hosted platform.",
@@ -488,6 +773,171 @@
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": true
+  },
+  {
+    "name": "PydanticAI",
+    "slug": "pydantic-ai",
+    "description": "Python agent framework by the Pydantic team with type-safe agents, dependency injection, tool use, and streaming. Supports OpenAI, Anthropic, Gemini, and other model providers. MCP client support included.",
+    "website": "https://ai.pydantic.dev",
+    "logoUrl": "https://avatars.githubusercontent.com/u/110818415?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": false,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "agent-framework",
+      "type-safe",
+      "python",
+      "pydantic"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Redis Cloud",
+    "slug": "redis",
+    "description": "Managed Redis with vector search, pub/sub, and caching capabilities. Includes an official MCP server and SDKs across all major languages for caching, real-time data, and vector similarity search.",
+    "website": "https://redis.io/cloud",
+    "logoUrl": "https://avatars.githubusercontent.com/u/1529926?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript",
+      "go",
+      "java",
+      "ruby"
+    ],
+    "mcpServerUrl": "https://github.com/redis/mcp-redis",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "caching",
+      "pub-sub",
+      "vector-search",
+      "in-memory"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Sentry",
+    "slug": "sentry",
+    "description": "Error tracking, performance monitoring, and session replay with SDKs in 100+ platforms. REST API, CLI, MCP server for AI error analysis, and webhooks for automated agent error workflows.",
+    "website": "https://sentry.io",
+    "logoUrl": "https://avatars.githubusercontent.com/u/1396951?s=64",
+    "category": "observability",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript",
+      "java",
+      "go",
+      "ruby"
+    ],
+    "mcpServerUrl": "https://github.com/getsentry/sentry-mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "error-tracking",
+      "performance",
+      "open-source",
+      "apm"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "smolagents",
+    "slug": "smolagents",
+    "description": "Minimal agent framework by Hugging Face where code agents write and execute Python to complete tasks. Small codebase designed for easy extension with MCP support for tool integration.",
+    "website": "https://huggingface.co/docs/smolagents",
+    "logoUrl": "https://avatars.githubusercontent.com/u/25720743?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": false,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "code-agents",
+      "hugging-face",
+      "minimal"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
   },
   {
     "name": "Stripe",

@@ -1,5 +1,46 @@
 [
   {
+    "name": "Chroma",
+    "slug": "chromadb",
+    "description": "Open source embedding database supporting in-process and client/server modes. Zero configuration required with Python and JavaScript SDKs, designed specifically for AI application development.",
+    "website": "https://www.trychroma.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/107552506?s=64",
+    "category": "data",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript"
+    ],
+    "mcpServerUrl": "https://github.com/chroma-core/chroma-mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "embeddings",
+      "vector-db",
+      "in-process"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "Firecrawl",
     "slug": "firecrawl",
     "description": "Web scraping and crawling API that returns LLM-ready markdown. Handles JavaScript rendering, pagination, and anti-bot measures. Has an Agent endpoint for multi-step autonomous browsing.",
@@ -41,6 +82,170 @@
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": true
+  },
+  {
+    "name": "LanceDB",
+    "slug": "lancedb",
+    "description": "Embedded multimodal vector database with columnar storage using the Lance format. No server required. Supports Python, JavaScript, and Rust with free open source licensing.",
+    "website": "https://lancedb.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/104893010?s=64",
+    "category": "data",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": false,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "rust"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "embedded",
+      "multimodal",
+      "columnar",
+      "vector-db"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Mem0",
+    "slug": "mem0",
+    "description": "Persistent memory layer for AI agents that stores and retrieves memories across sessions. Manages user preferences, facts, and context via API and Python/JS SDKs with an MCP server available.",
+    "website": "https://mem0.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/137926057?s=64",
+    "category": "data",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript"
+    ],
+    "mcpServerUrl": "https://github.com/mem0ai/mem0/tree/main/mem0-mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "memory",
+      "personalization",
+      "agents",
+      "open-source"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Qdrant",
+    "slug": "qdrant",
+    "description": "Open source vector database with payload filtering for hybrid search. Available as cloud managed or self-hosted with full REST/gRPC API, Python/JS/Rust/Go SDKs, and an official MCP server.",
+    "website": "https://qdrant.tech",
+    "logoUrl": "https://avatars.githubusercontent.com/u/73504361?s=64",
+    "category": "data",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "rust",
+      "go"
+    ],
+    "mcpServerUrl": "https://github.com/qdrant/mcp-server-qdrant",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "vector-db",
+      "open-source",
+      "similarity-search",
+      "rust"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "LlamaParse",
+    "slug": "llamaparse",
+    "description": "Proprietary document parser by LlamaIndex for extracting structured data from complex PDFs containing tables and images. Accessible via REST API and Python/TypeScript SDKs with a free tier.",
+    "website": "https://cloud.llamaindex.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/130722866?s=64",
+    "category": "data",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "document-parsing",
+      "pdf",
+      "tables",
+      "rag"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
   },
   {
     "name": "Pinecone",
@@ -85,6 +290,88 @@
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": true
+  },
+  {
+    "name": "Unstructured",
+    "slug": "unstructured",
+    "description": "Document parsing and ETL pipeline for LLMs. Extracts and chunks text from PDFs, Word documents, HTML, and email into clean structured output. REST API plus open source Python library.",
+    "website": "https://unstructured.io",
+    "logoUrl": "https://avatars.githubusercontent.com/u/103626631?s=64",
+    "category": "data",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "document-parsing",
+      "etl",
+      "pdf",
+      "open-source",
+      "chunking"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Weaviate",
+    "slug": "weaviate",
+    "description": "Open source vector database with built-in ML model integrations for semantic search. Supports GraphQL and REST APIs with Python, JavaScript, Go, and Java SDKs. Cloud managed available.",
+    "website": "https://weaviate.io",
+    "logoUrl": "https://avatars.githubusercontent.com/u/37794290?s=64",
+    "category": "data",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": true
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "go",
+      "java"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "vector-db",
+      "open-source",
+      "graphql",
+      "semantic-search"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
   },
   {
     "name": "Bright Data",

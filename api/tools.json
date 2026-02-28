@@ -82,6 +82,87 @@
     "verified": true
   },
   {
+    "name": "Modal",
+    "slug": "modal",
+    "description": "Serverless cloud for Python supporting GPU workloads, batch jobs, and web endpoints. Deploy directly from code using decorators via CLI and SDK — no dashboard interaction required.",
+    "website": "https://modal.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/75660786?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 10,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "api",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "serverless",
+      "gpu",
+      "python",
+      "yc",
+      "functions",
+      "batch"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "AgentOps",
+    "slug": "agentops",
+    "description": "Observability and analytics platform built specifically for AI agents. Provides session replays, cost tracking, and error detection via Python SDK and REST API. YC-backed with a free tier.",
+    "website": "https://agentops.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/129735845?s=64",
+    "category": "observability",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "agent-monitoring",
+      "session-replay",
+      "cost-tracking",
+      "yc"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "Brave Search API",
     "slug": "brave-search-api",
     "description": "Independent web search with a privacy focus. Fully API-accessible with no scraping required, free tier includes 2k requests per month. Official MCP server available for agent integration.",
@@ -160,6 +241,130 @@
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": true
+  },
+  {
+    "name": "Chroma",
+    "slug": "chromadb",
+    "description": "Open source embedding database supporting in-process and client/server modes. Zero configuration required with Python and JavaScript SDKs, designed specifically for AI application development.",
+    "website": "https://www.trychroma.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/107552506?s=64",
+    "category": "data",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript"
+    ],
+    "mcpServerUrl": "https://github.com/chroma-core/chroma-mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "embeddings",
+      "vector-db",
+      "in-process"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Cloudflare Workers AI",
+    "slug": "cloudflare-workers-ai",
+    "description": "Run LLM inference at the edge via Cloudflare Workers. Includes AI Gateway for LLM proxying, R2 object storage, D1 SQLite, and KV storage — all accessible via REST API, Wrangler CLI, and MCP server.",
+    "website": "https://developers.cloudflare.com/workers-ai/",
+    "logoUrl": "https://avatars.githubusercontent.com/u/314135?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "javascript",
+      "python"
+    ],
+    "mcpServerUrl": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "edge",
+      "inference",
+      "r2",
+      "kv",
+      "d1",
+      "ai-gateway"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Crawl4AI",
+    "slug": "crawl4ai",
+    "description": "Open source async web crawler built for LLMs and AI agents. Returns structured markdown content, supports JSON extraction and screenshot capture, with MCP server and CLI included.",
+    "website": "https://crawl4ai.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/165337399?s=64",
+    "category": "browser",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": "https://github.com/unclecode/crawl4ai/tree/main/mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "web-crawling",
+      "markdown",
+      "async",
+      "llm-ready"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
   },
   {
     "name": "E2B",
@@ -287,6 +492,47 @@
     "verified": true
   },
   {
+    "name": "Fireworks AI",
+    "slug": "fireworks-ai",
+    "description": "Fast LLM inference API with function calling and JSON mode. Sub-100ms latency with 100+ open source models available. Python and Node SDKs. YC W23 with bot-friendly signup.",
+    "website": "https://fireworks.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/124983430?s=64",
+    "category": "compute",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "llm-inference",
+      "fast",
+      "function-calling",
+      "yc",
+      "open-models"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "GitHub MCP Server",
     "slug": "github-mcp",
     "description": "Official GitHub MCP server for AI agents — manage repos, issues, PRs, code search, and actions programmatically. Full GitHub API surface exposed as agent-native tools.",
@@ -326,6 +572,87 @@
     "verified": true
   },
   {
+    "name": "Groq",
+    "slug": "groq",
+    "description": "Ultra-fast LLM inference on custom LPU hardware with an OpenAI-compatible API. Provides the fastest inference available for popular models. Python and JavaScript SDKs with a free tier.",
+    "website": "https://groq.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/79576057?s=64",
+    "category": "compute",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "llm-inference",
+      "fast",
+      "lpu",
+      "openai-compatible"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Inngest",
+    "slug": "inngest",
+    "description": "Background jobs and durable workflows as code with SDK-first event-driven design. Supports fan-out, step functions, and automatic retries. TypeScript and Python SDKs. Open source and self-hostable.",
+    "website": "https://www.inngest.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/74215852?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "background-jobs",
+      "step-functions",
+      "open-source",
+      "event-driven",
+      "durable"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "Jina AI",
     "slug": "jina-ai",
     "description": "Reader API converts any URL to LLM-ready markdown instantly. Also provides embeddings, reranker, and classifier APIs with a generous free tier for AI agent and RAG pipeline integration.",
@@ -361,6 +688,127 @@
       "embeddings",
       "reranker",
       "markdown-conversion"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "LanceDB",
+    "slug": "lancedb",
+    "description": "Embedded multimodal vector database with columnar storage using the Lance format. No server required. Supports Python, JavaScript, and Rust with free open source licensing.",
+    "website": "https://lancedb.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/104893010?s=64",
+    "category": "data",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": false,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "rust"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "embedded",
+      "multimodal",
+      "columnar",
+      "vector-db"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Logfire",
+    "slug": "logfire",
+    "description": "Observability platform by Pydantic built on OpenTelemetry with built-in LLM instrumentation. Python SDK and CLI with free self-hosting option for monitoring AI agents and LLM applications.",
+    "website": "https://logfire.pydantic.dev",
+    "logoUrl": "https://avatars.githubusercontent.com/u/110818415?s=64",
+    "category": "observability",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "opentelemetry",
+      "llm-instrumentation",
+      "pydantic",
+      "tracing"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Mem0",
+    "slug": "mem0",
+    "description": "Persistent memory layer for AI agents that stores and retrieves memories across sessions. Manages user preferences, facts, and context via API and Python/JS SDKs with an MCP server available.",
+    "website": "https://mem0.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/137926057?s=64",
+    "category": "data",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript"
+    ],
+    "mcpServerUrl": "https://github.com/mem0ai/mem0/tree/main/mem0-mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "memory",
+      "personalization",
+      "agents",
+      "open-source"
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": false
@@ -451,6 +899,215 @@
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": true
+  },
+  {
+    "name": "Playwright MCP",
+    "slug": "playwright-mcp",
+    "description": "Official Microsoft MCP server for browser automation using Playwright. Provides full CDP access, screenshots, navigation, and form filling capabilities for AI agent browser control.",
+    "website": "https://github.com/microsoft/playwright-mcp",
+    "logoUrl": "https://avatars.githubusercontent.com/u/6154722?s=64",
+    "category": "mcp-server",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": false,
+      "sdk": false,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript"
+    ],
+    "mcpServerUrl": "https://github.com/microsoft/playwright-mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "browser-automation",
+      "microsoft",
+      "playwright"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "PostHog",
+    "slug": "posthog",
+    "description": "Open source product analytics, session recording, and feature flags platform. Full REST API with Python, Node, PHP, Ruby, and Go SDKs. Self-hostable with a generous free cloud tier.",
+    "website": "https://posthog.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/63120248?s=64",
+    "category": "observability",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript",
+      "php",
+      "ruby",
+      "go"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "product-analytics",
+      "feature-flags",
+      "open-source",
+      "session-recording"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Qdrant",
+    "slug": "qdrant",
+    "description": "Open source vector database with payload filtering for hybrid search. Available as cloud managed or self-hosted with full REST/gRPC API, Python/JS/Rust/Go SDKs, and an official MCP server.",
+    "website": "https://qdrant.tech",
+    "logoUrl": "https://avatars.githubusercontent.com/u/73504361?s=64",
+    "category": "data",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "rust",
+      "go"
+    ],
+    "mcpServerUrl": "https://github.com/qdrant/mcp-server-qdrant",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "vector-db",
+      "open-source",
+      "similarity-search",
+      "rust"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Replicate",
+    "slug": "replicate",
+    "description": "Run ML models via API with over 10000 models for image, video, audio, and code generation. Simple REST API with Python, Node, and Go SDKs — no GPU setup or infrastructure management required.",
+    "website": "https://replicate.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/60410876?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript",
+      "go"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": false,
+      "model": "usage-based"
+    },
+    "tags": [
+      "ml-models",
+      "image-generation",
+      "inference",
+      "gpu-cloud"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Resend",
+    "slug": "resend",
+    "description": "Email API built for developers with React Email templates and clean REST API design. SDKs in TypeScript, Python, Ruby, PHP, Go, and Java with a generous free tier. YC-backed.",
+    "website": "https://resend.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/108510645?s=64",
+    "category": "automation",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "python",
+      "ruby",
+      "php",
+      "go",
+      "java"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "email-api",
+      "react-email",
+      "developer-first",
+      "yc"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
   },
   {
     "name": "Spider",
@@ -576,6 +1233,169 @@
     "verified": true
   },
   {
+    "name": "Tigris",
+    "slug": "tigris",
+    "description": "Globally distributed object storage with S3-compatible API. No region configuration needed with automatic replication. CLI and TypeScript, Python, Go SDKs available with a free tier.",
+    "website": "https://www.tigrisdata.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/97783285?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "python",
+      "go"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "object-storage",
+      "s3-compatible",
+      "distributed",
+      "yc"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Together AI",
+    "slug": "together-ai",
+    "description": "LLM inference platform for open source models with OpenAI-compatible API. Supports fine-tuning, embeddings, and function calling with Python and JavaScript SDKs and a free tier.",
+    "website": "https://www.together.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/118274684?s=64",
+    "category": "compute",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "llm-inference",
+      "open-source-models",
+      "fine-tuning",
+      "openai-compatible"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Trigger.dev",
+    "slug": "trigger-dev",
+    "description": "Open source background jobs platform with a code-first approach for long-running tasks and scheduled jobs. TypeScript SDK with self-hosting support and automatic retries. YC-backed.",
+    "website": "https://trigger.dev",
+    "logoUrl": "https://avatars.githubusercontent.com/u/95297378?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "background-jobs",
+      "open-source",
+      "long-running",
+      "typescript",
+      "yc"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Turso",
+    "slug": "turso",
+    "description": "SQLite at the edge with multi-tenant support. Instant per-tenant database creation via REST API, libsql protocol, and CLI. TypeScript, Python, Rust, and Go SDKs for easy agent integration.",
+    "website": "https://turso.tech",
+    "logoUrl": "https://avatars.githubusercontent.com/u/139791384?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "python",
+      "rust",
+      "go"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "sqlite",
+      "edge",
+      "multi-tenant",
+      "libsql"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "Upstash",
     "slug": "upstash",
     "description": "Serverless Redis and Kafka with per-request pricing — zero cold starts, HTTP REST API for agents that can't maintain persistent connections. 100% programmatic provisioning via API.",
@@ -622,6 +1442,47 @@
     "verified": true
   },
   {
+    "name": "Vapi",
+    "slug": "vapi",
+    "description": "Voice AI infrastructure for building, testing, and deploying voice agents via REST API. Real-time transcription and LLM integration for phone-based AI agents. Python and TypeScript SDKs. YC S23.",
+    "website": "https://vapi.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/124702902?s=64",
+    "category": "automation",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "voice-ai",
+      "phone-agents",
+      "real-time",
+      "yc",
+      "telephony"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "Apify",
     "slug": "apify",
     "description": "Serverless web scraping platform with 4,000+ pre-built Actors for any website. Full API for scheduling, running, and retrieving results. Native MCP integration and CrewAI/LangChain support.",
@@ -662,6 +1523,46 @@
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": true
+  },
+  {
+    "name": "Arize AI",
+    "slug": "arize-ai",
+    "description": "ML observability and LLM tracing platform. Includes Phoenix open source for local tracing and cloud deployment for production. Trace LLM calls, run evals, and detect model drift.",
+    "website": "https://arize.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/61427307?s=64",
+    "category": "observability",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "ml-observability",
+      "llm-tracing",
+      "phoenix",
+      "evals"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
   },
   {
     "name": "Basis Theory",
@@ -708,6 +1609,87 @@
     "verified": true
   },
   {
+    "name": "Cohere",
+    "slug": "cohere",
+    "description": "Enterprise LLM platform providing Generate, Embed, and Rerank APIs with tool use and function calling support. SDKs in Python, TypeScript, Go, and Java for building RAG and agent applications.",
+    "website": "https://cohere.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/54850923?s=64",
+    "category": "compute",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "go",
+      "java"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "llm",
+      "embeddings",
+      "reranking",
+      "enterprise",
+      "rag"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Fly.io",
+    "slug": "fly-io",
+    "description": "Deploy Docker containers globally with a CLI-first workflow using flyctl and a REST Machines API for programmatic VM lifecycle management. Edge networking with low-latency global deployment.",
+    "website": "https://fly.io",
+    "logoUrl": "https://avatars.githubusercontent.com/u/22525303?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": false,
+      "cli": true,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "deployment",
+      "docker",
+      "edge",
+      "machines-api",
+      "global"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "Helicone",
     "slug": "helicone",
     "description": "Open-source LLM observability with one-line proxy integration. Agent session tracing, cost tracking, and prompt management — fully self-hostable, all features via API, no dashboard lock-in.",
@@ -744,6 +1726,46 @@
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": true
+  },
+  {
+    "name": "Hyperbrowser",
+    "slug": "hyperbrowser",
+    "description": "Cloud browser for AI agents with an API to start sessions, navigate pages, and extract data. Includes computer use support and an MCP server for direct agent integration.",
+    "website": "https://hyperbrowser.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/170000777?s=64",
+    "category": "browser",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript"
+    ],
+    "mcpServerUrl": "https://github.com/hyperbrowserai/mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "browser-api",
+      "computer-use",
+      "sessions"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
   },
   {
     "name": "LangGraph",
@@ -829,6 +1851,166 @@
     "verified": true
   },
   {
+    "name": "LlamaIndex",
+    "slug": "llamaindex",
+    "description": "Open source data framework for LLM applications. Connect to data sources, parse documents, and build RAG pipelines with Python and TypeScript SDKs. Extensive integrations with vector stores.",
+    "website": "https://www.llamaindex.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/130722866?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": false,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "rag",
+      "data-framework",
+      "agents"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "LlamaParse",
+    "slug": "llamaparse",
+    "description": "Proprietary document parser by LlamaIndex for extracting structured data from complex PDFs containing tables and images. Accessible via REST API and Python/TypeScript SDKs with a free tier.",
+    "website": "https://cloud.llamaindex.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/130722866?s=64",
+    "category": "data",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "document-parsing",
+      "pdf",
+      "tables",
+      "rag"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Mistral AI",
+    "slug": "mistral-ai",
+    "description": "European AI lab providing fast and efficient LLM models with chat, embeddings, and function calling. OpenAI-compatible API with Python and JavaScript SDKs for easy agent integration.",
+    "website": "https://mistral.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/132372032?s=64",
+    "category": "compute",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": false,
+      "model": "usage-based"
+    },
+    "tags": [
+      "llm",
+      "function-calling",
+      "european",
+      "efficient"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "n8n",
+    "slug": "n8n",
+    "description": "Open source workflow automation with 400+ integrations and AI agent nodes. Self-hostable with REST API, CLI, and code nodes for custom logic. Webhook-driven event processing.",
+    "website": "https://n8n.io",
+    "logoUrl": "https://avatars.githubusercontent.com/u/45487711?s=64",
+    "category": "automation",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": false,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "open-source",
+      "workflow-automation",
+      "self-hostable",
+      "integrations",
+      "ai-agents"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "Perplexity API",
     "slug": "perplexity",
     "description": "AI-powered search API with real-time web indexing. Returns structured research answers with citations — the fastest way for agents to answer factual questions about current events.",
@@ -911,6 +2093,211 @@
     "verified": true
   },
   {
+    "name": "Prefect",
+    "slug": "prefect",
+    "description": "Python workflow orchestration with code-first pipeline definitions. REST API, Python SDK, and CLI for building and monitoring data pipelines. Cloud and self-hosted deployment options.",
+    "website": "https://www.prefect.io",
+    "logoUrl": "https://avatars.githubusercontent.com/u/39270919?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "workflow-orchestration",
+      "python",
+      "data-pipelines",
+      "open-source"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "PropelAuth",
+    "slug": "propelauth",
+    "description": "Auth for B2B SaaS with multi-tenant organizations, role-based access control, and full API management. Webhook notifications and Python/Node SDKs for programmatic user and org management.",
+    "website": "https://www.propelauth.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/96398720?s=64",
+    "category": "auth",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "b2b-auth",
+      "multi-tenant",
+      "organizations",
+      "roles"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "PydanticAI",
+    "slug": "pydantic-ai",
+    "description": "Python agent framework by the Pydantic team with type-safe agents, dependency injection, tool use, and streaming. Supports OpenAI, Anthropic, Gemini, and other model providers. MCP client support included.",
+    "website": "https://ai.pydantic.dev",
+    "logoUrl": "https://avatars.githubusercontent.com/u/110818415?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": false,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "agent-framework",
+      "type-safe",
+      "python",
+      "pydantic"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Redis Cloud",
+    "slug": "redis",
+    "description": "Managed Redis with vector search, pub/sub, and caching capabilities. Includes an official MCP server and SDKs across all major languages for caching, real-time data, and vector similarity search.",
+    "website": "https://redis.io/cloud",
+    "logoUrl": "https://avatars.githubusercontent.com/u/1529926?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript",
+      "go",
+      "java",
+      "ruby"
+    ],
+    "mcpServerUrl": "https://github.com/redis/mcp-redis",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "caching",
+      "pub-sub",
+      "vector-search",
+      "in-memory"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Sentry",
+    "slug": "sentry",
+    "description": "Error tracking, performance monitoring, and session replay with SDKs in 100+ platforms. REST API, CLI, MCP server for AI error analysis, and webhooks for automated agent error workflows.",
+    "website": "https://sentry.io",
+    "logoUrl": "https://avatars.githubusercontent.com/u/1396951?s=64",
+    "category": "observability",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript",
+      "java",
+      "go",
+      "ruby"
+    ],
+    "mcpServerUrl": "https://github.com/getsentry/sentry-mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "error-tracking",
+      "performance",
+      "open-source",
+      "apm"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "SerpApi",
     "slug": "serpapi",
     "description": "Structured Google/Bing/and other search engine results via REST API. Agent-friendly signup with no CAPTCHA. Supports Python, Ruby, Node, Go, and PHP SDKs for easy integration.",
@@ -982,6 +2369,45 @@
       "google-search",
       "json",
       "fast"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "smolagents",
+    "slug": "smolagents",
+    "description": "Minimal agent framework by Hugging Face where code agents write and execute Python to complete tasks. Small codebase designed for easy extension with MCP support for tool integration.",
+    "website": "https://huggingface.co/docs/smolagents",
+    "logoUrl": "https://avatars.githubusercontent.com/u/25720743?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": false,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "code-agents",
+      "hugging-face",
+      "minimal"
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": false
@@ -1074,6 +2500,49 @@
     "verified": true
   },
   {
+    "name": "Stytch",
+    "slug": "stytch",
+    "description": "Developer-first auth platform providing magic links, passkeys, OAuth, and M2M tokens for agent-to-agent authentication. Full REST API with Python, Node, Go, and Ruby SDKs.",
+    "website": "https://stytch.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/69983493?s=64",
+    "category": "auth",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript",
+      "go",
+      "ruby"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "auth",
+      "m2m",
+      "passkeys",
+      "magic-links",
+      "developer-friendly"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "Supabase",
     "slug": "supabase",
     "description": "Open-source Firebase alternative with Postgres, auth, storage, and edge functions. Full REST and GraphQL APIs, CLI for all operations, MCP server for AI-assisted database management.",
@@ -1119,6 +2588,341 @@
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": true
+  },
+  {
+    "name": "Temporal",
+    "slug": "temporal",
+    "description": "Durable execution engine for long-running workflows. Define workflows as code with automatic retries and state persistence. SDKs in Python, Go, Java, TypeScript, and PHP with open source core.",
+    "website": "https://temporal.io",
+    "logoUrl": "https://avatars.githubusercontent.com/u/56493103?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "go",
+      "java",
+      "typescript",
+      "php"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "workflow-orchestration",
+      "durable-execution",
+      "open-source",
+      "retry"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Twilio",
+    "slug": "twilio",
+    "description": "Communications API platform for SMS, voice, email, and WhatsApp. REST API with SDKs in 7 languages and extensive webhook support for building programmable communication agents.",
+    "website": "https://www.twilio.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/109142?s=64",
+    "category": "automation",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript",
+      "java",
+      "ruby",
+      "php",
+      "go"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "sms",
+      "voice",
+      "whatsapp",
+      "communications-api"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Unstructured",
+    "slug": "unstructured",
+    "description": "Document parsing and ETL pipeline for LLMs. Extracts and chunks text from PDFs, Word documents, HTML, and email into clean structured output. REST API plus open source Python library.",
+    "website": "https://unstructured.io",
+    "logoUrl": "https://avatars.githubusercontent.com/u/103626631?s=64",
+    "category": "data",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "document-parsing",
+      "etl",
+      "pdf",
+      "open-source",
+      "chunking"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Voyage AI",
+    "slug": "voyage-ai",
+    "description": "State-of-the-art embedding and reranking models for RAG applications. REST API and Python SDK with specialized domain models for code, finance, and legal use cases. Free tier available.",
+    "website": "https://www.voyageai.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/130565773?s=64",
+    "category": "compute",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "embeddings",
+      "reranking",
+      "rag",
+      "domain-specific"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Weaviate",
+    "slug": "weaviate",
+    "description": "Open source vector database with built-in ML model integrations for semantic search. Supports GraphQL and REST APIs with Python, JavaScript, Go, and Java SDKs. Cloud managed available.",
+    "website": "https://weaviate.io",
+    "logoUrl": "https://avatars.githubusercontent.com/u/37794290?s=64",
+    "category": "data",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": true
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "go",
+      "java"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "vector-db",
+      "open-source",
+      "graphql",
+      "semantic-search"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Weights & Biases",
+    "slug": "weights-biases",
+    "description": "ML experiment tracking, dataset versioning, and model registry platform. Python SDK, REST API, and CLI included. LLM tracing via Weave for monitoring agent and LLM application performance.",
+    "website": "https://wandb.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/26401354?s=64",
+    "category": "observability",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "ml-tracking",
+      "experiment-tracking",
+      "llm-tracing",
+      "weave"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "WorkOS",
+    "slug": "workos",
+    "description": "Enterprise-ready auth platform for SSO, SCIM provisioning, MFA, and admin portal. REST API with Node, Python, Ruby, and Go SDKs for rapid enterprise authentication integration.",
+    "website": "https://workos.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/47638274?s=64",
+    "category": "auth",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "python",
+      "ruby",
+      "go"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "sso",
+      "scim",
+      "enterprise",
+      "saml",
+      "oidc"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Auth0",
+    "slug": "auth0",
+    "description": "Identity platform by Okta supporting OAuth, OIDC, and SAML. Management API for programmatic user management with SDKs in Python, JavaScript, Java, Go, and Ruby. Some features require dashboard setup.",
+    "website": "https://auth0.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/2824157?s=64",
+    "category": "auth",
+    "agentFirstScore": 7,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "human-only",
+      "hasAgentAuth": true,
+      "allowsBots": false
+    },
+    "allFeaturesViaAPI": false,
+    "sdkLanguages": [
+      "python",
+      "javascript",
+      "java",
+      "go",
+      "ruby"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "identity",
+      "oauth",
+      "sso",
+      "enterprise",
+      "okta"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
   },
   {
     "name": "Bright Data",
@@ -1247,6 +3051,83 @@
     "verified": true
   },
   {
+    "name": "DSPy",
+    "slug": "dspy",
+    "description": "Framework for programming language models rather than prompting them. Compilers automatically optimize prompts and weights for your pipeline. Python-only open source project from Stanford.",
+    "website": "https://dspy.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/125672393?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 7,
+    "interfaces": {
+      "api": false,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "open-source",
+      "prompt-optimization",
+      "compiler",
+      "stanford"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Railway",
+    "slug": "railway",
+    "description": "Cloud deployment platform with GitHub integration for auto-deploy from git. Provides REST API, CLI, GraphQL API, and webhooks. Includes managed databases and requires human account setup.",
+    "website": "https://railway.app",
+    "logoUrl": "https://avatars.githubusercontent.com/u/66716858?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 7,
+    "interfaces": {
+      "api": true,
+      "sdk": false,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": true
+    },
+    "signup": {
+      "method": "human-only",
+      "hasAgentAuth": false,
+      "allowsBots": false
+    },
+    "allFeaturesViaAPI": false,
+    "sdkLanguages": [],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "deployment",
+      "ci-cd",
+      "postgres",
+      "redis",
+      "github"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "ScrapingBee",
     "slug": "scrapingbee",
     "description": "Web scraping API with JavaScript rendering and proxy rotation. Provides a REST API with Python, Node, Ruby, and PHP SDKs for handling anti-bot measures and dynamic content extraction.",
@@ -1282,6 +3163,50 @@
       "scraping",
       "proxy",
       "js-rendering"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "SendGrid",
+    "slug": "sendgrid",
+    "description": "Email delivery platform by Twilio for transactional and bulk email. REST API with SDKs in Python, JavaScript, Java, PHP, Ruby, and Go. Requires human account verification for setup.",
+    "website": "https://sendgrid.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/181234?s=64",
+    "category": "automation",
+    "agentFirstScore": 7,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "human-only",
+      "hasAgentAuth": false,
+      "allowsBots": false
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript",
+      "java",
+      "php",
+      "ruby",
+      "go"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "email",
+      "bulk-email",
+      "transactional",
+      "twilio"
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": false

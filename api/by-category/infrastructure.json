@@ -41,6 +41,90 @@
     "verified": true
   },
   {
+    "name": "Modal",
+    "slug": "modal",
+    "description": "Serverless cloud for Python supporting GPU workloads, batch jobs, and web endpoints. Deploy directly from code using decorators via CLI and SDK — no dashboard interaction required.",
+    "website": "https://modal.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/75660786?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 10,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "api",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "serverless",
+      "gpu",
+      "python",
+      "yc",
+      "functions",
+      "batch"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Cloudflare Workers AI",
+    "slug": "cloudflare-workers-ai",
+    "description": "Run LLM inference at the edge via Cloudflare Workers. Includes AI Gateway for LLM proxying, R2 object storage, D1 SQLite, and KV storage — all accessible via REST API, Wrangler CLI, and MCP server.",
+    "website": "https://developers.cloudflare.com/workers-ai/",
+    "logoUrl": "https://avatars.githubusercontent.com/u/314135?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "javascript",
+      "python"
+    ],
+    "mcpServerUrl": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "edge",
+      "inference",
+      "r2",
+      "kv",
+      "d1",
+      "ai-gateway"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "Neon",
     "slug": "neon",
     "description": "Serverless Postgres with instant branching and scale-to-zero. Over 80% of Neon databases are created by agents — supports full database provisioning, branching, and querying via REST API.",
@@ -128,6 +212,130 @@
     "verified": true
   },
   {
+    "name": "Replicate",
+    "slug": "replicate",
+    "description": "Run ML models via API with over 10000 models for image, video, audio, and code generation. Simple REST API with Python, Node, and Go SDKs — no GPU setup or infrastructure management required.",
+    "website": "https://replicate.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/60410876?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript",
+      "go"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": false,
+      "model": "usage-based"
+    },
+    "tags": [
+      "ml-models",
+      "image-generation",
+      "inference",
+      "gpu-cloud"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Tigris",
+    "slug": "tigris",
+    "description": "Globally distributed object storage with S3-compatible API. No region configuration needed with automatic replication. CLI and TypeScript, Python, Go SDKs available with a free tier.",
+    "website": "https://www.tigrisdata.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/97783285?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "python",
+      "go"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "object-storage",
+      "s3-compatible",
+      "distributed",
+      "yc"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Turso",
+    "slug": "turso",
+    "description": "SQLite at the edge with multi-tenant support. Instant per-tenant database creation via REST API, libsql protocol, and CLI. TypeScript, Python, Rust, and Go SDKs for easy agent integration.",
+    "website": "https://turso.tech",
+    "logoUrl": "https://avatars.githubusercontent.com/u/139791384?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "python",
+      "rust",
+      "go"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "sqlite",
+      "edge",
+      "multi-tenant",
+      "libsql"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
     "name": "Upstash",
     "slug": "upstash",
     "description": "Serverless Redis and Kafka with per-request pricing — zero cold starts, HTTP REST API for agents that can't maintain persistent connections. 100% programmatic provisioning via API.",
@@ -172,6 +380,87 @@
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": true
+  },
+  {
+    "name": "Fly.io",
+    "slug": "fly-io",
+    "description": "Deploy Docker containers globally with a CLI-first workflow using flyctl and a REST Machines API for programmatic VM lifecycle management. Edge networking with low-latency global deployment.",
+    "website": "https://fly.io",
+    "logoUrl": "https://avatars.githubusercontent.com/u/22525303?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": false,
+      "cli": true,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "deployment",
+      "docker",
+      "edge",
+      "machines-api",
+      "global"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
+  },
+  {
+    "name": "Redis Cloud",
+    "slug": "redis",
+    "description": "Managed Redis with vector search, pub/sub, and caching capabilities. Includes an official MCP server and SDKs across all major languages for caching, real-time data, and vector similarity search.",
+    "website": "https://redis.io/cloud",
+    "logoUrl": "https://avatars.githubusercontent.com/u/1529926?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "javascript",
+      "go",
+      "java",
+      "ruby"
+    ],
+    "mcpServerUrl": "https://github.com/redis/mcp-redis",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "caching",
+      "pub-sub",
+      "vector-search",
+      "in-memory"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
   },
   {
     "name": "Supabase",
@@ -219,5 +508,43 @@
     ],
     "addedAt": "2026-02-28T00:00:00.000Z",
     "verified": true
+  },
+  {
+    "name": "Railway",
+    "slug": "railway",
+    "description": "Cloud deployment platform with GitHub integration for auto-deploy from git. Provides REST API, CLI, GraphQL API, and webhooks. Includes managed databases and requires human account setup.",
+    "website": "https://railway.app",
+    "logoUrl": "https://avatars.githubusercontent.com/u/66716858?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 7,
+    "interfaces": {
+      "api": true,
+      "sdk": false,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": true
+    },
+    "signup": {
+      "method": "human-only",
+      "hasAgentAuth": false,
+      "allowsBots": false
+    },
+    "allFeaturesViaAPI": false,
+    "sdkLanguages": [],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "deployment",
+      "ci-cd",
+      "postgres",
+      "redis",
+      "github"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": false
   }
 ]
