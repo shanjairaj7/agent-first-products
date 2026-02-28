@@ -1,0 +1,44 @@
+[
+  {
+    "name": "E2B",
+    "slug": "e2b",
+    "description": "Secure sandboxed cloud environments for AI agents to execute code. Instant provisioning, full internet access, file system, and terminal — programmatic API with sub-second startup.",
+    "website": "https://e2b.dev",
+    "logoUrl": "https://avatars.githubusercontent.com/u/105856024?s=64",
+    "category": "compute",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript"
+    ],
+    "mcpServerUrl": "https://github.com/e2b-dev/mcp-server",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "code-execution",
+      "sandbox",
+      "docker",
+      "jupyter",
+      "secure-compute"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Basis Theory",
+    "slug": "basis-theory",
+    "description": "Tokenization infrastructure and Browser Proxy API for agentic payments. PCI-compliant vault service that lets AI agents handle payment credentials without storing raw card data.",
+    "website": "https://basistheory.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/56854841?s=64",
+    "category": "payments",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "python",
+      "javascript",
+      "dotnet",
+      "java"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "tokenization",
+      "pci-compliance",
+      "agentic-payments",
+      "vault",
+      "proxy"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Stripe",
+    "slug": "stripe",
+    "description": "Payment infrastructure with agentic commerce features — Shared Payment Tokens for agent-initiated transactions, full REST API, and an official MCP server for payment operations.",
+    "website": "https://stripe.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/856813?s=64",
+    "category": "payments",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "human-only",
+      "hasAgentAuth": false,
+      "allowsBots": false
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript",
+      "ruby",
+      "go",
+      "java",
+      "php",
+      "dotnet"
+    ],
+    "mcpServerUrl": "https://github.com/stripe/agent-toolkit/tree/main/modelcontextprotocol",
+    "pricing": {
+      "hasFree": false,
+      "model": "usage-based"
+    },
+    "tags": [
+      "payments",
+      "agentic-commerce",
+      "billing",
+      "subscriptions",
+      "webhooks"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  }
+]

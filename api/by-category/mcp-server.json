@@ -1,0 +1,41 @@
+[
+  {
+    "name": "GitHub MCP Server",
+    "slug": "github-mcp",
+    "description": "Official GitHub MCP server for AI agents — manage repos, issues, PRs, code search, and actions programmatically. Full GitHub API surface exposed as agent-native tools.",
+    "website": "https://github.com/github/github-mcp-server",
+    "logoUrl": "https://avatars.githubusercontent.com/u/9919?s=64",
+    "category": "mcp-server",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": false,
+      "cli": false,
+      "mcp": true,
+      "webhook": true,
+      "graphql": true
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [],
+    "mcpServerUrl": "https://github.com/github/github-mcp-server",
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "github",
+      "git",
+      "code-review",
+      "issues",
+      "pull-requests",
+      "open-source"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  }
+]

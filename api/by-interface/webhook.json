@@ -1,0 +1,474 @@
+[
+  {
+    "name": "Composio",
+    "slug": "composio",
+    "description": "Unified tool platform purpose-built for AI agents. 400+ integrations with managed OAuth, multi-tenant auth, and event triggers — all accessible via API without ever touching a dashboard.",
+    "website": "https://composio.dev",
+    "logoUrl": "https://avatars.githubusercontent.com/u/120251023?s=64",
+    "category": "automation",
+    "agentFirstScore": 10,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript"
+    ],
+    "mcpServerUrl": "https://github.com/ComposioHQ/composio/tree/master/python/composio/cli/mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "tool-integrations",
+      "oauth",
+      "multi-tenant",
+      "agent-tools"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Firecrawl",
+    "slug": "firecrawl",
+    "description": "Web scraping and crawling API that returns LLM-ready markdown. Handles JavaScript rendering, pagination, and anti-bot measures. Has an Agent endpoint for multi-step autonomous browsing.",
+    "website": "https://firecrawl.dev",
+    "logoUrl": "https://avatars.githubusercontent.com/u/157971260?s=64",
+    "category": "data",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "go",
+      "rust"
+    ],
+    "mcpServerUrl": "https://github.com/mendableai/firecrawl-mcp-server",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "web-scraping",
+      "crawling",
+      "markdown",
+      "llm-ready",
+      "javascript-rendering"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "GitHub MCP Server",
+    "slug": "github-mcp",
+    "description": "Official GitHub MCP server for AI agents — manage repos, issues, PRs, code search, and actions programmatically. Full GitHub API surface exposed as agent-native tools.",
+    "website": "https://github.com/github/github-mcp-server",
+    "logoUrl": "https://avatars.githubusercontent.com/u/9919?s=64",
+    "category": "mcp-server",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": false,
+      "cli": false,
+      "mcp": true,
+      "webhook": true,
+      "graphql": true
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [],
+    "mcpServerUrl": "https://github.com/github/github-mcp-server",
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "github",
+      "git",
+      "code-review",
+      "issues",
+      "pull-requests",
+      "open-source"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "OpenAI API",
+    "slug": "openai-api",
+    "description": "GPT-4o, o3, and Embeddings via REST API. Built-in tool calling, assistants, structured outputs, and the Responses API — the platform most agent frameworks target first.",
+    "website": "https://platform.openai.com",
+    "logoUrl": "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/openai.png",
+    "category": "infrastructure",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript",
+      "go",
+      "java",
+      "rust"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": false,
+      "model": "usage-based"
+    },
+    "tags": [
+      "llm",
+      "gpt-4o",
+      "embeddings",
+      "tool-calling",
+      "structured-outputs"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Apify",
+    "slug": "apify",
+    "description": "Serverless web scraping platform with 4,000+ pre-built Actors for any website. Full API for scheduling, running, and retrieving results. Native MCP integration and CrewAI/LangChain support.",
+    "website": "https://apify.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/24586296?s=64",
+    "category": "automation",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript"
+    ],
+    "mcpServerUrl": "https://github.com/apify/actors-mcp-server",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "web-scraping",
+      "actors",
+      "automation",
+      "crawling",
+      "data-extraction"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Basis Theory",
+    "slug": "basis-theory",
+    "description": "Tokenization infrastructure and Browser Proxy API for agentic payments. PCI-compliant vault service that lets AI agents handle payment credentials without storing raw card data.",
+    "website": "https://basistheory.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/56854841?s=64",
+    "category": "payments",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "python",
+      "javascript",
+      "dotnet",
+      "java"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "tokenization",
+      "pci-compliance",
+      "agentic-payments",
+      "vault",
+      "proxy"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Helicone",
+    "slug": "helicone",
+    "description": "Open-source LLM observability with one-line proxy integration. Agent session tracing, cost tracking, and prompt management — fully self-hostable, all features via API, no dashboard lock-in.",
+    "website": "https://helicone.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/108263233?s=64",
+    "category": "observability",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": false,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "observability",
+      "proxy",
+      "open-source",
+      "cost-tracking",
+      "self-hostable"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "LangSmith",
+    "slug": "langsmith",
+    "description": "LLM observability platform for tracing, evaluating, and monitoring AI agent runs. Deep LangChain integration with full REST API access for programmatic trace analysis and dataset management.",
+    "website": "https://smith.langchain.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/126733545?s=64",
+    "category": "observability",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "observability",
+      "tracing",
+      "evaluation",
+      "langchain",
+      "monitoring"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Stripe",
+    "slug": "stripe",
+    "description": "Payment infrastructure with agentic commerce features — Shared Payment Tokens for agent-initiated transactions, full REST API, and an official MCP server for payment operations.",
+    "website": "https://stripe.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/856813?s=64",
+    "category": "payments",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "human-only",
+      "hasAgentAuth": false,
+      "allowsBots": false
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript",
+      "ruby",
+      "go",
+      "java",
+      "php",
+      "dotnet"
+    ],
+    "mcpServerUrl": "https://github.com/stripe/agent-toolkit/tree/main/modelcontextprotocol",
+    "pricing": {
+      "hasFree": false,
+      "model": "usage-based"
+    },
+    "tags": [
+      "payments",
+      "agentic-commerce",
+      "billing",
+      "subscriptions",
+      "webhooks"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Supabase",
+    "slug": "supabase",
+    "description": "Open-source Firebase alternative with Postgres, auth, storage, and edge functions. Full REST and GraphQL APIs, CLI for all operations, MCP server for AI-assisted database management.",
+    "website": "https://supabase.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/54469796?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": true,
+      "graphql": true
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "javascript",
+      "python",
+      "dart",
+      "kotlin",
+      "swift",
+      "csharp"
+    ],
+    "mcpServerUrl": "https://github.com/supabase-community/supabase-mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "postgres",
+      "auth",
+      "storage",
+      "realtime",
+      "open-source",
+      "edge-functions"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Clerk",
+    "slug": "clerk",
+    "description": "User authentication platform with machine-to-machine (M2M) tokens — designed for services that agents need to call on behalf of users. Full API and SDK, programmatic user/org management.",
+    "website": "https://clerk.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/49538330?s=64",
+    "category": "auth",
+    "agentFirstScore": 7,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "javascript",
+      "python",
+      "go",
+      "ruby"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "auth",
+      "m2m-tokens",
+      "jwt",
+      "oauth",
+      "user-management"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  }
+]

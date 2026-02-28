@@ -1,0 +1,131 @@
+[
+  {
+    "name": "Firecrawl",
+    "slug": "firecrawl",
+    "description": "Web scraping and crawling API that returns LLM-ready markdown. Handles JavaScript rendering, pagination, and anti-bot measures. Has an Agent endpoint for multi-step autonomous browsing.",
+    "website": "https://firecrawl.dev",
+    "logoUrl": "https://avatars.githubusercontent.com/u/157971260?s=64",
+    "category": "data",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "go",
+      "rust"
+    ],
+    "mcpServerUrl": "https://github.com/mendableai/firecrawl-mcp-server",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "web-scraping",
+      "crawling",
+      "markdown",
+      "llm-ready",
+      "javascript-rendering"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Pinecone",
+    "slug": "pinecone",
+    "description": "Managed vector database for semantic search and agent long-term memory. Serverless with instant provisioning, hybrid search, and a dedicated Pinecone Assistant endpoint for RAG workloads.",
+    "website": "https://pinecone.io",
+    "logoUrl": "https://avatars.githubusercontent.com/u/54333248?s=64",
+    "category": "data",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript",
+      "java",
+      "go"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "vector-database",
+      "semantic-search",
+      "rag",
+      "embeddings",
+      "agent-memory"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Bright Data",
+    "slug": "bright-data",
+    "description": "Enterprise web data platform with residential proxies, SERP API, and an Agent Browser with built-in CAPTCHA solving. Massive scale for production data pipelines powering AI training.",
+    "website": "https://brightdata.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/20947487?s=64",
+    "category": "data",
+    "agentFirstScore": 7,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "human-only",
+      "hasAgentAuth": false,
+      "allowsBots": false
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript"
+    ],
+    "mcpServerUrl": "https://github.com/luminati-io/brightdata-mcp",
+    "pricing": {
+      "hasFree": false,
+      "model": "usage-based"
+    },
+    "tags": [
+      "proxies",
+      "web-scraping",
+      "serp",
+      "datasets",
+      "enterprise"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  }
+]

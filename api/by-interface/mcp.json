@@ -1,0 +1,629 @@
+[
+  {
+    "name": "Composio",
+    "slug": "composio",
+    "description": "Unified tool platform purpose-built for AI agents. 400+ integrations with managed OAuth, multi-tenant auth, and event triggers — all accessible via API without ever touching a dashboard.",
+    "website": "https://composio.dev",
+    "logoUrl": "https://avatars.githubusercontent.com/u/120251023?s=64",
+    "category": "automation",
+    "agentFirstScore": 10,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript"
+    ],
+    "mcpServerUrl": "https://github.com/ComposioHQ/composio/tree/master/python/composio/cli/mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "tool-integrations",
+      "oauth",
+      "multi-tenant",
+      "agent-tools"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Browserbase",
+    "slug": "browserbase",
+    "description": "Headless browser infrastructure built for AI agents. Stealth browsing, session management, live debugging, and CAPTCHA solving — all via API. No UI needed, ever.",
+    "website": "https://browserbase.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/134118601?s=64",
+    "category": "browser",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript"
+    ],
+    "mcpServerUrl": "https://github.com/browserbase/mcp-server-browserbase",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "browser-automation",
+      "stealth",
+      "playwright",
+      "puppeteer",
+      "web-scraping"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "E2B",
+    "slug": "e2b",
+    "description": "Secure sandboxed cloud environments for AI agents to execute code. Instant provisioning, full internet access, file system, and terminal — programmatic API with sub-second startup.",
+    "website": "https://e2b.dev",
+    "logoUrl": "https://avatars.githubusercontent.com/u/105856024?s=64",
+    "category": "compute",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript"
+    ],
+    "mcpServerUrl": "https://github.com/e2b-dev/mcp-server",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "code-execution",
+      "sandbox",
+      "docker",
+      "jupyter",
+      "secure-compute"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Exa",
+    "slug": "exa",
+    "description": "Neural search API for the web — finds the exact content AI agents need using embeddings-based retrieval instead of keywords. Built for machine consumption with clean structured responses.",
+    "website": "https://exa.ai",
+    "logoUrl": "https://avatars.githubusercontent.com/u/127428455?s=64",
+    "category": "search",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript"
+    ],
+    "mcpServerUrl": "https://github.com/exa-labs/exa-mcp-server",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "semantic-search",
+      "neural-search",
+      "embeddings",
+      "web-crawl"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Firecrawl",
+    "slug": "firecrawl",
+    "description": "Web scraping and crawling API that returns LLM-ready markdown. Handles JavaScript rendering, pagination, and anti-bot measures. Has an Agent endpoint for multi-step autonomous browsing.",
+    "website": "https://firecrawl.dev",
+    "logoUrl": "https://avatars.githubusercontent.com/u/157971260?s=64",
+    "category": "data",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "go",
+      "rust"
+    ],
+    "mcpServerUrl": "https://github.com/mendableai/firecrawl-mcp-server",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "web-scraping",
+      "crawling",
+      "markdown",
+      "llm-ready",
+      "javascript-rendering"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "GitHub MCP Server",
+    "slug": "github-mcp",
+    "description": "Official GitHub MCP server for AI agents — manage repos, issues, PRs, code search, and actions programmatically. Full GitHub API surface exposed as agent-native tools.",
+    "website": "https://github.com/github/github-mcp-server",
+    "logoUrl": "https://avatars.githubusercontent.com/u/9919?s=64",
+    "category": "mcp-server",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": false,
+      "cli": false,
+      "mcp": true,
+      "webhook": true,
+      "graphql": true
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [],
+    "mcpServerUrl": "https://github.com/github/github-mcp-server",
+    "pricing": {
+      "hasFree": true,
+      "model": "free"
+    },
+    "tags": [
+      "github",
+      "git",
+      "code-review",
+      "issues",
+      "pull-requests",
+      "open-source"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Neon",
+    "slug": "neon",
+    "description": "Serverless Postgres with instant branching and scale-to-zero. Over 80% of Neon databases are created by agents — supports full database provisioning, branching, and querying via REST API.",
+    "website": "https://neon.tech",
+    "logoUrl": "https://avatars.githubusercontent.com/u/77690634?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "api",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": "https://github.com/neondatabase/mcp-server-neon",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "postgres",
+      "serverless",
+      "branching",
+      "database",
+      "sql"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Tavily",
+    "slug": "tavily",
+    "description": "Real-time web search API purpose-built for AI agents and RAG pipelines. Returns structured, citable results optimized for LLM consumption — not human reading.",
+    "website": "https://tavily.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/131060032?s=64",
+    "category": "search",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript"
+    ],
+    "mcpServerUrl": "https://github.com/tavily-ai/tavily-mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "web-search",
+      "rag",
+      "research",
+      "real-time",
+      "citations"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Apify",
+    "slug": "apify",
+    "description": "Serverless web scraping platform with 4,000+ pre-built Actors for any website. Full API for scheduling, running, and retrieving results. Native MCP integration and CrewAI/LangChain support.",
+    "website": "https://apify.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/24586296?s=64",
+    "category": "automation",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript"
+    ],
+    "mcpServerUrl": "https://github.com/apify/actors-mcp-server",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "web-scraping",
+      "actors",
+      "automation",
+      "crawling",
+      "data-extraction"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "LangGraph",
+    "slug": "langgraph",
+    "description": "Low-level orchestration framework for building stateful, long-running agents as directed graphs. Handles durable state, human-in-the-loop, and multi-agent coordination with a hosted platform.",
+    "website": "https://langchain-ai.github.io/langgraph",
+    "logoUrl": "https://avatars.githubusercontent.com/u/126733545?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript"
+    ],
+    "mcpServerUrl": "https://github.com/langchain-ai/langgraph/tree/main/libs/langgraph-mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "orchestration",
+      "state-machine",
+      "multi-agent",
+      "durable-execution",
+      "open-source"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Perplexity API",
+    "slug": "perplexity",
+    "description": "AI-powered search API with real-time web indexing. Returns structured research answers with citations — the fastest way for agents to answer factual questions about current events.",
+    "website": "https://www.perplexity.ai/api",
+    "logoUrl": "https://avatars.githubusercontent.com/u/116907547?s=64",
+    "category": "search",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": false,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [],
+    "mcpServerUrl": "https://github.com/ppl-ai/modelcontextprotocol",
+    "pricing": {
+      "hasFree": false,
+      "model": "usage-based"
+    },
+    "tags": [
+      "search",
+      "research",
+      "citations",
+      "real-time",
+      "fact-checking"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Stripe",
+    "slug": "stripe",
+    "description": "Payment infrastructure with agentic commerce features — Shared Payment Tokens for agent-initiated transactions, full REST API, and an official MCP server for payment operations.",
+    "website": "https://stripe.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/856813?s=64",
+    "category": "payments",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "human-only",
+      "hasAgentAuth": false,
+      "allowsBots": false
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript",
+      "ruby",
+      "go",
+      "java",
+      "php",
+      "dotnet"
+    ],
+    "mcpServerUrl": "https://github.com/stripe/agent-toolkit/tree/main/modelcontextprotocol",
+    "pricing": {
+      "hasFree": false,
+      "model": "usage-based"
+    },
+    "tags": [
+      "payments",
+      "agentic-commerce",
+      "billing",
+      "subscriptions",
+      "webhooks"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Supabase",
+    "slug": "supabase",
+    "description": "Open-source Firebase alternative with Postgres, auth, storage, and edge functions. Full REST and GraphQL APIs, CLI for all operations, MCP server for AI-assisted database management.",
+    "website": "https://supabase.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/54469796?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": true,
+      "graphql": true
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "javascript",
+      "python",
+      "dart",
+      "kotlin",
+      "swift",
+      "csharp"
+    ],
+    "mcpServerUrl": "https://github.com/supabase-community/supabase-mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "postgres",
+      "auth",
+      "storage",
+      "realtime",
+      "open-source",
+      "edge-functions"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Bright Data",
+    "slug": "bright-data",
+    "description": "Enterprise web data platform with residential proxies, SERP API, and an Agent Browser with built-in CAPTCHA solving. Massive scale for production data pipelines powering AI training.",
+    "website": "https://brightdata.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/20947487?s=64",
+    "category": "data",
+    "agentFirstScore": 7,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "human-only",
+      "hasAgentAuth": false,
+      "allowsBots": false
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript"
+    ],
+    "mcpServerUrl": "https://github.com/luminati-io/brightdata-mcp",
+    "pricing": {
+      "hasFree": false,
+      "model": "usage-based"
+    },
+    "tags": [
+      "proxies",
+      "web-scraping",
+      "serp",
+      "datasets",
+      "enterprise"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "CrewAI",
+    "slug": "crewai",
+    "description": "Role-based multi-agent orchestration framework. Define agent crews with goals and tools, run them autonomously. 4,000+ tool integrations via Composio, async execution, MCP server support.",
+    "website": "https://crewai.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/159383026?s=64",
+    "category": "orchestration",
+    "agentFirstScore": 7,
+    "interfaces": {
+      "api": false,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": false,
+    "sdkLanguages": [
+      "python"
+    ],
+    "mcpServerUrl": "https://docs.crewai.com/concepts/mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "multi-agent",
+      "roles",
+      "autonomous",
+      "framework",
+      "open-source"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  }
+]

@@ -1,0 +1,126 @@
+name: Add a Tool to the Registry
+description: Submit a new agent-first tool for review and inclusion
+title: "[Tool] "
+labels: ["tool-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing! Fill in as much detail as you can. A maintainer will review and auto-generate a PR.
+
+  - type: input
+    id: tool-name
+    attributes:
+      label: Tool Name
+      placeholder: "Browserbase"
+    validations:
+      required: true
+
+  - type: input
+    id: website
+    attributes:
+      label: Website URL
+      placeholder: "https://browserbase.com"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: One or two sentences (max 300 characters) — what it does and why it's agent-first
+      placeholder: "Headless browser infrastructure built for AI agents. Stealth browsing, session management, and CAPTCHA solving — all via API."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - search
+        - automation
+        - data
+        - infrastructure
+        - observability
+        - compute
+        - payments
+        - auth
+        - orchestration
+        - browser
+        - mcp-server
+    validations:
+      required: true
+
+  - type: input
+    id: score
+    attributes:
+      label: Agent-First Score (1–10)
+      description: "10 = built exclusively for agents. 7+ = core features via API. 5 = partial. See /submit for the scoring guide."
+      placeholder: "8"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: interfaces
+    attributes:
+      label: Available Interfaces
+      description: Check all that are available
+      options:
+        - label: Has API
+        - label: Has SDK
+        - label: Has CLI
+        - label: Has MCP
+        - label: Has Webhook
+        - label: Has GraphQL
+
+  - type: dropdown
+    id: signup-method
+    attributes:
+      label: Signup Method
+      description: How can an agent get access?
+      options:
+        - api (fully programmatic — no browser needed)
+        - website-bot-friendly (web form, no CAPTCHA/verification)
+        - human-only (requires human verification or manual approval)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: pricing-model
+    attributes:
+      label: Pricing Model
+      options:
+        - usage-based
+        - subscription
+        - free
+        - enterprise
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: has-free
+    attributes:
+      label: Free Tier
+      options:
+        - label: Free tier available
+
+  - type: input
+    id: sdk-languages
+    attributes:
+      label: SDK Languages
+      description: Comma-separated list
+      placeholder: "python, typescript, go"
+
+  - type: input
+    id: mcp-server-url
+    attributes:
+      label: MCP Server URL (if applicable)
+      placeholder: "https://github.com/org/mcp-server"
+
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: Comma-separated keywords
+      placeholder: "browser-automation, stealth, playwright"

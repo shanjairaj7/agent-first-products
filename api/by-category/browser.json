@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Browserbase",
+    "slug": "browserbase",
+    "description": "Headless browser infrastructure built for AI agents. Stealth browsing, session management, live debugging, and CAPTCHA solving — all via API. No UI needed, ever.",
+    "website": "https://browserbase.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/134118601?s=64",
+    "category": "browser",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript"
+    ],
+    "mcpServerUrl": "https://github.com/browserbase/mcp-server-browserbase",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "browser-automation",
+      "stealth",
+      "playwright",
+      "puppeteer",
+      "web-scraping"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  }
+]

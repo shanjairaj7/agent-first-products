@@ -1,0 +1,223 @@
+[
+  {
+    "name": "Anthropic API",
+    "slug": "anthropic-api",
+    "description": "The Claude API — the AI backbone for most agent systems. Full programmatic access to Claude models with prompt caching, streaming, tool use, and the Files API.",
+    "website": "https://anthropic.com/api",
+    "logoUrl": "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/claude-color.png",
+    "category": "infrastructure",
+    "agentFirstScore": 10,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": false,
+      "model": "usage-based"
+    },
+    "tags": [
+      "llm",
+      "claude",
+      "foundation-model",
+      "tool-use",
+      "streaming"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Neon",
+    "slug": "neon",
+    "description": "Serverless Postgres with instant branching and scale-to-zero. Over 80% of Neon databases are created by agents — supports full database provisioning, branching, and querying via REST API.",
+    "website": "https://neon.tech",
+    "logoUrl": "https://avatars.githubusercontent.com/u/77690634?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "api",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "python",
+      "javascript"
+    ],
+    "mcpServerUrl": "https://github.com/neondatabase/mcp-server-neon",
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "postgres",
+      "serverless",
+      "branching",
+      "database",
+      "sql"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "OpenAI API",
+    "slug": "openai-api",
+    "description": "GPT-4o, o3, and Embeddings via REST API. Built-in tool calling, assistants, structured outputs, and the Responses API — the platform most agent frameworks target first.",
+    "website": "https://platform.openai.com",
+    "logoUrl": "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/openai.png",
+    "category": "infrastructure",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": false,
+      "mcp": false,
+      "webhook": true,
+      "graphql": false
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "python",
+      "typescript",
+      "javascript",
+      "go",
+      "java",
+      "rust"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": false,
+      "model": "usage-based"
+    },
+    "tags": [
+      "llm",
+      "gpt-4o",
+      "embeddings",
+      "tool-calling",
+      "structured-outputs"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Upstash",
+    "slug": "upstash",
+    "description": "Serverless Redis and Kafka with per-request pricing — zero cold starts, HTTP REST API for agents that can't maintain persistent connections. 100% programmatic provisioning via API.",
+    "website": "https://upstash.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/70108611?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 9,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": false,
+      "webhook": false,
+      "graphql": false
+    },
+    "signup": {
+      "method": "api",
+      "hasAgentAuth": true,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "python",
+      "javascript",
+      "go",
+      "rust",
+      "java"
+    ],
+    "mcpServerUrl": null,
+    "pricing": {
+      "hasFree": true,
+      "model": "usage-based"
+    },
+    "tags": [
+      "redis",
+      "kafka",
+      "serverless",
+      "key-value",
+      "rate-limiting",
+      "agent-memory"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  },
+  {
+    "name": "Supabase",
+    "slug": "supabase",
+    "description": "Open-source Firebase alternative with Postgres, auth, storage, and edge functions. Full REST and GraphQL APIs, CLI for all operations, MCP server for AI-assisted database management.",
+    "website": "https://supabase.com",
+    "logoUrl": "https://avatars.githubusercontent.com/u/54469796?s=64",
+    "category": "infrastructure",
+    "agentFirstScore": 8,
+    "interfaces": {
+      "api": true,
+      "sdk": true,
+      "cli": true,
+      "mcp": true,
+      "webhook": true,
+      "graphql": true
+    },
+    "signup": {
+      "method": "website-bot-friendly",
+      "hasAgentAuth": false,
+      "allowsBots": true
+    },
+    "allFeaturesViaAPI": true,
+    "sdkLanguages": [
+      "typescript",
+      "javascript",
+      "python",
+      "dart",
+      "kotlin",
+      "swift",
+      "csharp"
+    ],
+    "mcpServerUrl": "https://github.com/supabase-community/supabase-mcp",
+    "pricing": {
+      "hasFree": true,
+      "model": "subscription"
+    },
+    "tags": [
+      "postgres",
+      "auth",
+      "storage",
+      "realtime",
+      "open-source",
+      "edge-functions"
+    ],
+    "addedAt": "2026-02-28T00:00:00.000Z",
+    "verified": true
+  }
+]

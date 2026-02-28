@@ -1,0 +1,99 @@
+{
+  "total": 23,
+  "verified": 23,
+  "avgScore": 8.4,
+  "categories": [
+    {
+      "id": "search",
+      "label": "Search",
+      "emoji": "🔍",
+      "description": "Web search and research APIs",
+      "count": 3
+    },
+    {
+      "id": "automation",
+      "label": "Automation",
+      "emoji": "⚙️",
+      "description": "Workflow and task automation",
+      "count": 2
+    },
+    {
+      "id": "data",
+      "label": "Data",
+      "emoji": "📊",
+      "description": "Data extraction and processing",
+      "count": 3
+    },
+    {
+      "id": "infrastructure",
+      "label": "Infrastructure",
+      "emoji": "🏗️",
+      "description": "Databases, storage, and compute infrastructure",
+      "count": 5
+    },
+    {
+      "id": "observability",
+      "label": "Observability",
+      "emoji": "📈",
+      "description": "Monitoring, logging, and tracing",
+      "count": 2
+    },
+    {
+      "id": "compute",
+      "label": "Compute",
+      "emoji": "💻",
+      "description": "Code execution and sandboxing",
+      "count": 1
+    },
+    {
+      "id": "payments",
+      "label": "Payments",
+      "emoji": "💳",
+      "description": "Payment processing and commerce",
+      "count": 2
+    },
+    {
+      "id": "auth",
+      "label": "Auth",
+      "emoji": "🔐",
+      "description": "Authentication and authorization",
+      "count": 1
+    },
+    {
+      "id": "orchestration",
+      "label": "Orchestration",
+      "emoji": "🎯",
+      "description": "Agent orchestration frameworks",
+      "count": 2
+    },
+    {
+      "id": "browser",
+      "label": "Browser",
+      "emoji": "🌐",
+      "description": "Browser automation and scraping",
+      "count": 1
+    },
+    {
+      "id": "mcp-server",
+      "label": "MCP Server",
+      "emoji": "🔌",
+      "description": "Model Context Protocol servers",
+      "count": 1
+    }
+  ],
+  "interfaceCounts": {
+    "api": 22,
+    "sdk": 20,
+    "cli": 9,
+    "mcp": 15,
+    "webhook": 11,
+    "graphql": 2
+  },
+  "lastUpdated": "2026-02-28T09:31:43.285Z",
+  "apiEndpoints": {
+    "all": "/api/tools.json",
+    "meta": "/api/meta.json",
+    "byCategory": "/api/by-category/{category}.json",
+    "byInterface": "/api/by-interface/{interface}.json"
+  }
+}
